@@ -38,7 +38,7 @@
             <useCaseMoniker
               Id="d3524115-6756-46b4-a79d-e777195a1aa5"
               LastKnownName="Nghe nhạc đoán tên bài hát"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
       </useCase>
@@ -56,7 +56,7 @@
             <useCaseMoniker
               Id="d3524115-6756-46b4-a79d-e777195a1aa5"
               LastKnownName="Nghe nhạc đoán tên bài hát"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
       </useCase>
@@ -74,7 +74,7 @@
             <useCaseMoniker
               Id="d3524115-6756-46b4-a79d-e777195a1aa5"
               LastKnownName="Nghe nhạc đoán tên bài hát"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
       </useCase>
@@ -92,7 +92,7 @@
             <useCaseMoniker
               Id="d3524115-6756-46b4-a79d-e777195a1aa5"
               LastKnownName="Nghe nhạc đoán tên bài hát"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
       </useCase>
@@ -110,7 +110,7 @@
             <useCaseMoniker
               Id="d3524115-6756-46b4-a79d-e777195a1aa5"
               LastKnownName="Nghe nhạc đoán tên bài hát"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
       </useCase>
@@ -127,7 +127,7 @@
             <useCaseMoniker
               Id="d3524115-6756-46b4-a79d-e777195a1aa5"
               LastKnownName="Nghe nhạc đoán tên bài hát"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </extend>
         </extendedCases>
       </useCase>
@@ -144,7 +144,7 @@
             <useCaseMoniker
               Id="64ef8acf-2460-446a-8577-63db9899b457"
               LastKnownName="Cộng Điểm"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </extend>
         </extendedCases>
       </useCase>
@@ -161,7 +161,7 @@
             <useCaseMoniker
               Id="d7b7f445-5be4-48bc-9642-c77430c9d57d"
               LastKnownName="Nâng Level"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </extend>
         </extendedCases>
       </useCase>
@@ -178,7 +178,7 @@
             <useCaseMoniker
               Id="64ef8acf-2460-446a-8577-63db9899b457"
               LastKnownName="Cộng Điểm"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </include>
         </additions>
       </useCase>
@@ -214,7 +214,7 @@
             <actorMoniker
               Id="341847d4-34d7-45f5-a21f-6b062207d440"
               LastKnownName="Facebook"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -265,7 +265,7 @@
             <useCaseMoniker
               Id="fe30568c-46d1-451b-b221-c5a0d8fdfaee"
               LastKnownName="Hát Karaoke"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </extend>
         </extendedCases>
         <additions>
@@ -274,14 +274,14 @@
             <useCaseMoniker
               Id="fcd4e751-b129-4898-bcc0-376db25650d1"
               LastKnownName="Chia sẻ facebook"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </include>
           <include
             Id="19e24505-40d9-4bca-9991-23ed38815cd2">
             <useCaseMoniker
               Id="be89d540-db3c-4d5f-ae13-7d878d15718c"
               LastKnownName="Lưu file ghi âm"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </include>
         </additions>
       </useCase>
@@ -305,7 +305,7 @@
             <useCaseMoniker
               Id="b3da5d67-e524-498a-9848-6e2ef5525704"
               LastKnownName="Chấm Điểm Tự Động"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </include>
         </additions>
       </useCase>
@@ -323,7 +323,7 @@
             <useCaseMoniker
               Id="fe30568c-46d1-451b-b221-c5a0d8fdfaee"
               LastKnownName="Hát Karaoke"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
       </useCase>
@@ -341,7 +341,7 @@
             <useCaseMoniker
               Id="fe30568c-46d1-451b-b221-c5a0d8fdfaee"
               LastKnownName="Hát Karaoke"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
       </useCase>
@@ -363,7 +363,7 @@
             <useCaseMoniker
               Id="d3524115-6756-46b4-a79d-e777195a1aa5"
               LastKnownName="Nghe nhạc đoán tên bài hát"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -402,7 +402,7 @@
             <useCaseMoniker
               Id="fe30568c-46d1-451b-b221-c5a0d8fdfaee"
               LastKnownName="Hát Karaoke"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -441,7 +441,7 @@
             <useCaseMoniker
               Id="6fc24c34-3e6e-4f27-844e-25a6ca77c159"
               LastKnownName="Tạo tài khoản"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -480,7 +480,7 @@
             <useCaseMoniker
               Id="3db2d7d0-6a05-409e-a38d-fe98cdf8bbcc"
               LastKnownName="Đăng nhập"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -519,7 +519,7 @@
             <useCaseMoniker
               Id="d8334c80-fc16-4c1f-93f4-fa4bc3b13679"
               LastKnownName="Quản lý thông tin tài khoản"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -570,7 +570,7 @@
             <useCaseMoniker
               Id="58fc5502-bc5d-48fc-bc25-5114b16755f8"
               LastKnownName="Kiểm tra đăng nhập"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </include>
         </additions>
       </useCase>
@@ -594,7 +594,7 @@
             <useCaseMoniker
               Id="58fc5502-bc5d-48fc-bc25-5114b16755f8"
               LastKnownName="Kiểm tra đăng nhập"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </extend>
         </extendedCases>
       </useCase>
@@ -611,14 +611,14 @@
             <useCaseMoniker
               Id="7c369a69-367a-4619-a752-f825ed3d567b"
               LastKnownName="Cập Nhật Thông Tin Cá Nhân"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </include>
           <include
             Id="5f6e6905-9df6-4fd5-bdfd-734e5c9e727f">
             <useCaseMoniker
               Id="90b4481c-5c32-4f6a-a023-f4f1115a37f6"
               LastKnownName="Đổi Mật Khẩu"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </include>
         </additions>
       </useCase>
@@ -715,7 +715,7 @@
               <classMoniker
                 Id="cbe8ded2-a30d-422d-960e-5f459dc64a39"
                 LastKnownName="Thể Loại"
-                LastKnownLocation="AVKaraoke Project.uml" />
+                LastKnownLocation="UMLDeepKara.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -749,7 +749,7 @@
             <classMoniker
               Id="92134883-9042-4580-bc1b-1f557fdd953c"
               LastKnownName="Âm Thanh"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -829,7 +829,7 @@
             <classMoniker
               Id="92134883-9042-4580-bc1b-1f557fdd953c"
               LastKnownName="Âm Thanh"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
         <targetEnds>
@@ -843,7 +843,7 @@
             <classMoniker
               Id="442867ec-2ff1-4f64-87c1-92ac0368556c"
               LastKnownName="VideoRecord"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -925,7 +925,7 @@
             <classMoniker
               Id="92134883-9042-4580-bc1b-1f557fdd953c"
               LastKnownName="Âm Thanh"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
@@ -957,7 +957,7 @@
             <classMoniker
               Id="409eea72-49b3-40f5-8b8b-74755f8276c1"
               LastKnownName="VideoKaraoke"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
@@ -989,7 +989,7 @@
             <classMoniker
               Id="409eea72-49b3-40f5-8b8b-74755f8276c1"
               LastKnownName="VideoKaraoke"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
@@ -1142,7 +1142,7 @@
             <classMoniker
               Id="409eea72-49b3-40f5-8b8b-74755f8276c1"
               LastKnownName="VideoKaraoke"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -1204,7 +1204,7 @@
             <classMoniker
               Id="609118cb-882b-4517-9741-152811b617a0"
               LastKnownName="SongVocal"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -1394,7 +1394,7 @@
               <classMoniker
                 Id="260aac0f-535d-4742-90d6-c6b56ce600ae"
                 LastKnownName="Điểm"
-                LastKnownLocation="AVKaraoke Project.uml" />
+                LastKnownLocation="UMLDeepKara.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -1524,7 +1524,7 @@
             <classMoniker
               Id="adfb870e-5e32-467d-9da4-f8dd18a80350"
               LastKnownName="Người dùng"
-              LastKnownLocation="AVKaraoke Project.uml" />
+              LastKnownLocation="UMLDeepKara.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -1591,6 +1591,14 @@
       <class
         Id="115a3d8c-4a2d-4c52-9999-47cec2a46616"
         name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f1c2f9e8-cf5f-4ac4-88b3-658e55bc7f25"
+        name="Class2"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />

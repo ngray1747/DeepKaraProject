@@ -33,3 +33,6 @@ C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\Debug\UseCo
 C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\Debug\UseControl\FacebbokPost.baml
 C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\Debug\UseControl\Scored.g.cs
 C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\Debug\UseControl\Scored.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\BlueKara Design.exe.config
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design.exe
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design.pdb
