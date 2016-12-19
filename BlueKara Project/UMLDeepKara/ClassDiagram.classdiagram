@@ -422,11 +422,6 @@
         <elementDefinition Id="260aac0f-535d-4742-90d6-c6b56ce600ae" />
       </referencedType>
     </packageHasNamedElement>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="32aed464-7998-4f27-b55a-199ab7e19697" name="Class2" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="f1c2f9e8-cf5f-4ac4-88b3-658e55bc7f25" />
-      </class>
-    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="920cdd68-7988-482f-975a-0e8ae6ecb7fa" name="AVKaraoke Project">
     <elementDefinition Id="a6a3f503-7a5a-44c9-8b6a-98055897f617" />
