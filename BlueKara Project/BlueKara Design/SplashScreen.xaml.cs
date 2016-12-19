@@ -22,6 +22,7 @@ namespace BlueKara_Design
         public SplashScreen()
         {
             InitializeComponent();
+            //test github change
         }
     }
 }
