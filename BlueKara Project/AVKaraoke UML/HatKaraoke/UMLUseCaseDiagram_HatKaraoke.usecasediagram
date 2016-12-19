@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="8b1fce5e-1ad6-49b4-8413-a2d6ea992c6d" name="UMLUseCaseDiagram_HatKaraoke" linkedPackageId="83ebb6ac-c1cd-4d75-aa92-ba70d9ef5c46" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="0029d3d6-d8a3-4463-beec-8f8beacbb6f0" name="Người Hát" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7dea3687-7ed9-4e11-a4ea-6e173730a8ad" />
+        <targetEnds>
+          <association Id="2bd184ac-693f-4bcf-8923-89a27d02863b" isDerived="false" sourceEndRoleName="Người Hát" targetEndRoleName="Tạo tài khoản" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="12ec5b9c-5995-4f0d-bde2-2bc5ddc6849a" LastKnownName="Tạo tài khoản" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="39832801-d2d8-4757-8fdf-087fa9a823d5" name="Người Hát" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8c80c257-af78-4435-9ad5-f7cf1de95cf2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ef7ecc08-7262-4865-9969-b6e23f260994" name="Tạo tài khoản" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7ac184eb-3cfb-48d3-b0ee-e8cbbca52d0d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="107b8408-81b8-40c6-a44d-093b00083cd1" />
+          </association>
+          <association Id="a06773d3-1fda-4305-833d-aadc5a08361f" isDerived="false" sourceEndRoleName="Người Hát" targetEndRoleName="Đăng nhập" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1f6a1dc2-4eec-4a3b-8489-8d074154f730" LastKnownName="Đăng nhập" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d6e3d52-8e34-49b7-b72f-80339d703de0" name="Người Hát" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="364fe3ae-19c3-447f-8213-63e2a2217bcd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e3b0c97f-8c76-4c7f-9188-822464c9bd6c" name="Đăng nhập" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d289acf3-5946-4105-8ee8-e12554b0eccd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="033b5390-d903-483a-8c62-62251bccd1fa" />
+          </association>
+          <association Id="3722b5b6-59d8-4599-91bc-110aeac69892" isDerived="false" sourceEndRoleName="Người Hát" targetEndRoleName="Hát Karaoke" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="cde76abd-ef49-40c9-9f2c-b65e44090094" LastKnownName="Hát Karaoke" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bde6c40c-b15d-4ebb-bfe3-f0e00feed85c" name="Người Hát" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7c2dea38-d1dd-44e6-a76c-351905159790" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cf43d43e-c0ab-4366-9328-b11e9a1ef04d" name="Hát Karaoke" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="901ff5ae-69c0-4513-8260-99944b4d2ca5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="737e4960-c6dd-41f7-9425-17e22fabdaae" />
+          </association>
+          <association Id="d298ae91-d330-46e1-ae47-6092f9162be7" isDerived="false" sourceEndRoleName="Người Hát" targetEndRoleName="Nghe nhạc đoán tên bài hát" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="140227e4-168c-44a9-8ff1-34ccdaf91fc5" LastKnownName="Nghe nhạc đoán tên bài hát" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="df2f5096-b1aa-4d3b-b2f1-cd28eca8d1b1" name="Người Hát" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4bcbf77b-f245-47c9-8a23-f8617cfcf14f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd91f595-4131-424f-9c6f-c2061d97f560" name="Nghe nhạc đoán tên bài hát" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b4c514a5-e84e-4911-9c3a-71a61b07d896" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1f463d97-04fb-4aef-811d-b44470408944" />
+          </association>
+          <association Id="10ca5984-4df9-4856-bb2d-7dd08d2bb3b8" isDerived="false" sourceEndRoleName="Người Hát" targetEndRoleName="Quản lý thông tin tài khoản" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="06995589-fed0-42f9-a8ba-a9f29ff0df44" LastKnownName="Quản lý thông tin tài khoản" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d5305ab-2373-4779-bf2a-74acee370215" name="Người Hát" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2a4f9829-90c2-4a73-96a5-af6a3084f3cc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f7857694-928c-4f51-84ff-a1b8577be2f3" name="Quản lý thông tin tài khoản" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4ecf8605-8468-42fa-a1f2-79619dae5a6c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a39585f0-1e96-4450-ae9d-d4df9c266948" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1f6a1dc2-4eec-4a3b-8489-8d074154f730" name="Đăng nhập" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="02741fdf-7f3b-46ec-ae54-22cef4a3ba8c" />
+        <additions>
+          <include Id="ada58bc5-1b7a-4989-ae91-b5e27c946fb9">
+            <useCaseMoniker Id="9d21c932-a421-419c-8715-557f30d85847" LastKnownName="Kiểm tra đăng nhập" />
+            <elementDefinition Id="fc88c09e-e6ac-47d3-9fa7-a203b03c09cb" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="12ec5b9c-5995-4f0d-bde2-2bc5ddc6849a" name="Tạo tài khoản" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="68c0bb59-e6a7-4203-a5c8-2f8e0836eea9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9d21c932-a421-419c-8715-557f30d85847" name="Kiểm tra đăng nhập" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c15f1254-124b-4785-bc46-ab004a219970" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="58b18187-6a3b-4b59-91e5-853b93dd5bd1" name="Hát Online" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="01f4bd76-fffd-4082-8ce8-6d4f9ebcaa1f" />
+        <generalsInternal>
+          <generalization Id="deb81dbc-c2d2-45da-b8d2-ac264b466615" isSubstitutable="false">
+            <useCaseMoniker Id="cde76abd-ef49-40c9-9f2c-b65e44090094" LastKnownName="Hát Karaoke" />
+            <elementDefinition Id="63838fd8-1ab2-46ea-8d6a-d7b394119726" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="92cee4cd-e668-4449-8a77-15c122c2b862" name="Hát Offline" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d3e47c9c-a9fc-4e26-a348-1a92442b6489" />
+        <generalsInternal>
+          <generalization Id="f85ebe2b-dd3e-4f68-8107-3ea63e1f2abc" isSubstitutable="false">
+            <useCaseMoniker Id="cde76abd-ef49-40c9-9f2c-b65e44090094" LastKnownName="Hát Karaoke" />
+            <elementDefinition Id="0109baef-1893-4343-9752-821d92181b66" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="cde76abd-ef49-40c9-9f2c-b65e44090094" name="Hát Karaoke" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="03c2d4fe-471b-468b-b0fd-bf5d6b2aeaa1" />
+        <additions>
+          <include Id="f60921dc-0ab4-4c24-883c-edea9aa0712a">
+            <useCaseMoniker Id="e8fe3288-7993-47fe-84dd-101b916ef287" LastKnownName="Chấm Điểm Tự Động" />
+            <elementDefinition Id="e4d1ea85-95cc-4d0a-a500-b841734ab289" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="140227e4-168c-44a9-8ff1-34ccdaf91fc5" name="Nghe nhạc đoán tên bài hát" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e597b7fb-e251-45c9-b50a-50e33b522534" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="29a622e7-0c2d-486a-9c7d-6c87e9381066" name="Đoán nhạc trẻ" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6f2d0905-61a4-4c27-a999-8fac080b91a0" />
+        <generalsInternal>
+          <generalization Id="a3847d39-41cb-4e04-8cb1-4f4ac0db642e" isSubstitutable="false">
+            <useCaseMoniker Id="140227e4-168c-44a9-8ff1-34ccdaf91fc5" LastKnownName="Nghe nhạc đoán tên bài hát" />
+            <elementDefinition Id="cf191d18-6f5b-4312-8a0d-1969d3e11dc4" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1abaf433-cbb9-40e4-9df4-56aa849882a3" name="Đoán nhạc Bolero" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3b94b25d-f063-4356-9680-cd2247de4b26" />
+        <generalsInternal>
+          <generalization Id="fdbea596-a5c0-4cd3-a36b-71e12abdb306" isSubstitutable="false">
+            <useCaseMoniker Id="140227e4-168c-44a9-8ff1-34ccdaf91fc5" LastKnownName="Nghe nhạc đoán tên bài hát" />
+            <elementDefinition Id="7d138d9b-99e4-4e60-aa78-e3f3e8d585a7" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a730719e-54e7-45a2-8526-55e74b910cb7" name="Đoán nhạc thiếu nhi" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6abbe8ec-92ba-48c8-be9f-48dd1a2bcb22" />
+        <generalsInternal>
+          <generalization Id="590b17c2-e097-4df5-9b62-dc7d081bbeb9" isSubstitutable="false">
+            <useCaseMoniker Id="140227e4-168c-44a9-8ff1-34ccdaf91fc5" LastKnownName="Nghe nhạc đoán tên bài hát" />
+            <elementDefinition Id="28b64ca5-508b-4852-a61c-bee1539cfa6e" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="39932915-057d-4abc-adad-d2dc1dea1bc5" name="Đoán nhạc Cách Mạng" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="106a57b8-5988-4ef3-930d-6a895fb0a85d" />
+        <generalsInternal>
+          <generalization Id="b86de3ba-e966-40c9-a6c0-1eb61d192c4d" isSubstitutable="false">
+            <useCaseMoniker Id="140227e4-168c-44a9-8ff1-34ccdaf91fc5" LastKnownName="Nghe nhạc đoán tên bài hát" />
+            <elementDefinition Id="700d1198-5387-4099-91c5-8adfb6eaf58e" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bd200913-1d7a-4345-95d6-79fe47acf57f" name="Đoán nhạc Pop Âu Mỹ" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1685fd66-61bc-4f50-936b-c1bfb8b79653" />
+        <generalsInternal>
+          <generalization Id="33408ce9-d24d-4fa9-900d-e72a4354b1c2" isSubstitutable="false">
+            <useCaseMoniker Id="140227e4-168c-44a9-8ff1-34ccdaf91fc5" LastKnownName="Nghe nhạc đoán tên bài hát" />
+            <elementDefinition Id="4879b9a5-27fb-42ad-9690-0668ae299018" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0b5ab3f2-7a24-4217-9ae7-b8b7113ecca5" name="Cộng Điểm" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c57d2570-ddfc-4e4d-9475-9fdaa692d75b" />
+        <extendedCases>
+          <extend Id="8fa04f67-5c83-4215-8956-fc7862d16cf1">
+            <useCaseMoniker Id="140227e4-168c-44a9-8ff1-34ccdaf91fc5" LastKnownName="Nghe nhạc đoán tên bài hát" />
+            <elementDefinition Id="3b9f3ab2-fa76-41de-bf2e-719404328cba" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="91f1cd89-2e92-4be8-9800-de77cfaefa1b" name="Nâng Level" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="068bc171-e9bf-4e5b-9e7b-e11cced8bfe3" />
+        <extendedCases>
+          <extend Id="4723d66b-5067-4f53-8162-ebeb8c0a6177">
+            <useCaseMoniker Id="0b5ab3f2-7a24-4217-9ae7-b8b7113ecca5" LastKnownName="Cộng Điểm" />
+            <elementDefinition Id="481654f5-d9ba-44aa-a3f7-c37ac93037de" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e8fe3288-7993-47fe-84dd-101b916ef287" name="Chấm Điểm Tự Động" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="12ad5691-ecd9-4e2c-b932-969617fea73f" />
+        <additions>
+          <include Id="d9b9d942-9b35-4182-95da-9e1329407704">
+            <useCaseMoniker Id="0b5ab3f2-7a24-4217-9ae7-b8b7113ecca5" LastKnownName="Cộng Điểm" />
+            <elementDefinition Id="1e8d4efe-21ae-4715-893b-1a8b6be39912" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2358c23c-739a-425e-bbae-03c373dec2ad" name="Thưởng đồ vật" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3a521000-71cc-4280-8ad9-8914d6fefee9" />
+        <extendedCases>
+          <extend Id="1ba64846-885c-4b6b-aebc-25802bbecf6b">
+            <useCaseMoniker Id="91f1cd89-2e92-4be8-9800-de77cfaefa1b" LastKnownName="Nâng Level" />
+            <elementDefinition Id="781a5806-d7aa-4b15-bf94-5c19bbd86b38" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d2645e05-77bb-435b-bd12-debc1a3b9b01" name="Block tài khoản nếu sai quá 5 lần" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="406b8a1a-c25f-4628-bd32-74ed55935748" />
+        <extendedCases>
+          <extend Id="10240d17-360a-4790-b15b-599b51e13408">
+            <useCaseMoniker Id="9d21c932-a421-419c-8715-557f30d85847" LastKnownName="Kiểm tra đăng nhập" />
+            <elementDefinition Id="e039887b-c93b-4661-9d97-04834b6190df" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="06995589-fed0-42f9-a8ba-a9f29ff0df44" name="Quản lý thông tin tài khoản" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="257032fb-f62f-4121-a124-5ed221d28fff" />
+        <additions>
+          <include Id="513613ff-bdd5-47f9-99c4-ac91d8353ec8">
+            <useCaseMoniker Id="1d546fbd-a74d-4e5a-b3e8-0f66644ba7a7" LastKnownName="Cập Nhật Thông Tin Cá Nhân" />
+            <elementDefinition Id="f146fa22-079d-4015-8734-235e84be538e" />
+          </include>
+          <include Id="d2ec4c3b-a4b7-47f8-8dba-6d4becd6173e">
+            <useCaseMoniker Id="c0ef430c-402e-41f4-9e73-d996aa72b7d3" LastKnownName="Đổi Mật Khẩu" />
+            <elementDefinition Id="c6eab173-2724-48e2-aeb7-ca99ff739ed2" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1d546fbd-a74d-4e5a-b3e8-0f66644ba7a7" name="Cập Nhật Thông Tin Cá Nhân" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="95a65db2-b89a-42f6-bcfe-886f92c02162" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c0ef430c-402e-41f4-9e73-d996aa72b7d3" name="Đổi Mật Khẩu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="44a1ee77-5e1e-4b06-92fa-cf7dd84a8742" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0c154dd8-cef4-4089-974d-191c06aae4a8" name="Ghi âm" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f10038bc-1234-4c0b-a007-0e1820fddd32" />
+        <extendedCases>
+          <extend Id="54246a5c-580b-46c1-bd75-8db3842e0907">
+            <useCaseMoniker Id="cde76abd-ef49-40c9-9f2c-b65e44090094" LastKnownName="Hát Karaoke" />
+            <elementDefinition Id="133950e7-4a69-420d-8ec5-12f4e9c06a84" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="a475fd8c-e61c-4467-8c3b-ebda8078491b">
+            <useCaseMoniker Id="56853672-cd82-4763-8785-a6cd82031088" LastKnownName="Chia sẻ facebook" />
+            <elementDefinition Id="3e0d0229-81cd-41fc-be24-45c3236490b8" />
+          </include>
+          <include Id="79e127da-8401-4cdc-978f-7909f3158a86">
+            <useCaseMoniker Id="0237a171-e13e-489c-a97f-cc864978992d" LastKnownName="Lưu file ghi âm" />
+            <elementDefinition Id="1b3f819c-49f5-40a0-b2fc-e3ba868ab7bd" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="56853672-cd82-4763-8785-a6cd82031088" name="Chia sẻ facebook" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a87bd0d0-b277-419f-be20-7514dc50e360" />
+        <targetEnds>
+          <association Id="01874aa5-bbe1-483a-9a1d-2c5055fd337c" isDerived="false" sourceEndRoleName="Chia sẻ facebook" targetEndRoleName="Facebook" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="084ddc17-98de-4946-a3ec-f20521c2b34e" LastKnownName="Facebook" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dfa04e4b-c930-4784-b497-08f0e89394f4" name="Chia sẻ facebook" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="274edd9c-bfd7-4efc-adf9-3ed9a5a391d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8724e804-e9b0-403e-859c-6421101e8677" name="Facebook" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0d31c0a5-45e9-4ff4-a024-18e75dbbc149" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="46d7cdea-6ab9-418a-955d-2bffbeb8bd13" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0237a171-e13e-489c-a97f-cc864978992d" name="Lưu file ghi âm" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="988ab332-ace5-49e1-87ab-1ff6cf8a5a37" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="084ddc17-98de-4946-a3ec-f20521c2b34e" name="Facebook" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="95257c78-7004-4f4e-aeb4-e3cc323f38ec" />
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="83ebb6ac-c1cd-4d75-aa92-ba70d9ef5c46" name="HatKaraoke">
+    <elementDefinition Id="6d3dfd0d-b689-4a8d-b017-68bff1a2841c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="bb213ad6-f477-4538-ae56-683a57017d7d">
+        <profileInstance Id="248936ea-a8e9-4517-a0ab-acea471a9f4f" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f6fe5dd1-5edd-4310-864f-c16d7488b340">
+        <profileInstance Id="2f65024f-e340-4a2b-a8e0-bb089d7f44d9" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,31 @@
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\bin\x64\Debug\BlueKara Design.exe.config
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\bin\x64\Debug\BlueKara Design.exe
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\bin\x64\Debug\BlueKara Design.pdb
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\bin\x64\Debug\MahApps.Metro.dll
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\bin\x64\Debug\System.Windows.Interactivity.dll
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\bin\x64\Debug\WPF.MDI.dll
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\bin\x64\Debug\MahApps.Metro.pdb
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\bin\x64\Debug\MahApps.Metro.xml
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\BlueKara Design.csprojResolveAssemblyReference.cache
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\CreateAccount.g.cs
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\Login.g.cs
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\MainHome.g.cs
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\ResetPass.g.cs
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\SplashScreen.g.cs
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\UseControl\VideoPlayer.g.cs
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\App.g.cs
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\BlueKara Design_MarkupCompile.cache
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\BlueKara Design_MarkupCompile.lref
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\App.baml
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\CreateAccount.baml
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\Login.baml
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\MainHome.baml
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\ResetPass.baml
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\SplashScreen.baml
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\UseControl\VideoPlayer.baml
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\BlueKara Design.g.resources
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\BlueKara_Design.Properties.Resources.resources
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\BlueKara Design.csproj.GenerateResource.Cache
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\BlueKara Design.exe
+C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\x64\Debug\BlueKara Design.pdb

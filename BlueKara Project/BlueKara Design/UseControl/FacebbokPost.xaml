@@ -1,0 +1,40 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BlueKara_Design.UseControl"
+             xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" x:Class="BlueKara_Design.UseControl.FacebbokPost"
+             mc:Ignorable="d" 
+            BorderBrush="#2B53CC" BorderThickness="2"
+             d:DesignHeight="450" d:DesignWidth="900">
+
+    <Grid Background="White">
+        <Border BorderBrush="Black" Background="#2B53CC" BorderThickness="1" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="900"/>
+        <TextBox x:Name="textBox" FontSize="16" HorizontalAlignment="Left" Margin="133,104,0,295" TextWrapping="Wrap"  Width="753" RenderTransformOrigin="0.512,0.451" Custom:TextBoxHelper.Watermark="Chia sẻ cảm xúc của bạn..."/>
+        <Label x:Name="label" Content="CHIA SẺ LÊN FACEBOOK CỦA BẠN" Foreground="White" FontSize="20"  HorizontalAlignment="Left" Margin="48,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Hủy Bỏ" FontSize="15"  HorizontalAlignment="Left" Margin="780,373,0,0" VerticalAlignment="Top" Width="79" Height="43"/>
+        <ComboBox x:Name="comboBox" ItemsSource="{Binding Images}"   SelectedIndex="0" HorizontalAlignment="Left" Margin="488,373,0,0" VerticalAlignment="Top" Width="145" Height="43"
+                  >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Image}" ></Image>
+                        <TextBlock FontSize="15" Text="{Binding Content}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+
+        </ComboBox>
+        <Image x:Name="image" HorizontalAlignment="Left" Source="../Image/facebook.png" Height="37" Margin="10,10,0,0" VerticalAlignment="Top" Width="38"/>
+        <Button x:Name="button_Copy" Content="Chia Sẻ" FontSize="15"  HorizontalAlignment="Left" Margin="670,373,0,0" VerticalAlignment="Top" Width="79" Height="43"/>
+        <Image x:Name="image1" Source="../Image/My photo on Jobs HoilydayEdit.jpg" HorizontalAlignment="Left" Height="51" Margin="22,104,0,0" VerticalAlignment="Top" Width="71"/>
+        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="1" Margin="0,356,0,0" VerticalAlignment="Top" Width="900"/>
+        <Image x:Name="image2" Source="../Image/Logo.jpg" Stretch="Fill" HorizontalAlignment="Left" Height="180" Margin="133,171,0,0" VerticalAlignment="Top" Width="156"/>
+        <TextBlock x:Name="textBlock" FontStyle="Italic" Foreground="Blue"  FontSize="20" HorizontalAlignment="Left" Margin="312,171,0,0" TextWrapping="Wrap" Text="Bản Thu Âm Ca khúc Căn Nhà Màu Tím" VerticalAlignment="Top" Height="32" Width="552"/>
+        <TextBlock x:Name="textBlock_Copy" FontSize="20" HorizontalAlignment="Left" Margin="312,203,0,0" TextWrapping="Wrap" Text="Trình bày: Nguyễn Thanh Phi" VerticalAlignment="Top" Height="32" Width="552"/>
+        <TextBlock x:Name="textBlock_Copy1" FontSize="17" Foreground="Black" HorizontalAlignment="Left" Margin="312,235,0,0" TextWrapping="Wrap" Text="DeepKara là phần mềm hát karaoke và thua âm trực tiếp trên máy tính. Phần mềm giúp bạn có được những phút giây thư giãn và trải nghiệm giọng hát của mình. Phần mềm được sản xuất bởi Nguyễn Thanh Phi. Vui lòng liên hệ 01265190526 hoặc email tuonglaivinhhang1@gmail.com để được sở hữu miễn phí." FontStyle="Italic" VerticalAlignment="Top" Height="116" Width="574"/>
+
+
+    </Grid>
+</UserControl>

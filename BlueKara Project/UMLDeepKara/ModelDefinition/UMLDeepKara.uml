@@ -1,0 +1,1619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="a6a3f503-7a5a-44c9-8b6a-98055897f617"
+  name="AVKaraoke Project" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <useCase
+        Id="d3524115-6756-46b4-a79d-e777195a1aa5"
+        name="Nghe nhạc đoán tên bài hát"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fca4e1b9-1f1f-41f2-888b-a086e1bbaac7"
+        name="Đoán nhạc trẻ"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="0b54caf2-be4b-4483-a330-cdfe62d2ec72"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="d3524115-6756-46b4-a79d-e777195a1aa5"
+              LastKnownName="Nghe nhạc đoán tên bài hát"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="efa14f87-89bf-464a-a96a-d3d9eb0c14ec"
+        name="Đoán nhạc Bolero"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="321f9f13-0d20-4f87-8a53-b42142344b6f"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="d3524115-6756-46b4-a79d-e777195a1aa5"
+              LastKnownName="Nghe nhạc đoán tên bài hát"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="97e07e40-b6a6-427d-a6d5-772528e27659"
+        name="Đoán nhạc thiếu nhi"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="697b28c7-3e66-4591-af35-5ccbec91886e"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="d3524115-6756-46b4-a79d-e777195a1aa5"
+              LastKnownName="Nghe nhạc đoán tên bài hát"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a2562eb8-c298-4173-b471-00607941fbca"
+        name="Đoán nhạc Cách Mạng"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="f7fe2495-1d2a-42be-8094-163600c5cdec"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="d3524115-6756-46b4-a79d-e777195a1aa5"
+              LastKnownName="Nghe nhạc đoán tên bài hát"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f0667c20-5bf5-41ca-9200-69a6464b1745"
+        name="Đoán nhạc Pop Âu Mỹ"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="4191a444-7039-4c56-a872-93562af1d8ed"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="d3524115-6756-46b4-a79d-e777195a1aa5"
+              LastKnownName="Nghe nhạc đoán tên bài hát"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="64ef8acf-2460-446a-8577-63db9899b457"
+        name="Cộng Điểm"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="09f33881-781d-4267-b6b7-5213893e34d7">
+            <useCaseMoniker
+              Id="d3524115-6756-46b4-a79d-e777195a1aa5"
+              LastKnownName="Nghe nhạc đoán tên bài hát"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d7b7f445-5be4-48bc-9642-c77430c9d57d"
+        name="Nâng Level"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="fa519fd0-123b-49e5-a1bf-dff7b100aeb7">
+            <useCaseMoniker
+              Id="64ef8acf-2460-446a-8577-63db9899b457"
+              LastKnownName="Cộng Điểm"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a687afc7-5327-4371-9875-981d29cf7507"
+        name="Thưởng đồ vật"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c8434e5d-de81-4a4b-9a19-2d2753f5b7b2">
+            <useCaseMoniker
+              Id="d7b7f445-5be4-48bc-9642-c77430c9d57d"
+              LastKnownName="Nâng Level"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b3da5d67-e524-498a-9848-6e2ef5525704"
+        name="Chấm Điểm Tự Động"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9c2570fb-893a-4496-b3d9-cc088025356f">
+            <useCaseMoniker
+              Id="64ef8acf-2460-446a-8577-63db9899b457"
+              LastKnownName="Cộng Điểm"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="c15dfb8f-4433-4c3e-9201-36da22d09567"
+        name="Facebook"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3ecaa98d-0201-4d9e-81e1-59f93ef9b643"
+        name="Chia sẻ facebook"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fcd4e751-b129-4898-bcc0-376db25650d1"
+        name="Chia sẻ facebook"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="9e063094-6707-4a11-a504-fb67db4deee9"
+            isDerived="false"
+            sourceEndRoleName="Chia sẻ facebook"
+            targetEndRoleName="Facebook"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="341847d4-34d7-45f5-a21f-6b062207d440"
+              LastKnownName="Facebook"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3093ca22-9edb-48f9-a34f-b2d254914b84"
+                  name="Chia sẻ facebook"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a309c46e-2a30-4a1d-9d24-4c673cee0c4d"
+                  name="Facebook"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="341847d4-34d7-45f5-a21f-6b062207d440"
+        name="Facebook"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5eac866a-5b9e-43bf-b25d-3a8367fb6ca6"
+        name="Ghi âm"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="dbf78590-47dc-4147-9aa9-2bef79ef54f3">
+            <useCaseMoniker
+              Id="fe30568c-46d1-451b-b221-c5a0d8fdfaee"
+              LastKnownName="Hát Karaoke"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="021a6b0a-a141-4940-966c-2dc76576ce3a">
+            <useCaseMoniker
+              Id="fcd4e751-b129-4898-bcc0-376db25650d1"
+              LastKnownName="Chia sẻ facebook"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </include>
+          <include
+            Id="19e24505-40d9-4bca-9991-23ed38815cd2">
+            <useCaseMoniker
+              Id="be89d540-db3c-4d5f-ae13-7d878d15718c"
+              LastKnownName="Lưu file ghi âm"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="be89d540-db3c-4d5f-ae13-7d878d15718c"
+        name="Lưu file ghi âm"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fe30568c-46d1-451b-b221-c5a0d8fdfaee"
+        name="Hát Karaoke"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="daeaeb36-1096-4478-bbf1-f802aed1c0d7">
+            <useCaseMoniker
+              Id="b3da5d67-e524-498a-9848-6e2ef5525704"
+              LastKnownName="Chấm Điểm Tự Động"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8ef1f7ab-5da4-4682-a3ce-fcdd1eecd7d6"
+        name="Hát Online"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="07ea57e4-e67b-4a17-83df-b95218762287"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="fe30568c-46d1-451b-b221-c5a0d8fdfaee"
+              LastKnownName="Hát Karaoke"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8ebfa9a1-79d3-48bd-870d-4f620723e09c"
+        name="Hát Offline"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="61b9a7ed-01f7-472e-b120-5b5f542549cf"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="fe30568c-46d1-451b-b221-c5a0d8fdfaee"
+              LastKnownName="Hát Karaoke"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="755e98ef-b19c-4a02-8d0f-5b935da985b6"
+        name="Người Hát"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="6415c317-d4cd-4be9-939f-d7acf2fbf249"
+            isDerived="false"
+            sourceEndRoleName="Người Hát"
+            targetEndRoleName="Nghe nhạc đoán tên bài hát"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d3524115-6756-46b4-a79d-e777195a1aa5"
+              LastKnownName="Nghe nhạc đoán tên bài hát"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82b1918e-6580-455b-aec9-ab7ba9682839"
+                  name="Người Hát"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8eb42787-dd09-4bbf-a5fe-da1386b5234e"
+                  name="Nghe nhạc đoán tên bài hát"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7f74c6a6-1b94-4e9f-b5c5-a782522ba163"
+            isDerived="false"
+            sourceEndRoleName="Người Hát"
+            targetEndRoleName="Hát Karaoke"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="fe30568c-46d1-451b-b221-c5a0d8fdfaee"
+              LastKnownName="Hát Karaoke"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6a195b81-83a6-4463-a18a-1875590b2469"
+                  name="Người Hát"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8037db16-9b53-4133-8c7f-bc4e59c154af"
+                  name="Hát Karaoke"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f7538cf9-3a4c-4152-beff-890113fc3bb9"
+            isDerived="false"
+            sourceEndRoleName="Người Hát"
+            targetEndRoleName="Tạo tài khoản"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6fc24c34-3e6e-4f27-844e-25a6ca77c159"
+              LastKnownName="Tạo tài khoản"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f128f67c-b47c-42f1-928b-171d7df09c9f"
+                  name="Người Hát"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eb4e20c5-8d77-4964-83a3-0dc5739afb84"
+                  name="Tạo tài khoản"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d528a2f7-c9b1-48bb-b341-1a813968cb87"
+            isDerived="false"
+            sourceEndRoleName="Người Hát"
+            targetEndRoleName="Đăng nhập"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3db2d7d0-6a05-409e-a38d-fe98cdf8bbcc"
+              LastKnownName="Đăng nhập"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d944e7c-1305-4a19-8bbb-c950725079d4"
+                  name="Người Hát"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="60547cc0-b45d-4c8d-bac3-30b2281d07e2"
+                  name="Đăng nhập"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1eaf58a0-a9cf-474d-9d47-540c90223f99"
+            isDerived="false"
+            sourceEndRoleName="Người Hát"
+            targetEndRoleName="Quản lý thông tin tài khoản"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d8334c80-fc16-4c1f-93f4-fa4bc3b13679"
+              LastKnownName="Quản lý thông tin tài khoản"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a861490-b645-4540-b04b-59eced83e833"
+                  name="Người Hát"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4588f559-ee12-47a9-8a65-113d63a21a64"
+                  name="Quản lý thông tin tài khoản"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6fc24c34-3e6e-4f27-844e-25a6ca77c159"
+        name="Tạo tài khoản"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3db2d7d0-6a05-409e-a38d-fe98cdf8bbcc"
+        name="Đăng nhập"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4c3a02e1-94cb-4ced-ba6a-afe89a2b81e9">
+            <useCaseMoniker
+              Id="58fc5502-bc5d-48fc-bc25-5114b16755f8"
+              LastKnownName="Kiểm tra đăng nhập"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="58fc5502-bc5d-48fc-bc25-5114b16755f8"
+        name="Kiểm tra đăng nhập"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="93255c3e-be3a-48e1-856f-3218780ac221"
+        name="Block tài khoản nếu sai quá 5 lần"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="f45c2b6e-1103-4e62-9a04-8bf875249e0b">
+            <useCaseMoniker
+              Id="58fc5502-bc5d-48fc-bc25-5114b16755f8"
+              LastKnownName="Kiểm tra đăng nhập"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d8334c80-fc16-4c1f-93f4-fa4bc3b13679"
+        name="Quản lý thông tin tài khoản"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="95035d55-b093-44e7-b407-6797ef2de9eb">
+            <useCaseMoniker
+              Id="7c369a69-367a-4619-a752-f825ed3d567b"
+              LastKnownName="Cập Nhật Thông Tin Cá Nhân"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </include>
+          <include
+            Id="5f6e6905-9df6-4fd5-bdfd-734e5c9e727f">
+            <useCaseMoniker
+              Id="90b4481c-5c32-4f6a-a023-f4f1115a37f6"
+              LastKnownName="Đổi Mật Khẩu"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7c369a69-367a-4619-a752-f825ed3d567b"
+        name="Cập Nhật Thông Tin Cá Nhân"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="90b4481c-5c32-4f6a-a023-f4f1115a37f6"
+        name="Đổi Mật Khẩu"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="92134883-9042-4580-bc1b-1f557fdd953c"
+        name="Âm Thanh"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="cd7f5ec2-ebe0-440a-8480-ddf2e45ca161"
+            name="Mã Số"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9e43df48-aba6-4875-a00d-400594ce7fc3"
+            name="Tên"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0492d8f4-3c8a-46f0-bfd3-023bcdedee9a"
+            name="Tác Giả"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0f1b4c79-1c96-41cc-b659-1a98d3b9a805"
+            name="Ca Sĩ"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f2301b21-8b63-44e3-a0aa-badf5e7be1d0"
+            name="Độ Dài"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e31deb8f-7ffa-4f12-a404-dc299178c1d2"
+            name="tl"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="cbe8ded2-a30d-422d-960e-5f459dc64a39"
+                LastKnownName="Thể Loại"
+                LastKnownLocation="AVKaraoke Project.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="32321542-9e5f-4664-a6b5-e89845f0b701"
+            name="Phát Âm Thanh"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cbe8ded2-a30d-422d-960e-5f459dc64a39"
+        name="Thể Loại"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="4739686b-bc7a-4f5a-b3e6-f31738faa3ed"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="92134883-9042-4580-bc1b-1f557fdd953c"
+              LastKnownName="Âm Thanh"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e82727d6-1f1e-45c8-89a2-c0ac3911c892"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d769b2e-c2f3-4cb1-830b-a8ec191f21bc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ef051aff-fced-4ef8-b7f2-e36db5793a31"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="929938b3-0a1d-4922-bcb9-a483dd5c877e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="6bd824a3-1f45-450c-9172-9f6eaab9cac2"
+            name="Tên thể loại"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="564841ea-f4d1-458b-8c3d-31eb428bb25d"
+            name="Miêu Tả"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="409eea72-49b3-40f5-8b8b-74755f8276c1"
+        name="VideoKaraoke"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="67d953e7-746a-4b7f-aea4-906e08a53b56"
+            isSubstitutable="false">
+            <classMoniker
+              Id="92134883-9042-4580-bc1b-1f557fdd953c"
+              LastKnownName="Âm Thanh"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="4992da06-c681-4c79-a6b9-86fc362486d6"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="442867ec-2ff1-4f64-87c1-92ac0368556c"
+              LastKnownName="VideoRecord"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cceb8a39-b3c7-465a-bfe3-d2d695b7318f"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="65ae29a3-ca22-46d9-882a-37db3c10782e"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="69ead787-6c9e-45d8-825e-b95715b8c833"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c638ce20-231c-4224-adc6-bf81fbe0d9ef"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="53607311-6680-4ed9-ab34-c5eb82dc0c05"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8bdd87c3-3604-473c-9c15-338e10837b49"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c5e6eac5-9448-4ab9-bbad-9bee9c88852e"
+            name="Định dạng video"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="609118cb-882b-4517-9741-152811b617a0"
+        name="SongVocal"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="f65e7a3b-271e-4486-b568-a622163e3669"
+            isSubstitutable="false">
+            <classMoniker
+              Id="92134883-9042-4580-bc1b-1f557fdd953c"
+              LastKnownName="Âm Thanh"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="f987cfd4-df30-4827-8d47-63c3df1c5e6f"
+            name="Bitrate"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9911bf55-d2a9-4e69-b5bd-749c7627a7ef"
+        name="VideoOffline"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="c7f3eb85-63ed-49d0-b9f8-a61990ba882e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="409eea72-49b3-40f5-8b8b-74755f8276c1"
+              LastKnownName="VideoKaraoke"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d57c40e7-180a-4fb6-bc74-1c2e5e33cfc2"
+            name="Đường Dẫn Trên Máy Tính"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cc9d2e63-d4e0-437a-9aa5-9bac48955cd3"
+        name="VideoOnline"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="9a30d876-4f39-42cc-a2ed-25a30bfd8f96"
+            isSubstitutable="false">
+            <classMoniker
+              Id="409eea72-49b3-40f5-8b8b-74755f8276c1"
+              LastKnownName="VideoKaraoke"
+              LastKnownLocation="AVKaraoke Project.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="7e62a22c-7207-430d-9eaf-4e363d1b81f8"
+            name="URL Video"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="22605005-0dd9-4ff4-9270-f661b5d60247"
+            name="Độ Phân Giải"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9d9e43af-6183-42ac-bb4d-cab60d9fe8a8"
+            name="Ngày Cập Nhật"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="442867ec-2ff1-4f64-87c1-92ac0368556c"
+        name="VideoRecord"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="2a65406d-0be9-4948-82a0-03b08d7fd76a"
+            name="Mã Video"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ed8aa56b-66a5-4bf5-99cd-3cfbb8821702"
+            name="Tên"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c0bda2cd-d54a-4659-9594-146402b34a65"
+            name="Ngày Record"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="00ae9f69-f2b5-4256-8611-d8cf8a724884"
+            name="Người Record"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="711e148a-6a97-43c4-9592-bea0fdeaf17b"
+            name="Status"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="df27774e-16dc-4489-8cf0-49f14d79446a"
+            name="Đường Dẫn Lưu File"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="08bee79f-e9bf-4eb0-a614-ce587889ba08"
+            name="Chia sẻ Video"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b5ad54eb-5626-41d5-be84-c8a6ca4ccd8c"
+            name="Nghe Lại Video"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="adfb870e-5e32-467d-9da4-f8dd18a80350"
+        name="Người dùng"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="cd49db48-2386-4d93-954f-a8f50c28451f"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="409eea72-49b3-40f5-8b8b-74755f8276c1"
+              LastKnownName="VideoKaraoke"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7828af8f-e1db-40ae-a64b-40d6a556d104"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="36ec5a13-3ae9-4439-bf0e-286c4110317e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2b65e7f0-97c7-44b4-a6a5-e59c63fe05bb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2fbf27c6-dc89-4599-8171-94fdd8ba201e"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5425ecfd-b3fd-4906-aa39-5e492a53fde6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1fc22425-88ee-44ff-819d-4d981eb247d2"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d008cba4-f009-4a8c-bde3-163572e61f1c"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="609118cb-882b-4517-9741-152811b617a0"
+              LastKnownName="SongVocal"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c9ffc076-74d3-4d90-9a77-f3c1b5ddd647"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e09945b0-2932-4840-9794-e7546c64ca32"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="db72d41e-9c46-4e4a-93ed-358002ea882d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1b4eaddf-83ac-4dc8-beea-9279d03dc24f"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3c36540f-ddc3-44db-ae8d-89e881c76159"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="eea4570b-7bbd-432f-b201-0a1e92a2ae00"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="b666db0e-39ac-4843-a3f4-ad6d80d1db61"
+            name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a720cf93-24ca-4121-8605-6a4528053c14"
+            name="Họ Tên"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ed7ca841-a39b-4f0d-b5dc-a752e32145c7"
+            name="Ngày Sinh"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0e15c98c-dc56-49de-8ab9-370222acfaff"
+            name="Điện thoại"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d97c9378-fd46-4348-b147-0e01cef002b6"
+            name="Email"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2f47e43f-926b-40e1-8adc-8de131a3dd74"
+            name="Địa Chỉ Facebook"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="37516971-b7ba-4971-9def-0014af03a958"
+            name="Tên Đăng Nhập"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d9680aad-3c4c-4994-afb6-cca96e506eb7"
+            name="Mật Khẩu"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="08e60df1-75a9-4bee-ac3f-5f6c8796959b"
+            name="Nghề Nghiệp"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="fa26d02a-9697-4edb-b06f-7f072eb44c01"
+            name="Level"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="288c39ee-40b3-4925-b05d-e3565ee16fcd"
+            name="Avatar"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="079ea02f-beca-4d98-beb0-b92362aea049"
+            name="Score"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="260aac0f-535d-4742-90d6-c6b56ce600ae"
+                LastKnownName="Điểm"
+                LastKnownLocation="AVKaraoke Project.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0a04bf2e-edc2-4fdf-a384-9bec12c981ad"
+            name="Hát Karaoke"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2ee50ed4-85f8-450c-ae0c-52fa255e074a"
+            name="Đoán Bài Hát"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="047550a3-1bf1-4f50-ba9e-c990785438e0"
+        name="Chi Tiết Lần Hát"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="669871d7-e6b2-41e3-9eb2-593b2a9de643"
+            name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b8de5878-c77c-408a-94cb-cdc88c9946be"
+            name="Ngày Hát"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="3c5e26e4-6576-4720-9ad1-7bd1cd930eed"
+            name="Điểm Số"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cbed795a-7bbb-40c8-9755-20167cf3af54"
+        name="Chi Tiết Lần Đoán"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="eaed3064-4d7d-4266-bb5a-922eb00e908d"
+            name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="36f13fd1-0234-429f-9b6d-d0d78622ea74"
+            name="Ngày Đoán"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6206adbf-291a-4d7b-8ede-1c605915f112"
+            name="Status"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="260aac0f-535d-4742-90d6-c6b56ce600ae"
+        name="Điểm"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="0daadbc1-f459-47ac-b4b4-f23baa136a26"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="adfb870e-5e32-467d-9da4-f8dd18a80350"
+              LastKnownName="Người dùng"
+              LastKnownLocation="AVKaraoke Project.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a3fc4427-6c67-4130-a3a7-591ac3b1f563"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="59cb4de6-0839-492c-b45a-b213f00ab63e"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="ae27b0a9-0818-4f6f-949d-6fd7346fc682"
+            name="Số Điểm Hiện Tại"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e96f57c9-9310-4949-8909-28174cfe139d"
+            name="Còn Bao Nhiêu Điểm Lên Level?"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="67105c2d-2ac7-4fd9-81bb-91148de08dd6"
+            name="Set Điểm"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="115a3d8c-4a2d-4c52-9999-47cec2a46616"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
