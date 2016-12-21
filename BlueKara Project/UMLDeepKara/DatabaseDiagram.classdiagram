@@ -6,20 +6,6 @@
       <body>Đã chia sẻ facebook hay chưa ?</body>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="82f32c86-4a28-447a-a389-d76c4681afb5">
-      <profileInstance Id="ddb0c5c5-1c9a-41c8-b34a-a51f02fa9596" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="a5fb6239-0f7c-4b2c-a6b3-28e886d207be">
-      <profileInstance Id="137fb12a-a0e6-46ec-8867-2663369e5311" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="9f1ee5bc-74e3-4f68-a640-8f021a1d8214" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
@@ -493,5 +479,19 @@
   </packagedElements>
   <package Id="b13e7a6c-2bc2-421b-8b13-61040ebba104" name="AVKaraoke Project">
     <elementDefinition Id="a6a3f503-7a5a-44c9-8b6a-98055897f617" />
+    <profileInstances>
+      <packageHasProfileInstances Id="82f32c86-4a28-447a-a389-d76c4681afb5">
+        <profileInstance Id="ddb0c5c5-1c9a-41c8-b34a-a51f02fa9596" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a5fb6239-0f7c-4b2c-a6b3-28e886d207be">
+        <profileInstance Id="137fb12a-a0e6-46ec-8867-2663369e5311" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
