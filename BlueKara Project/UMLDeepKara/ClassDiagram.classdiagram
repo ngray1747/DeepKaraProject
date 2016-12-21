@@ -275,9 +275,6 @@
           <property Id="3cf8125f-e9ee-4f69-84aa-b65abaef98e0" name="Địa Chỉ Facebook" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="2f47e43f-926b-40e1-8adc-8de131a3dd74" />
           </property>
-          <property Id="a2826e41-86e1-4f95-bf58-147f08b3c982" name="Tên Đăng Nhập" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="37516971-b7ba-4971-9def-0014af03a958" />
-          </property>
           <property Id="0b86f74b-1775-4ae9-817d-ec0398a4c1df" name="Mật Khẩu" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="d9680aad-3c4c-4994-afb6-cca96e506eb7" />
           </property>
@@ -295,6 +292,9 @@
             <type_NamedElement>
               <referencedTypeMoniker Id="5c0510ec-4745-4b1e-a589-fc9fd9244844" LastKnownName="Level" />
             </type_NamedElement>
+          </property>
+          <property Id="1f32ce0f-8d11-4839-87b7-ec099919339c" name="Tên Đăng Nhập" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="30704c4c-113a-43ff-b087-c8a461893c56" />
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
