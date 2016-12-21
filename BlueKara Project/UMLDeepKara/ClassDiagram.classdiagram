@@ -2,67 +2,34 @@
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="3ff6d556-5408-4db9-b40a-d089037b2317" name="ClassDiagram" linkedPackageId="920cdd68-7988-482f-975a-0e8ae6ecb7fa" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
-      <class Id="698d99a8-869b-49c4-937e-b0f76b67ce74" name="Âm Thanh" isAbstract="true" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="92134883-9042-4580-bc1b-1f557fdd953c" />
-        <ownedAttributesInternal>
-          <property Id="70da98b3-3e9a-44c9-9398-825488e38dc0" name="Mã Số" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="cd7f5ec2-ebe0-440a-8480-ddf2e45ca161" />
-          </property>
-          <property Id="70b562c0-a3d7-4b37-b9b8-8bf750c2b0e9" name="Tên" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="9e43df48-aba6-4875-a00d-400594ce7fc3" />
-          </property>
-          <property Id="daa77d2f-2dd6-4a6e-a335-69c373b837e2" name="Tác Giả" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="0492d8f4-3c8a-46f0-bfd3-023bcdedee9a" />
-          </property>
-          <property Id="ccd8595c-3ec8-46b1-9e4f-92d22e8acea5" name="Ca Sĩ" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="0f1b4c79-1c96-41cc-b659-1a98d3b9a805" />
-          </property>
-          <property Id="29cb7f00-5ad8-4629-95fb-b031508a2f9d" name="Độ Dài" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="f2301b21-8b63-44e3-a0aa-badf5e7be1d0" />
-          </property>
-          <property Id="573aceb1-4583-438b-bfdd-8d9facd6f83c" name="tl" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="e31deb8f-7ffa-4f12-a404-dc299178c1d2" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="acd3a48e-dca6-4929-9b6d-21b9748e148d" LastKnownName="Thể Loại" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="76f4796d-72e9-4175-883f-ad7de6e24232" name="Phát Âm Thanh" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="32321542-9e5f-4664-a6b5-e89845f0b701" />
-          </operation>
-        </ownedOperationsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
       <class Id="07c69202-a53b-4b08-bb81-3e530d43d5a6" name="Thể Loại" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="cbe8ded2-a30d-422d-960e-5f459dc64a39" />
         <targetEnds>
-          <association Id="cf54ea70-58d6-46a0-9bc2-7feba8ecbf7d" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
-            <classMoniker Id="698d99a8-869b-49c4-937e-b0f76b67ce74" LastKnownName="Âm Thanh" />
+          <association Id="003f8786-d683-4eec-8121-80a934ac4db0" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="359e32da-186e-4abc-825c-93ce81245914" LastKnownName="VideoKaraoke" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="c4460f6c-3dce-47a1-a8e7-f6a3d16dd928" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="e82727d6-1f1e-45c8-89a2-c0ac3911c892" />
+                <memberEnd Id="bcf32358-21d1-496b-a7c9-44b7be31a12a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6094d76b-5cca-4aa9-9022-1dcd1e4635cd" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="b1c410dd-e7fd-4fd7-8d8a-c459765f18cb" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="18de9cca-8ea8-478a-a1dd-657b390fbfc6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <lowerValueInternal>
-                    <literalString Id="eacf85db-844c-4a24-aab1-3b9d3ac34f43" name="Lower" value="*">
-                      <elementDefinition Id="ef051aff-fced-4ef8-b7f2-e36db5793a31" />
+                    <literalString Id="65901831-950d-405a-a646-fa5b19697320" name="Lower" value="*">
+                      <elementDefinition Id="4e43e04a-fc9b-4600-b554-8f87f125bee4" />
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="f907ff14-d000-4e0d-aa6f-ab51623766fb" name="Upper" value="*">
-                      <elementDefinition Id="929938b3-0a1d-4922-bcb9-a483dd5c877e" />
+                    <literalString Id="108ef66d-fe49-4f3f-9a7a-3feb44145211" name="Upper" value="*">
+                      <elementDefinition Id="c084d1a1-adbc-4684-95de-1a172b4960ea" />
                     </literalString>
                   </upperValueInternal>
-                  <elementDefinition Id="2d769b2e-c2f3-4cb1-830b-a8ec191f21bc" />
+                  <elementDefinition Id="2e6512b6-1871-43a7-81c3-047e8cceec98" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="4739686b-bc7a-4f5a-b3e6-f31738faa3ed" />
+            <elementDefinition Id="f98877ad-19f6-4944-a21e-69cd8aa2ec7a" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -78,12 +45,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="359e32da-186e-4abc-825c-93ce81245914" name="VideoKaraoke" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="409eea72-49b3-40f5-8b8b-74755f8276c1" />
-        <generalsInternal>
-          <generalization Id="bb6938b4-117d-4658-8bef-cb3b1ce0f2fc" isSubstitutable="false">
-            <classMoniker Id="698d99a8-869b-49c4-937e-b0f76b67ce74" LastKnownName="Âm Thanh" />
-            <elementDefinition Id="67d953e7-746a-4b7f-aea4-906e08a53b56" />
-          </generalization>
-        </generalsInternal>
         <targetEnds>
           <association Id="c2343d64-ecfb-4c50-84df-58495167c84c" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
             <classMoniker Id="79774b8d-581e-495a-a389-77e106dfe500" LastKnownName="VideoRecord" />
@@ -126,30 +87,21 @@
           <property Id="35b85b30-86d7-4a43-ac38-b0bef92fdb3f" name="Định dạng video" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="c5e6eac5-9448-4ab9-bbad-9bee9c88852e" />
           </property>
-        </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="566ad612-b598-4729-90de-0e4953485c42" name="SongVocal" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="609118cb-882b-4517-9741-152811b617a0" />
-        <generalsInternal>
-          <generalization Id="f0d006df-2080-44ef-9c58-9f6a5163252a" isSubstitutable="false">
-            <classMoniker Id="698d99a8-869b-49c4-937e-b0f76b67ce74" LastKnownName="Âm Thanh" />
-            <elementDefinition Id="f65e7a3b-271e-4486-b568-a622163e3669" />
-          </generalization>
-        </generalsInternal>
-        <ownedAttributesInternal>
-          <property Id="89ee3dfb-3f6e-4347-98ac-5bc0d5c76af6" name="Bitrate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="f987cfd4-df30-4827-8d47-63c3df1c5e6f" />
+          <property Id="9240d964-3901-4af2-b92b-fed64d5dad38" name="Mã Số" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="28ce7f80-8581-4162-beef-04de57c81283" />
+          </property>
+          <property Id="78c20191-f8fe-492a-ad44-3d83d65867f5" name="Thể Loại" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="19016149-5d6f-4e26-94ff-8b55db8ebb66" />
+          </property>
+          <property Id="84d843dc-268e-4519-b28e-76db09a68b37" name="Tên" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="83418ccd-f1f9-47a5-a2dc-da319e317d4a" />
+          </property>
+          <property Id="313ec4d6-bd34-46a3-9a22-745e1564d9ab" name="Độ Dài" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9986e44a-ee35-4716-ba62-05cf86031a3a" />
           </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="acd3a48e-dca6-4929-9b6d-21b9748e148d" name="Thể Loại" isAbstract="false" isLeaf="false" cachedFullName="AVKaraoke Project::Thể Loại">
-        <elementDefinition Id="cbe8ded2-a30d-422d-960e-5f459dc64a39" />
-      </referencedType>
-    </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
       <class Id="b7c4a36f-5922-4113-8589-e067b7b33b11" name="VideoOffline" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="9911bf55-d2a9-4e69-b5bd-749c7627a7ef" />
@@ -164,6 +116,14 @@
             <elementDefinition Id="d57c40e7-180a-4fb6-bc74-1c2e5e33cfc2" />
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="6916040a-4d6a-4ab0-aa47-e081d2c34b6d" name="Load Dữ Liệu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3d8174c9-a6f7-4205-ba5b-c137a0c6d6ae" />
+          </operation>
+          <operation Id="ff4c4b42-c640-448c-b720-baee956c4270" name="Xóa Dữ Liệu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ae816003-f463-48b4-b238-ecd5cbe91ed3" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -185,23 +145,57 @@
           <property Id="9a8bb945-ab2e-4710-92c7-4a31aebe1d1e" name="Ngày Cập Nhật" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="9d9e43af-6183-42ac-bb4d-cab60d9fe8a8" />
           </property>
+          <property Id="25bb929a-2be1-4dcc-9a1d-e7f8a5fe75dd" name="Ca Sĩ" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bb1dae24-cfb6-4ca3-9d05-eb250aeff620" />
+          </property>
+          <property Id="6a3288f5-b40a-4d47-9e00-542fe22f77c7" name="Tác Giả" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a6d6955f-bcfb-4709-9014-cb78f8011b5b" />
+          </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="79774b8d-581e-495a-a389-77e106dfe500" name="VideoRecord" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="442867ec-2ff1-4f64-87c1-92ac0368556c" />
+        <targetEnds>
+          <association Id="e253bb75-db28-486f-aa6a-a8f848bd8850" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="de908950-fd4a-4725-8889-a6b199d59930" LastKnownName="Người dùng" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3ba95b75-5717-460c-94f5-d5f119e47eb8" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="aacfc9d2-cc94-41f6-ba25-751222f2a4cb" name="Lower" value="0">
+                      <elementDefinition Id="523a6fd6-f7ed-4417-947c-385adad730ab" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="8f772d39-e2b0-499d-8ae0-694f9345d226" name="Upper" value="*">
+                      <elementDefinition Id="2cbf4d8a-40ff-4d3b-bf26-7f3d3ef6e817" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="e7ab6fa6-dc2a-4272-a022-7f522c8aee36" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="790981bb-b77c-431b-be4a-990f7741a9c3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b01feec8-af90-40e1-a9b3-d4c38dba9189" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="15885b94-b12a-4af5-914c-c917dfeb85aa" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="b18f1dcf-355c-4d24-9a77-6b7e107e01ed" name="Mã Video" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="2a65406d-0be9-4948-82a0-03b08d7fd76a" />
           </property>
-          <property Id="fd1f2a15-7cf7-4155-9706-bd5eff4c60d3" name="Tên" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="fd1f2a15-7cf7-4155-9706-bd5eff4c60d3" name="Tên File Record" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="ed8aa56b-66a5-4bf5-99cd-3cfbb8821702" />
           </property>
           <property Id="9cc662b7-adf5-4c87-b350-b5ec1afbedf3" name="Ngày Record" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="c0bda2cd-d54a-4659-9594-146402b34a65" />
           </property>
-          <property Id="0159ceac-190a-4b9a-9079-955313f343f7" name="Người Record" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="0159ceac-190a-4b9a-9079-955313f343f7" name="Người Record (ID)" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="00ae9f69-f2b5-4256-8611-d8cf8a724884" />
           </property>
           <property Id="71b4a4f3-a46a-49d6-bccb-5c9eff7eab5e" name="Status" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -261,42 +255,6 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="cd49db48-2386-4d93-954f-a8f50c28451f" />
           </association>
-          <association Id="1b28c7b2-565b-4cfa-92cb-62339f1470b9" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
-            <classMoniker Id="566ad612-b598-4729-90de-0e4953485c42" LastKnownName="SongVocal" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="6ab24c11-14ad-40ad-a157-b15489f10671" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <lowerValueInternal>
-                    <literalString Id="932e845e-ecce-45af-8ef8-b58f45eeab1b" name="Lower" value="*">
-                      <elementDefinition Id="e09945b0-2932-4840-9794-e7546c64ca32" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="321c690b-f169-4b5d-a8e8-d993a0d85a0f" name="Upper" value="*">
-                      <elementDefinition Id="db72d41e-9c46-4e4a-93ed-358002ea882d" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="c9ffc076-74d3-4d90-9a77-f3c1b5ddd647" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="fd4b55a8-a427-48ff-8518-4c9dedb273e6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <lowerValueInternal>
-                    <literalString Id="fcc1ace7-8c6b-4767-b148-a870327eb696" name="Lower" value="*">
-                      <elementDefinition Id="3c36540f-ddc3-44db-ae8d-89e881c76159" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="333985d5-affa-4c07-b94a-5896c29555fb" name="Upper" value="*">
-                      <elementDefinition Id="eea4570b-7bbd-432f-b201-0a1e92a2ae00" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="1b4eaddf-83ac-4dc8-beea-9279d03dc24f" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="d008cba4-f009-4a8c-bde3-163572e61f1c" />
-          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property Id="a3d5dfb5-4113-4dff-ae34-28c9557a8930" name="ID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -335,7 +293,7 @@
           <property Id="80ae51ce-ad78-426f-b2d6-ec0e5c4e48d2" name="Score" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="079ea02f-beca-4d98-beb0-b92362aea049" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="5c0510ec-4745-4b1e-a589-fc9fd9244844" LastKnownName="Điểm" />
+              <referencedTypeMoniker Id="5c0510ec-4745-4b1e-a589-fc9fd9244844" LastKnownName="Level" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -366,23 +324,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="beadb5e5-f272-4cd2-ab01-5c69e3e7aca3" name="Chi Tiết Lần Đoán" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="cbed795a-7bbb-40c8-9755-20167cf3af54" />
-        <ownedAttributesInternal>
-          <property Id="e09e0653-ac2e-4857-bb7e-b872c93eec75" name="ID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="eaed3064-4d7d-4266-bb5a-922eb00e908d" />
-          </property>
-          <property Id="257f7b3e-59da-4038-961a-7a2b03be789a" name="Ngày Đoán" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="36f13fd1-0234-429f-9b6d-d0d78622ea74" />
-          </property>
-          <property Id="033b34ae-d068-4042-9f98-15ed0688af7c" name="Status" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="6206adbf-291a-4d7b-8ede-1c605915f112" />
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="f7c2e67e-26ef-45b5-aff2-8e41b9016bfc" name="Điểm" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="f7c2e67e-26ef-45b5-aff2-8e41b9016bfc" name="Level" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="260aac0f-535d-4742-90d6-c6b56ce600ae" />
         <targetEnds>
           <association Id="e2496d13-44c9-4d52-8517-4f12ee02cc60" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
@@ -390,6 +332,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="c13fbd80-c5c0-4932-9fcb-3f82101029b4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="7cb25176-47c8-419a-a65b-1c85be2456e8" name="Lower" value="*">
+                      <elementDefinition Id="365a718c-302b-4764-8106-67f010f821c3" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="44a29ee3-ded1-46e2-b15a-a23557aa7671" name="Upper" value="*">
+                      <elementDefinition Id="ea53de07-5130-4778-87ff-181c5d0dedb3" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="a3fc4427-6c67-4130-a3a7-591ac3b1f563" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -403,7 +355,7 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="0f94200a-6cc8-451a-8a1f-30874205bf69" name="Số Điểm Hiện Tại" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="0f94200a-6cc8-451a-8a1f-30874205bf69" name="Số Điểm Tối Đa Của Level" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="ae27b0a9-0818-4f6f-949d-6fd7346fc682" />
           </property>
           <property Id="9cde4b22-1e91-40fb-a1a0-64746bbc8687" name="Còn Bao Nhiêu Điểm Lên Level?" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -411,14 +363,14 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="ea631166-d701-422b-86c3-2e61038df578" name="Set Điểm" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="ea631166-d701-422b-86c3-2e61038df578" name="Change Level" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="67105c2d-2ac7-4fd9-81bb-91148de08dd6" />
           </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
-      <referencedType Id="5c0510ec-4745-4b1e-a589-fc9fd9244844" name="Điểm" isAbstract="false" isLeaf="false" cachedFullName="AVKaraoke Project::Điểm">
+      <referencedType Id="5c0510ec-4745-4b1e-a589-fc9fd9244844" name="Level" isAbstract="false" isLeaf="false" cachedFullName="AVKaraoke Project::Level">
         <elementDefinition Id="260aac0f-535d-4742-90d6-c6b56ce600ae" />
       </referencedType>
     </packageHasNamedElement>

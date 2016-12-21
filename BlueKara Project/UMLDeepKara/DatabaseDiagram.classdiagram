@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="91f42902-28dc-478b-8d3d-7824f5ef7164" name="DatabaseDiagram" linkedPackageId="b13e7a6c-2bc2-421b-8b13-61040ebba104" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="85baab07-7b4c-4185-a556-c039d0e3fe47">
+      <elementDefinition Id="51c6fef6-1a21-4ee0-86a6-481e5642cbeb" />
+      <body>Đã chia sẻ facebook hay chưa ?</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="82f32c86-4a28-447a-a389-d76c4681afb5">
+      <profileInstance Id="ddb0c5c5-1c9a-41c8-b34a-a51f02fa9596" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a5fb6239-0f7c-4b2c-a6b3-28e886d207be">
+      <profileInstance Id="137fb12a-a0e6-46ec-8867-2663369e5311" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="9f1ee5bc-74e3-4f68-a640-8f021a1d8214" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="b16aee3b-d1cc-4c36-abc4-f1f3cd1a6206" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b1ef8f6c-9b8d-4cd1-8a99-efe24af255b0" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ca85dfe5-2cfd-45d6-97e4-6a7df2f0ccc5" name="Int" isAbstract="false" isLeaf="false" cachedFullName="Int">
+        <elementDefinition Id="87f85ddd-7459-46cf-a004-7a4cc8547598" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="494fa31e-9d01-4482-876b-d304201b0838" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e75e3a5d-ca6f-4a63-8dd3-989cfdc8af02" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
+        <elementDefinition Id="99a26db4-d6c8-4829-b622-1cb677360517" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5341378c-9b84-408f-b4fd-2109e62dc047" name="Parameter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="39724d38-4db6-4d24-aa5a-c59580b0c1fd" />
+        <ownedAttributesInternal>
+          <property Id="9cfe4b9a-8eb9-4667-8c5c-a188e37ae699" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9870fa4c-c99c-4146-baec-0f1af98ac083" />
+          </property>
+          <property Id="15d9cb10-c625-46f0-baad-2c6d585eb1a8" name="ParamID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="27aae8ee-287f-47cb-9e60-1d90b4b9e2e3" />
+          </property>
+          <property Id="60a97995-076e-41d4-97bc-2dfeb01a0d5f" name="Status : bool" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0375b215-fc02-4b42-b481-d12b62097a3a" />
+          </property>
+          <property Id="e55c31eb-b8b7-4e0d-945a-103099161157" name="Type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cd01e2ff-793e-4252-a4fb-23982c118d72" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9f1ee5bc-74e3-4f68-a640-8f021a1d8214" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="66e8607e-a43a-4c0f-a98a-7b33d42a2462" name="Value" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="859338a8-90d8-47c5-961f-8e20e945b68e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9f1ee5bc-74e3-4f68-a640-8f021a1d8214" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="daff5cec-c09f-428b-957f-91466ed2b583" name="Category" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fff93cab-3f46-4143-8910-9cedc8368a7d" />
+        <ownedAttributesInternal>
+          <property Id="263ee0f1-a250-44dd-ba0f-911f8e826a07" name="CategoryID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f545a7d1-339c-474a-8fac-c41b480be53a" />
+          </property>
+          <property Id="767ca45d-9e42-4122-a194-3a81b8c5b590" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c32c9aa2-4a23-437c-a746-cbf044a40d6a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b1ef8f6c-9b8d-4cd1-8a99-efe24af255b0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="b689f5a9-7fad-4e6f-b6ef-63917036f5e6" name="Describe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9eef8928-2b2b-41f2-968f-1e0b60b248f7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b1ef8f6c-9b8d-4cd1-8a99-efe24af255b0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3dc689ae-88d1-49ea-b3c5-6b9aec9901f2" name="Composer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a7610776-e92a-41f2-bf09-92231ed3071b" />
+        <ownedAttributesInternal>
+          <property Id="fba3e3e0-248f-4bf9-a69d-e39f247c4d92" name="ComposerID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a7c9dcb7-9ff0-4b54-b8a9-73e30175bede" />
+          </property>
+          <property Id="9360c349-c65e-4fbf-ac47-617414b33678" name="FullName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6de84b52-13cc-4c55-b9fc-66425aec8f5c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3aa7d585-f851-4150-8cbb-2d6487f27fd2" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="1c7d346e-099c-4195-bbab-8a78bb76d704" name="Sex" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1a590f2c-1e18-4f84-b62b-d5eff8b36e2f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="49b5294b-4543-4377-b21e-8c959bc1414c" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="140bbf2e-ec36-4723-a5e4-b50337de0658" name="Age" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c4024cdc-82a5-4fab-a511-eac2e930edc0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ca85dfe5-2cfd-45d6-97e4-6a7df2f0ccc5" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8c08136e-4315-4b22-8005-127c68728a71" name="Singer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="96d6d862-da7a-4adb-8ded-752e52cf532c" />
+        <ownedAttributesInternal>
+          <property Id="f8e09b09-68d9-4248-8b45-3824f4578065" name="SingerID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e0c05358-494d-48da-b20b-c01886fad8bd" />
+          </property>
+          <property Id="7a2f4dcb-e00e-4334-98a9-52d815f1db76" name="FullName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="398643d3-d7ab-4160-9685-abb25829379e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="494fa31e-9d01-4482-876b-d304201b0838" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="7d3ab1b2-0106-47db-8bd9-9102adfa589d" name="Sex" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5f3ac0a9-f730-418a-b3df-2cfe2a226889" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ea284a94-0640-4289-9441-33acccb149b6" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="a5e04711-82af-49ef-88a2-f575e6a97c81" name="Age" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="88d982bf-84a9-4913-899f-9f24b088c074" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ca85dfe5-2cfd-45d6-97e4-6a7df2f0ccc5" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a9372de5-bb72-423b-be93-e45165c551f4" name="VideoKaraoke" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="af2ba53a-1910-4b67-b518-24ae0d36f9ab" />
+        <suppliersInternal>
+          <dependency Id="e726c474-1ff9-4a94-8705-151882912136">
+            <classMoniker Id="7417b75b-3096-4758-b4ec-602ef29abd31" LastKnownName="Chung_VideoKaraoke" />
+            <elementDefinition Id="4db8087a-b507-43b4-aa65-5d85ed2627fd" />
+          </dependency>
+          <dependency Id="a2935e10-95d3-475f-8def-3e9c13a2052b">
+            <classMoniker Id="c3b7b5eb-a24e-4863-8f99-8c288bf3861d" LastKnownName="Video Online" />
+            <elementDefinition Id="dbb3c186-4261-4e33-9020-8c4132237a9c" />
+          </dependency>
+          <dependency Id="5971dbaa-945e-474a-92ff-321fdec92f9c">
+            <classMoniker Id="ba77aa48-73ac-4644-bb5f-c01487266048" LastKnownName="Video Offline" />
+            <elementDefinition Id="562f946e-00d7-468f-a7a3-4bc626074725" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="2efd303d-991b-4d1b-a83b-04fc66a45a12" name="VideoID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3ea1282c-84e2-417c-883f-46ed7af5fca8" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7417b75b-3096-4758-b4ec-602ef29abd31" name="Chung_VideoKaraoke" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="38d0009d-b572-4e84-8d4b-1e6000a5c6b3" />
+        <suppliersInternal>
+          <dependency Id="046bf822-2aa3-47bc-9da1-62c0a1c75666">
+            <classMoniker Id="daff5cec-c09f-428b-957f-91466ed2b583" LastKnownName="Category" />
+            <elementDefinition Id="2f0329f2-9ffd-444a-8f0e-98b711ee42d8" />
+          </dependency>
+          <dependency Id="00a37bdf-579b-4cd7-8b6f-1fdbfcf02324">
+            <classMoniker Id="731f18e4-28c2-4392-8c27-308ab113eb64" LastKnownName="FormatVideo" />
+            <elementDefinition Id="4d3e89ff-cd4c-427b-aded-bbf7b1f3bb20" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="d60f2dde-3924-4768-84d5-668a883a76f0" name="ID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1620f00a-72cb-4df9-a241-bfae1891d9cd" />
+          </property>
+          <property Id="fd302903-2361-40d1-957f-e06ce847f0e8" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e54296a3-378d-49d3-be83-6a5d0f497eab" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b1ef8f6c-9b8d-4cd1-8a99-efe24af255b0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="554e5245-ddb8-42f0-bc47-0d013854c044" name="FormatVideoID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="80d8a0eb-13b6-4212-afa8-ffc1f5523a0f" />
+          </property>
+          <property Id="02530d20-79ea-4967-9258-37f7f9a8c329" name="CategoryID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6ccd2ed7-14e9-4028-bc94-eed5166eb9b4" />
+          </property>
+          <property Id="c2afd1e9-6f8b-4536-8c31-f7a81e4ad08c" name="Duaration" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4b89e9fc-f292-4199-bf76-265e01833f75" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ca85dfe5-2cfd-45d6-97e4-6a7df2f0ccc5" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9a445482-99e1-4240-9b91-5c8ac4fb4946" name="VideoRecord" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="95e925b5-fd31-4a84-8947-028e7c20d804" />
+        <suppliersInternal>
+          <dependency Id="71183482-c9bd-40c1-aeb2-3db2a21be236">
+            <classMoniker Id="50ebe134-e111-4f67-834f-5cc9b578b8aa" LastKnownName="RecordStatus" />
+            <elementDefinition Id="b40cf8bd-dbac-4e65-ad45-0026099ac0c7" />
+          </dependency>
+          <dependency Id="26a8df7e-be02-49cb-9daa-67f83fa1bc36">
+            <classMoniker Id="a9372de5-bb72-423b-be93-e45165c551f4" LastKnownName="VideoKaraoke" />
+            <elementDefinition Id="a50fcd5d-508f-48f5-a361-b98801801704" />
+          </dependency>
+          <dependency Id="9c134f38-7659-49b6-8823-691751b29b72">
+            <classMoniker Id="81dd0bd8-ea56-4fb9-83bf-9ade28840174" LastKnownName="Player" />
+            <elementDefinition Id="3e421177-d4f1-4e20-872f-43e996e5d0ee" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="99fcb25c-757d-45f5-b760-0a29a4b3fcff" name="RecordID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="901cb2ff-c116-464b-9917-8579e9ed7ce2" />
+          </property>
+          <property Id="e7c5ce84-0278-495e-9db7-c3b826e45d94" name="RecordDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="49163bb0-d75d-4f16-8ea6-79a063d0d6c6" />
+          </property>
+          <property Id="0ac395fb-70ed-4e55-aed7-8698744dc190" name="StatusID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c9cb8213-b839-4b9c-ae90-b2f79be6f2ee" />
+          </property>
+          <property Id="1d78718a-2d90-4a95-b431-65f7c720f60c" name="RecordName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e0146ae1-59b3-4754-9336-8edf1c0b24aa" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0daa9ee1-1684-426b-b9d9-d63208d4dbc9" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="8cf45b75-e7d2-48db-92de-59ad1f3d8fee" name="URL" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="574165d4-a51e-4f1b-86a2-0bb75a8b9228" />
+          </property>
+          <property Id="43f63533-8fd7-4a3e-88db-84c4fd5b6c32" name="VideoID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="212a2e2e-596d-4477-8b76-72c4c02f2517" />
+          </property>
+          <property Id="e9b17639-eb8c-4e05-801e-ba68f15e305f" name="PlayerID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fd18956e-8260-4fec-9acd-53f3eeb9e142" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="50ebe134-e111-4f67-834f-5cc9b578b8aa" name="RecordStatus" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4a188b39-0e81-4514-814b-5fe6868ad7fe" />
+        <ownedAttributesInternal>
+          <property Id="99cb3898-4016-4dd5-89a1-8774058dc9a4" name="StatusID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="64a24a6a-626a-4a76-9d14-c8df438111ff" />
+          </property>
+          <property Id="7e89519c-edfa-4f6b-8abd-4301ba934b65" name="StatusName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bef1290d-8578-47aa-b8a4-3dd659b05015" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b1ef8f6c-9b8d-4cd1-8a99-efe24af255b0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="81dd0bd8-ea56-4fb9-83bf-9ade28840174" name="Player" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="24c42416-94f9-45c3-8dbf-843f5429b69f" />
+        <suppliersInternal>
+          <dependency Id="7c8861cc-9ec7-48c3-8450-e0464e8d1887">
+            <classMoniker Id="8f23317e-ae12-4738-9f5f-e579990ff01f" LastKnownName="Avatar" />
+            <elementDefinition Id="7f4618eb-f112-4be0-9ddc-faffcc903e47" />
+          </dependency>
+          <dependency Id="2e3e1308-21af-470b-b485-944e53c424e3">
+            <classMoniker Id="a5635415-d2ad-440c-9ded-c3db34c1b8b2" LastKnownName="Level" />
+            <elementDefinition Id="15db95f6-e9d2-4360-8a5b-eb8a72ef5c51" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="e9b9dc57-c1f0-4f15-83de-29570087b66c" name="AvatarID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d7888b38-fb1e-40c1-8dcf-c898ce8fac70" />
+          </property>
+          <property Id="9c394e58-2607-41dc-9a49-242024070f35" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9a2f81df-bc92-4c76-b3f9-e50843b41271" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b1ef8f6c-9b8d-4cd1-8a99-efe24af255b0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="06996d94-3328-49e1-9008-34dcca7cecc3" name="FullName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a4093ef0-83b9-4e56-af0e-0b8bbb1d876c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="15278357-c3fa-4276-b0b9-35196cb51c60" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="3dcb6423-6677-4eb6-9fb0-735e4a58ad60" name="PlayerID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a7d7e770-be62-46de-85ad-f16d1d2ed86b" />
+          </property>
+          <property Id="b21db190-f2d1-4c0b-900f-3b5fe196a0f1" name="Job : String" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8f6d7b12-d11d-49fa-b094-0fea63b3f106" />
+          </property>
+          <property Id="7ba01d86-13ab-4d49-a008-756eab39062f" name="BirthDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="47edc76f-4885-4f97-a22b-e111ef1e9770" />
+          </property>
+          <property Id="a265f552-6617-4add-97cf-a84467a19717" name="PassWord" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b92f1c4d-77d4-41e9-9094-4dcf24cdd81e" />
+          </property>
+          <property Id="e68ef150-36a6-49a2-a69a-700d9766d037" name="PhoneNumber : String" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="10755fba-d8f8-4883-87bf-d00a6c8d17b8" />
+          </property>
+          <property Id="395a99c2-052b-4fa1-88f1-07e0e5b41da8" name="Facebook URL" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="68dbe684-4e0d-47e4-a29c-eee45fc238d8" />
+          </property>
+          <property Id="c6d1a7bd-53b5-4433-b3fb-d3468bb1b53f" name="Scores" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="08c48f1d-6380-478a-83b6-a6aa70e83688" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ca85dfe5-2cfd-45d6-97e4-6a7df2f0ccc5" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+          <property Id="97b64340-1fcb-4ae8-926c-32dfc8621e33" name="LevelID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="800dccd1-33a8-4fe3-b852-3d1a25ce9c1f" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8f23317e-ae12-4738-9f5f-e579990ff01f" name="Avatar" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ca095ce3-e67b-4c5b-bb48-dc7cb9728b37" />
+        <ownedAttributesInternal>
+          <property Id="00a2688a-1ae9-41e0-8f9a-ef6adfcec982" name="URL" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="520b0a50-e220-4cb9-9869-ec15dcae82be" />
+          </property>
+          <property Id="b8fff1a5-f7e7-4d0f-8de4-8a8e37851e2b" name="PhotoID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="450d14fd-435a-478a-9147-a16b9adceb83" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a5635415-d2ad-440c-9ded-c3db34c1b8b2" name="Level" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="59c8cd2e-08c5-4075-bbf6-3c327bba67ae" />
+        <ownedAttributesInternal>
+          <property Id="3fabce06-6178-4c53-ac38-8d913abd3f06" name="LevelID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c9de9232-1da3-4336-a4c9-c59ff69e43ee" />
+          </property>
+          <property Id="dd65cebe-eeb3-46c4-8264-450608e3696d" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a3e44947-b718-42dd-be9e-0110731d8ee5" />
+          </property>
+          <property Id="03a18844-5420-4711-8a56-6e8c3e631211" name="MaxScore" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="088c1872-b654-4f3f-9906-d4df735eedca" />
+          </property>
+          <property Id="8fc76c41-1de4-496a-9d7f-38159968f0a7" name="RemainScore" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f1d72059-7aeb-4f4a-b760-ceca49bfee7b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ca85dfe5-2cfd-45d6-97e4-6a7df2f0ccc5" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c3b7b5eb-a24e-4863-8f99-8c288bf3861d" name="Video Online" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c6806d91-3537-48f2-81c5-6d261cc348d6" />
+        <suppliersInternal>
+          <dependency Id="5292ab37-f54d-405c-8684-fcd723878930">
+            <classMoniker Id="8c08136e-4315-4b22-8005-127c68728a71" LastKnownName="Singer" />
+            <elementDefinition Id="21453bb0-9330-4ce3-a9a7-8b3011a1f7af" />
+          </dependency>
+          <dependency Id="5e7b46fd-462e-431d-b8f3-d64331ab9c63">
+            <classMoniker Id="3dc689ae-88d1-49ea-b3c5-6b9aec9901f2" LastKnownName="Composer" />
+            <elementDefinition Id="ba2ca4da-0348-4877-bbe1-bd19c2393348" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="362cdf4b-dd1f-473c-a2e0-7a168501a7f5" name="VideoID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="17356be8-bef6-484e-891c-4fc75b51f3ea" />
+          </property>
+          <property Id="df765858-96ed-437c-8452-83e80a7c2110" name="URLVideo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bfddd19a-d466-4627-b23c-f836df7145c1" />
+          </property>
+          <property Id="9b9849ea-19ad-4ada-8969-4afd774178fc" name="Resolution" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a503c973-9934-403f-b3c8-e989c90f1cb7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e75e3a5d-ca6f-4a63-8dd3-989cfdc8af02" LastKnownName="Double" />
+            </type_NamedElement>
+          </property>
+          <property Id="8dc7076a-2f53-4822-b281-55cdfbf45fe9" name="DateUpdate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ccae8274-a226-4a98-aea3-83a923ea77c8" />
+          </property>
+          <property Id="84be3dc2-3c08-4b3c-ae52-a59771b84f9f" name="SingerID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="03254fec-cca8-4c59-ad91-7ab8f02cd1d5" />
+          </property>
+          <property Id="c5ccf91a-3a5f-4239-b723-bfa034aee23a" name="ComposerID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b7765356-6755-435b-b0d9-aa415f1abeca" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ba77aa48-73ac-4644-bb5f-c01487266048" name="Video Offline" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7cc0c58c-f8f5-4d9d-ba8a-93475a9f8007" />
+        <ownedAttributesInternal>
+          <property Id="c42e13d8-cdff-4361-983f-87b1bb0ea11b" name="VideoID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="de0354ca-5d92-4020-90f3-df9497eae40c" />
+          </property>
+          <property Id="d41289c8-8cdc-43c7-9978-992db00962ca" name="LinkVideo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f428353c-fda7-406d-8351-d294eded585f" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="731f18e4-28c2-4392-8c27-308ab113eb64" name="FormatVideo" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e4bc123e-52c8-468a-b273-a516d422e5a8" />
+        <ownedAttributesInternal>
+          <property Id="9c3995b8-61a2-4480-bb40-4c9802b57913" name="FormatVideoID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d09db187-5424-4f59-a253-d3f7bde21c20" />
+          </property>
+          <property Id="55a786a0-47eb-486c-9ce5-aacd27d36920" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f6b2bafa-ca65-4441-83f8-c65e936119bc" />
+          </property>
+          <property Id="3b796cea-95b8-4c25-93f4-ee1335f320ea" name="Describe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="25ebd22a-7522-4682-9ce1-47d19d412fd4" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="3aa7d585-f851-4150-8cbb-2d6487f27fd2" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ea284a94-0640-4289-9441-33acccb149b6" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="49b5294b-4543-4377-b21e-8c959bc1414c" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="15278357-c3fa-4276-b0b9-35196cb51c60" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0daa9ee1-1684-426b-b9d9-d63208d4dbc9" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b67dd6c4-0c00-48a3-8d62-80e80e771919" name="DetailEachSing" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="038af003-1c85-4aa6-8af7-11372b591106" />
+        <suppliersInternal>
+          <dependency Id="99ce46fe-7016-444b-82de-2d022401e6e1">
+            <classMoniker Id="81dd0bd8-ea56-4fb9-83bf-9ade28840174" LastKnownName="Player" />
+            <elementDefinition Id="764b1ea2-d924-4814-9a0e-d8bcc5b835d4" />
+          </dependency>
+          <dependency Id="4fb80265-5150-4d6c-b9d8-ba5855365872">
+            <classMoniker Id="a9372de5-bb72-423b-be93-e45165c551f4" LastKnownName="VideoKaraoke" />
+            <elementDefinition Id="d569f4f6-34e7-40e8-9475-bd5103b53d61" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="9682049b-925d-4a33-b27c-8e10f9f9b8db" name="PlayerID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3d5a016e-e759-4cda-9a67-28c1691f54dd" />
+          </property>
+          <property Id="bdccf569-0d7f-4dd1-996a-2f85093a3d16" name="VideoID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0d29bb0d-0341-46b6-9158-26de49fef25c" />
+          </property>
+          <property Id="4135ffda-3b9b-49ca-92e9-45fe5427d84f" name="DateSing" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4dec1598-207a-4239-8176-d7b4cdc1e62d" />
+          </property>
+          <property Id="66bcc339-cf96-4470-8beb-153ebc8657cd" name="Score" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0f885e42-f5fd-400f-8a80-99cbbcf9eb53" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="b13e7a6c-2bc2-421b-8b13-61040ebba104" name="AVKaraoke Project">
+    <elementDefinition Id="a6a3f503-7a5a-44c9-8b6a-98055897f617" />
+  </package>
+</logicalClassDesignerModel>
