@@ -146,14 +146,6 @@
             <classMoniker Id="7417b75b-3096-4758-b4ec-602ef29abd31" LastKnownName="Chung_VideoKaraoke" />
             <elementDefinition Id="4db8087a-b507-43b4-aa65-5d85ed2627fd" />
           </dependency>
-          <dependency Id="a2935e10-95d3-475f-8def-3e9c13a2052b">
-            <classMoniker Id="c3b7b5eb-a24e-4863-8f99-8c288bf3861d" LastKnownName="Video Online" />
-            <elementDefinition Id="dbb3c186-4261-4e33-9020-8c4132237a9c" />
-          </dependency>
-          <dependency Id="5971dbaa-945e-474a-92ff-321fdec92f9c">
-            <classMoniker Id="ba77aa48-73ac-4644-bb5f-c01487266048" LastKnownName="Video Offline" />
-            <elementDefinition Id="562f946e-00d7-468f-a7a3-4bc626074725" />
-          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="2efd303d-991b-4d1b-a83b-04fc66a45a12" name="VideoID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -208,13 +200,13 @@
             <classMoniker Id="50ebe134-e111-4f67-834f-5cc9b578b8aa" LastKnownName="RecordStatus" />
             <elementDefinition Id="b40cf8bd-dbac-4e65-ad45-0026099ac0c7" />
           </dependency>
-          <dependency Id="26a8df7e-be02-49cb-9daa-67f83fa1bc36">
-            <classMoniker Id="a9372de5-bb72-423b-be93-e45165c551f4" LastKnownName="VideoKaraoke" />
-            <elementDefinition Id="a50fcd5d-508f-48f5-a361-b98801801704" />
-          </dependency>
           <dependency Id="9c134f38-7659-49b6-8823-691751b29b72">
             <classMoniker Id="81dd0bd8-ea56-4fb9-83bf-9ade28840174" LastKnownName="Player" />
             <elementDefinition Id="3e421177-d4f1-4e20-872f-43e996e5d0ee" />
+          </dependency>
+          <dependency Id="63c8a027-efb0-44c4-ba26-aaf6352a77ab">
+            <classMoniker Id="7417b75b-3096-4758-b4ec-602ef29abd31" LastKnownName="Chung_VideoKaraoke" />
+            <elementDefinition Id="210ae0da-151d-4c56-ab0e-2d73ac5b2057" />
           </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
@@ -370,6 +362,10 @@
             <classMoniker Id="3dc689ae-88d1-49ea-b3c5-6b9aec9901f2" LastKnownName="Composer" />
             <elementDefinition Id="ba2ca4da-0348-4877-bbe1-bd19c2393348" />
           </dependency>
+          <dependency Id="56c6c958-d277-4b94-ba69-14d097ba54c0">
+            <classMoniker Id="7417b75b-3096-4758-b4ec-602ef29abd31" LastKnownName="Chung_VideoKaraoke" />
+            <elementDefinition Id="70ea81d1-6077-4cce-9ae9-6137973a2947" />
+          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="362cdf4b-dd1f-473c-a2e0-7a168501a7f5" name="VideoID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -399,6 +395,12 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="ba77aa48-73ac-4644-bb5f-c01487266048" name="Video Offline" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="7cc0c58c-f8f5-4d9d-ba8a-93475a9f8007" />
+        <suppliersInternal>
+          <dependency Id="2f2330e7-4625-423e-bb7f-3e74ac3d4861">
+            <classMoniker Id="7417b75b-3096-4758-b4ec-602ef29abd31" LastKnownName="Chung_VideoKaraoke" />
+            <elementDefinition Id="ec9129fb-9c53-4b3c-9f91-887464adebe4" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="c42e13d8-cdff-4361-983f-87b1bb0ea11b" name="VideoID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="de0354ca-5d92-4020-90f3-df9497eae40c" />
@@ -458,9 +460,9 @@
             <classMoniker Id="81dd0bd8-ea56-4fb9-83bf-9ade28840174" LastKnownName="Player" />
             <elementDefinition Id="764b1ea2-d924-4814-9a0e-d8bcc5b835d4" />
           </dependency>
-          <dependency Id="4fb80265-5150-4d6c-b9d8-ba5855365872">
-            <classMoniker Id="a9372de5-bb72-423b-be93-e45165c551f4" LastKnownName="VideoKaraoke" />
-            <elementDefinition Id="d569f4f6-34e7-40e8-9475-bd5103b53d61" />
+          <dependency Id="aaddac43-4631-425a-9acb-14d7da07ab53">
+            <classMoniker Id="7417b75b-3096-4758-b4ec-602ef29abd31" LastKnownName="Chung_VideoKaraoke" />
+            <elementDefinition Id="53152333-48fc-4578-9f07-b7392742df30" />
           </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>

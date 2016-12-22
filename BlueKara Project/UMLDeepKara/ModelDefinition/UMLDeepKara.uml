@@ -2116,20 +2116,6 @@
               LastKnownName="Chung_VideoKaraoke"
               LastKnownLocation="UMLDeepKara.uml" />
           </dependency>
-          <dependency
-            Id="dbb3c186-4261-4e33-9020-8c4132237a9c">
-            <classMoniker
-              Id="c6806d91-3537-48f2-81c5-6d261cc348d6"
-              LastKnownName="Video Online"
-              LastKnownLocation="UMLDeepKara.uml" />
-          </dependency>
-          <dependency
-            Id="562f946e-00d7-468f-a7a3-4bc626074725">
-            <classMoniker
-              Id="7cc0c58c-f8f5-4d9d-ba8a-93475a9f8007"
-              LastKnownName="Video Offline"
-              LastKnownLocation="UMLDeepKara.uml" />
-          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property
@@ -2258,17 +2244,17 @@
               LastKnownLocation="UMLDeepKara.uml" />
           </dependency>
           <dependency
-            Id="a50fcd5d-508f-48f5-a361-b98801801704">
-            <classMoniker
-              Id="af2ba53a-1910-4b67-b518-24ae0d36f9ab"
-              LastKnownName="VideoKaraoke"
-              LastKnownLocation="UMLDeepKara.uml" />
-          </dependency>
-          <dependency
             Id="3e421177-d4f1-4e20-872f-43e996e5d0ee">
             <classMoniker
               Id="24c42416-94f9-45c3-8dbf-843f5429b69f"
               LastKnownName="Player"
+              LastKnownLocation="UMLDeepKara.uml" />
+          </dependency>
+          <dependency
+            Id="210ae0da-151d-4c56-ab0e-2d73ac5b2057">
+            <classMoniker
+              Id="38d0009d-b572-4e84-8d4b-1e6000a5c6b3"
+              LastKnownName="Chung_VideoKaraoke"
               LastKnownLocation="UMLDeepKara.uml" />
           </dependency>
         </suppliersInternal>
@@ -2704,6 +2690,13 @@
               LastKnownName="Composer"
               LastKnownLocation="UMLDeepKara.uml" />
           </dependency>
+          <dependency
+            Id="70ea81d1-6077-4cce-9ae9-6137973a2947">
+            <classMoniker
+              Id="38d0009d-b572-4e84-8d4b-1e6000a5c6b3"
+              LastKnownName="Chung_VideoKaraoke"
+              LastKnownLocation="UMLDeepKara.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property
@@ -2789,6 +2782,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="ec9129fb-9c53-4b3c-9f91-887464adebe4">
+            <classMoniker
+              Id="38d0009d-b572-4e84-8d4b-1e6000a5c6b3"
+              LastKnownName="Chung_VideoKaraoke"
+              LastKnownLocation="UMLDeepKara.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="de0354ca-5d92-4020-90f3-df9497eae40c"
@@ -2908,10 +2910,10 @@
               LastKnownLocation="UMLDeepKara.uml" />
           </dependency>
           <dependency
-            Id="d569f4f6-34e7-40e8-9475-bd5103b53d61">
+            Id="53152333-48fc-4578-9f07-b7392742df30">
             <classMoniker
-              Id="af2ba53a-1910-4b67-b518-24ae0d36f9ab"
-              LastKnownName="VideoKaraoke"
+              Id="38d0009d-b572-4e84-8d4b-1e6000a5c6b3"
+              LastKnownName="Chung_VideoKaraoke"
               LastKnownLocation="UMLDeepKara.uml" />
           </dependency>
         </suppliersInternal>
