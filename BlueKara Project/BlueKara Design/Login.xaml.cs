@@ -18,7 +18,7 @@ namespace BlueKara_Design
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow 
+    public partial class MainWindow
     {
         public MainWindow()
         {
@@ -41,6 +41,18 @@ namespace BlueKara_Design
 
         }
 
-        
+        private void Gointoforgetpass(object sender, MouseButtonEventArgs e)
+        {
+            ResetPass a = new ResetPass();
+            a.Show();
+            this.Close();
+        }
+
+        private void Gointcreate(object sender, MouseButtonEventArgs e)
+        {
+            CreateAccount a = new CreateAccount();
+            a.Show();
+            this.Close();
+        }
     }
 }

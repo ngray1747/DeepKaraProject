@@ -312,6 +312,12 @@
           <property Id="ed584955-49a2-46db-9e29-f722a470cbf0" name="Username" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="9ec687a4-1679-46b6-8e51-b943c2dfca80" />
           </property>
+          <property Id="c1f1c079-c052-4ece-910b-be1f024babdc" name="Answer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8ce81cb0-b353-4d7f-8e2d-2e8aa0b05ce5" />
+          </property>
+          <property Id="3609b311-9894-411b-b860-36d7baa7fe28" name="SecurityQuestion" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="22e562e4-3ca2-4852-93cc-72f8b7e30130" />
+          </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>

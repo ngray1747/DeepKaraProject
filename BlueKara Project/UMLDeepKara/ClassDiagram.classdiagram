@@ -296,6 +296,12 @@
           <property Id="1f32ce0f-8d11-4839-87b7-ec099919339c" name="Tên Đăng Nhập" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="30704c4c-113a-43ff-b087-c8a461893c56" />
           </property>
+          <property Id="f8f1b1df-6dec-4006-83f4-3802b9908dc6" name="Câu Hỏi Bảo Mật" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="56ddab6e-d4e3-4f90-9b58-17712bdd3743" />
+          </property>
+          <property Id="8dea9f15-a87f-45f7-a4a4-3966f32c1047" name="Câu Trả Lời Cho Câu Hỏi" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c423a173-c4a4-4bc4-9d49-f733326ec832" />
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="ad046c49-968c-4777-9cad-176f48e536de" name="Hát Karaoke" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">

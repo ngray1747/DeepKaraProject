@@ -1,0 +1,1025 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DeepKaraModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AVATAR">
+          <Key>
+            <PropertyRef Name="AvatarID" />
+          </Key>
+          <Property Name="AvatarID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="URL" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="CATEGORY">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Describe" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CHUNG_VIDEOKARAOKE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="CategoryID" Type="nvarchar" MaxLength="100" />
+          <Property Name="Duaration" Type="int" />
+          <Property Name="FormatVideoID" Type="nvarchar" MaxLength="100" />
+          <Property Name="ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="COMPOSER">
+          <Key>
+            <PropertyRef Name="ComposerID" />
+          </Key>
+          <Property Name="Age" Type="int" />
+          <Property Name="ComposerID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="DETAILEACHSING">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+            <PropertyRef Name="VideoID" />
+          </Key>
+          <Property Name="PlayerID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="VideoID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Score" Type="int" />
+          <Property Name="DateSing" Type="date" />
+        </EntityType>
+        <EntityType Name="FORMATVIDEO">
+          <Key>
+            <PropertyRef Name="FormatVideoID" />
+          </Key>
+          <Property Name="FormatVideoID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Describe" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="LEVEL">
+          <Key>
+            <PropertyRef Name="LevelID" />
+          </Key>
+          <Property Name="LevelID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="MaxScore" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="RemainScoreToUp" Type="int" />
+        </EntityType>
+        <EntityType Name="PARAMETER">
+          <Key>
+            <PropertyRef Name="ParamID" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="ParamID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Value" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="PLAYER">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+          </Key>
+          <Property Name="PlayerID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="AvatarID" Type="nvarchar" MaxLength="100" />
+          <Property Name="BirthDate" Type="date" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="FacebookURL" Type="nvarchar" MaxLength="500" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Job" Type="nvarchar" MaxLength="200" />
+          <Property Name="LevelID" Type="nvarchar" MaxLength="100" />
+          <Property Name="Username" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="15" />
+          <Property Name="Scores" Type="int" />
+          <Property Name="SecurityQuestion" Type="nvarchar" MaxLength="500" />
+          <Property Name="Answer" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="RECORDSTATUS">
+          <Key>
+            <PropertyRef Name="StatusID" />
+          </Key>
+          <Property Name="StatusID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="StatusName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SINGER">
+          <Key>
+            <PropertyRef Name="SingerID" />
+          </Key>
+          <Property Name="Age" Type="int" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="10" />
+          <Property Name="SingerID" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="VIDEOKARAOKE">
+          <Key>
+            <PropertyRef Name="VideoID" />
+          </Key>
+          <Property Name="VideoID" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VIDEOOFFLINE">
+          <Key>
+            <PropertyRef Name="VideoID" />
+          </Key>
+          <Property Name="LinkVideo" Type="nvarchar" MaxLength="500" />
+          <Property Name="VideoID" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VIDEOONLINE">
+          <Key>
+            <PropertyRef Name="VideoID" />
+          </Key>
+          <Property Name="ComposerID" Type="nvarchar" MaxLength="100" />
+          <Property Name="DateUpdate" Type="date" />
+          <Property Name="Resolution" Type="nvarchar" MaxLength="10" />
+          <Property Name="SingerID" Type="nvarchar" MaxLength="100" />
+          <Property Name="URLVideo" Type="nvarchar" MaxLength="500" />
+          <Property Name="VideoID" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VIDEORECORD">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="RecordDate" Type="date" />
+          <Property Name="PlayerID" Type="nvarchar" MaxLength="100" />
+          <Property Name="RecordName" Type="nvarchar" MaxLength="500" />
+          <Property Name="StatusID" Type="nvarchar" MaxLength="100" />
+          <Property Name="URL" Type="nvarchar" MaxLength="500" />
+          <Property Name="VideoID" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK1">
+          <End Role="FORMATVIDEO" Type="Self.FORMATVIDEO" Multiplicity="0..1" />
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FORMATVIDEO">
+              <PropertyRef Name="FormatVideoID" />
+            </Principal>
+            <Dependent Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="FormatVideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK10">
+          <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
+          <End Role="DETAILEACHSING" Type="Self.DETAILEACHSING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLAYER">
+              <PropertyRef Name="PlayerID" />
+            </Principal>
+            <Dependent Role="DETAILEACHSING">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK11">
+          <End Role="SINGER" Type="Self.SINGER" Multiplicity="0..1" />
+          <End Role="VIDEOONLINE" Type="Self.VIDEOONLINE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SINGER">
+              <PropertyRef Name="SingerID" />
+            </Principal>
+            <Dependent Role="VIDEOONLINE">
+              <PropertyRef Name="SingerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK12">
+          <End Role="COMPOSER" Type="Self.COMPOSER" Multiplicity="0..1" />
+          <End Role="VIDEOONLINE" Type="Self.VIDEOONLINE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMPOSER">
+              <PropertyRef Name="ComposerID" />
+            </Principal>
+            <Dependent Role="VIDEOONLINE">
+              <PropertyRef Name="ComposerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK13">
+          <End Role="LEVEL" Type="Self.LEVEL" Multiplicity="0..1" />
+          <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LEVEL">
+              <PropertyRef Name="LevelID" />
+            </Principal>
+            <Dependent Role="PLAYER">
+              <PropertyRef Name="LevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK14">
+          <End Role="AVATAR" Type="Self.AVATAR" Multiplicity="0..1" />
+          <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AVATAR">
+              <PropertyRef Name="AvatarID" />
+            </Principal>
+            <Dependent Role="PLAYER">
+              <PropertyRef Name="AvatarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK2">
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="1" />
+          <End Role="VIDEOOFFLINE" Type="Self.VIDEOOFFLINE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VIDEOOFFLINE">
+              <PropertyRef Name="VideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK3">
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="0..1" />
+          <End Role="VIDEORECORD" Type="Self.VIDEORECORD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VIDEORECORD">
+              <PropertyRef Name="VideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK4">
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="1" />
+          <End Role="VIDEOKARAOKE" Type="Self.VIDEOKARAOKE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VIDEOKARAOKE">
+              <PropertyRef Name="VideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK5">
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="1" />
+          <End Role="VIDEOONLINE" Type="Self.VIDEOONLINE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VIDEOONLINE">
+              <PropertyRef Name="VideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK6">
+          <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORY">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK7">
+          <End Role="RECORDSTATUS" Type="Self.RECORDSTATUS" Multiplicity="0..1" />
+          <End Role="VIDEORECORD" Type="Self.VIDEORECORD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RECORDSTATUS">
+              <PropertyRef Name="StatusID" />
+            </Principal>
+            <Dependent Role="VIDEORECORD">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK8">
+          <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+          <End Role="VIDEORECORD" Type="Self.VIDEORECORD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLAYER">
+              <PropertyRef Name="PlayerID" />
+            </Principal>
+            <Dependent Role="VIDEORECORD">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK9">
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="1" />
+          <End Role="DETAILEACHSING" Type="Self.DETAILEACHSING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DETAILEACHSING">
+              <PropertyRef Name="VideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DeepKaraModelStoreContainer">
+          <EntitySet Name="AVATAR" EntityType="Self.AVATAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHUNG_VIDEOKARAOKE" EntityType="Self.CHUNG_VIDEOKARAOKE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COMPOSER" EntityType="Self.COMPOSER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DETAILEACHSING" EntityType="Self.DETAILEACHSING" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FORMATVIDEO" EntityType="Self.FORMATVIDEO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LEVEL" EntityType="Self.LEVEL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PARAMETER" EntityType="Self.PARAMETER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PLAYER" EntityType="Self.PLAYER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RECORDSTATUS" EntityType="Self.RECORDSTATUS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SINGER" EntityType="Self.SINGER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VIDEOKARAOKE" EntityType="Self.VIDEOKARAOKE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VIDEOOFFLINE" EntityType="Self.VIDEOOFFLINE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VIDEOONLINE" EntityType="Self.VIDEOONLINE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VIDEORECORD" EntityType="Self.VIDEORECORD" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK1" Association="Self.FK1">
+            <End Role="FORMATVIDEO" EntitySet="FORMATVIDEO" />
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+          </AssociationSet>
+          <AssociationSet Name="FK10" Association="Self.FK10">
+            <End Role="PLAYER" EntitySet="PLAYER" />
+            <End Role="DETAILEACHSING" EntitySet="DETAILEACHSING" />
+          </AssociationSet>
+          <AssociationSet Name="FK11" Association="Self.FK11">
+            <End Role="SINGER" EntitySet="SINGER" />
+            <End Role="VIDEOONLINE" EntitySet="VIDEOONLINE" />
+          </AssociationSet>
+          <AssociationSet Name="FK12" Association="Self.FK12">
+            <End Role="COMPOSER" EntitySet="COMPOSER" />
+            <End Role="VIDEOONLINE" EntitySet="VIDEOONLINE" />
+          </AssociationSet>
+          <AssociationSet Name="FK13" Association="Self.FK13">
+            <End Role="LEVEL" EntitySet="LEVEL" />
+            <End Role="PLAYER" EntitySet="PLAYER" />
+          </AssociationSet>
+          <AssociationSet Name="FK14" Association="Self.FK14">
+            <End Role="AVATAR" EntitySet="AVATAR" />
+            <End Role="PLAYER" EntitySet="PLAYER" />
+          </AssociationSet>
+          <AssociationSet Name="FK2" Association="Self.FK2">
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+            <End Role="VIDEOOFFLINE" EntitySet="VIDEOOFFLINE" />
+          </AssociationSet>
+          <AssociationSet Name="FK3" Association="Self.FK3">
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+            <End Role="VIDEORECORD" EntitySet="VIDEORECORD" />
+          </AssociationSet>
+          <AssociationSet Name="FK4" Association="Self.FK4">
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+            <End Role="VIDEOKARAOKE" EntitySet="VIDEOKARAOKE" />
+          </AssociationSet>
+          <AssociationSet Name="FK5" Association="Self.FK5">
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+            <End Role="VIDEOONLINE" EntitySet="VIDEOONLINE" />
+          </AssociationSet>
+          <AssociationSet Name="FK6" Association="Self.FK6">
+            <End Role="CATEGORY" EntitySet="CATEGORY" />
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+          </AssociationSet>
+          <AssociationSet Name="FK7" Association="Self.FK7">
+            <End Role="RECORDSTATUS" EntitySet="RECORDSTATUS" />
+            <End Role="VIDEORECORD" EntitySet="VIDEORECORD" />
+          </AssociationSet>
+          <AssociationSet Name="FK8" Association="Self.FK8">
+            <End Role="PLAYER" EntitySet="PLAYER" />
+            <End Role="VIDEORECORD" EntitySet="VIDEORECORD" />
+          </AssociationSet>
+          <AssociationSet Name="FK9" Association="Self.FK9">
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+            <End Role="DETAILEACHSING" EntitySet="DETAILEACHSING" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DeepKaraModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AVATAR">
+          <Key>
+            <PropertyRef Name="AvatarID" />
+          </Key>
+          <Property Name="AvatarID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="URL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PLAYERs" Relationship="Self.FK14" FromRole="AVATAR" ToRole="PLAYER" />
+        </EntityType>
+        <EntityType Name="CATEGORY">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Describe" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CHUNG_VIDEOKARAOKE" Relationship="Self.FK6" FromRole="CATEGORY" ToRole="CHUNG_VIDEOKARAOKE" />
+        </EntityType>
+        <EntityType Name="CHUNG_VIDEOKARAOKE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="CategoryID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Duaration" Type="Int32" />
+          <Property Name="FormatVideoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CATEGORY" Relationship="Self.FK6" FromRole="CHUNG_VIDEOKARAOKE" ToRole="CATEGORY" />
+          <NavigationProperty Name="FORMATVIDEO" Relationship="Self.FK1" FromRole="CHUNG_VIDEOKARAOKE" ToRole="FORMATVIDEO" />
+          <NavigationProperty Name="VIDEOOFFLINE" Relationship="Self.FK2" FromRole="CHUNG_VIDEOKARAOKE" ToRole="VIDEOOFFLINE" />
+          <NavigationProperty Name="VIDEORECORDs" Relationship="Self.FK3" FromRole="CHUNG_VIDEOKARAOKE" ToRole="VIDEORECORD" />
+          <NavigationProperty Name="VIDEOKARAOKE" Relationship="Self.FK4" FromRole="CHUNG_VIDEOKARAOKE" ToRole="VIDEOKARAOKE" />
+          <NavigationProperty Name="VIDEOONLINE" Relationship="Self.FK5" FromRole="CHUNG_VIDEOKARAOKE" ToRole="VIDEOONLINE" />
+          <NavigationProperty Name="DETAILEACHSINGs" Relationship="Self.FK9" FromRole="CHUNG_VIDEOKARAOKE" ToRole="DETAILEACHSING" />
+        </EntityType>
+        <EntityType Name="COMPOSER">
+          <Key>
+            <PropertyRef Name="ComposerID" />
+          </Key>
+          <Property Name="Age" Type="Int32" />
+          <Property Name="ComposerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VIDEOONLINEs" Relationship="Self.FK12" FromRole="COMPOSER" ToRole="VIDEOONLINE" />
+        </EntityType>
+        <EntityType Name="DETAILEACHSING">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+            <PropertyRef Name="VideoID" />
+          </Key>
+          <Property Name="PlayerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VideoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Score" Type="Int32" />
+          <Property Name="DateSing" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="CHUNG_VIDEOKARAOKE" Relationship="Self.FK9" FromRole="DETAILEACHSING" ToRole="CHUNG_VIDEOKARAOKE" />
+          <NavigationProperty Name="PLAYER" Relationship="Self.FK10" FromRole="DETAILEACHSING" ToRole="PLAYER" />
+        </EntityType>
+        <EntityType Name="FORMATVIDEO">
+          <Key>
+            <PropertyRef Name="FormatVideoID" />
+          </Key>
+          <Property Name="FormatVideoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Describe" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CHUNG_VIDEOKARAOKE" Relationship="Self.FK1" FromRole="FORMATVIDEO" ToRole="CHUNG_VIDEOKARAOKE" />
+        </EntityType>
+        <EntityType Name="LEVEL">
+          <Key>
+            <PropertyRef Name="LevelID" />
+          </Key>
+          <Property Name="LevelID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaxScore" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RemainScoreToUp" Type="Int32" />
+          <NavigationProperty Name="PLAYERs" Relationship="Self.FK13" FromRole="LEVEL" ToRole="PLAYER" />
+        </EntityType>
+        <EntityType Name="PARAMETER">
+          <Key>
+            <PropertyRef Name="ParamID" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ParamID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Value" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PLAYER">
+          <Key>
+            <PropertyRef Name="PlayerID" />
+          </Key>
+          <Property Name="PlayerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AvatarID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BirthDate" Type="DateTime" Precision="0" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FacebookURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Job" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LevelID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Scores" Type="Int32" />
+          <Property Name="SecurityQuestion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Answer" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AVATAR" Relationship="Self.FK14" FromRole="PLAYER" ToRole="AVATAR" />
+          <NavigationProperty Name="DETAILEACHSINGs" Relationship="Self.FK10" FromRole="PLAYER" ToRole="DETAILEACHSING" />
+          <NavigationProperty Name="LEVEL" Relationship="Self.FK13" FromRole="PLAYER" ToRole="LEVEL" />
+          <NavigationProperty Name="VIDEORECORDs" Relationship="Self.FK8" FromRole="PLAYER" ToRole="VIDEORECORD" />
+        </EntityType>
+        <EntityType Name="RECORDSTATU">
+          <Key>
+            <PropertyRef Name="StatusID" />
+          </Key>
+          <Property Name="StatusID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StatusName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VIDEORECORDs" Relationship="Self.FK7" FromRole="RECORDSTATUS" ToRole="VIDEORECORD" />
+        </EntityType>
+        <EntityType Name="SINGER">
+          <Key>
+            <PropertyRef Name="SingerID" />
+          </Key>
+          <Property Name="Age" Type="Int32" />
+          <Property Name="FullName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SingerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="VIDEOONLINEs" Relationship="Self.FK11" FromRole="SINGER" ToRole="VIDEOONLINE" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="VIDEOKARAOKE">
+          <Key>
+            <PropertyRef Name="VideoID" />
+          </Key>
+          <Property Name="VideoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CHUNG_VIDEOKARAOKE" Relationship="Self.FK4" FromRole="VIDEOKARAOKE" ToRole="CHUNG_VIDEOKARAOKE" />
+        </EntityType>
+        <EntityType Name="VIDEOOFFLINE">
+          <Key>
+            <PropertyRef Name="VideoID" />
+          </Key>
+          <Property Name="LinkVideo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VideoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CHUNG_VIDEOKARAOKE" Relationship="Self.FK2" FromRole="VIDEOOFFLINE" ToRole="CHUNG_VIDEOKARAOKE" />
+        </EntityType>
+        <EntityType Name="VIDEOONLINE">
+          <Key>
+            <PropertyRef Name="VideoID" />
+          </Key>
+          <Property Name="ComposerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DateUpdate" Type="DateTime" Precision="0" />
+          <Property Name="Resolution" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SingerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="URLVideo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VideoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CHUNG_VIDEOKARAOKE" Relationship="Self.FK5" FromRole="VIDEOONLINE" ToRole="CHUNG_VIDEOKARAOKE" />
+          <NavigationProperty Name="COMPOSER" Relationship="Self.FK12" FromRole="VIDEOONLINE" ToRole="COMPOSER" />
+          <NavigationProperty Name="SINGER" Relationship="Self.FK11" FromRole="VIDEOONLINE" ToRole="SINGER" />
+        </EntityType>
+        <EntityType Name="VIDEORECORD">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RecordDate" Type="DateTime" Precision="0" />
+          <Property Name="PlayerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RecordName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StatusID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="URL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VideoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CHUNG_VIDEOKARAOKE" Relationship="Self.FK3" FromRole="VIDEORECORD" ToRole="CHUNG_VIDEOKARAOKE" />
+          <NavigationProperty Name="PLAYER" Relationship="Self.FK8" FromRole="VIDEORECORD" ToRole="PLAYER" />
+          <NavigationProperty Name="RECORDSTATU" Relationship="Self.FK7" FromRole="VIDEORECORD" ToRole="RECORDSTATUS" />
+        </EntityType>
+        <Association Name="FK14">
+          <End Role="AVATAR" Type="Self.AVATAR" Multiplicity="0..1" />
+          <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AVATAR">
+              <PropertyRef Name="AvatarID" />
+            </Principal>
+            <Dependent Role="PLAYER">
+              <PropertyRef Name="AvatarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK6">
+          <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORY">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK1">
+          <End Role="FORMATVIDEO" Type="Self.FORMATVIDEO" Multiplicity="0..1" />
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FORMATVIDEO">
+              <PropertyRef Name="FormatVideoID" />
+            </Principal>
+            <Dependent Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="FormatVideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK2">
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="1" />
+          <End Role="VIDEOOFFLINE" Type="Self.VIDEOOFFLINE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VIDEOOFFLINE">
+              <PropertyRef Name="VideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK3">
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="0..1" />
+          <End Role="VIDEORECORD" Type="Self.VIDEORECORD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VIDEORECORD">
+              <PropertyRef Name="VideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK4">
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="1" />
+          <End Role="VIDEOKARAOKE" Type="Self.VIDEOKARAOKE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VIDEOKARAOKE">
+              <PropertyRef Name="VideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK5">
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="1" />
+          <End Role="VIDEOONLINE" Type="Self.VIDEOONLINE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VIDEOONLINE">
+              <PropertyRef Name="VideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK9">
+          <End Role="CHUNG_VIDEOKARAOKE" Type="Self.CHUNG_VIDEOKARAOKE" Multiplicity="1" />
+          <End Role="DETAILEACHSING" Type="Self.DETAILEACHSING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUNG_VIDEOKARAOKE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DETAILEACHSING">
+              <PropertyRef Name="VideoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK12">
+          <End Role="COMPOSER" Type="Self.COMPOSER" Multiplicity="0..1" />
+          <End Role="VIDEOONLINE" Type="Self.VIDEOONLINE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMPOSER">
+              <PropertyRef Name="ComposerID" />
+            </Principal>
+            <Dependent Role="VIDEOONLINE">
+              <PropertyRef Name="ComposerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK10">
+          <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="1" />
+          <End Role="DETAILEACHSING" Type="Self.DETAILEACHSING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLAYER">
+              <PropertyRef Name="PlayerID" />
+            </Principal>
+            <Dependent Role="DETAILEACHSING">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK13">
+          <End Role="LEVEL" Type="Self.LEVEL" Multiplicity="0..1" />
+          <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LEVEL">
+              <PropertyRef Name="LevelID" />
+            </Principal>
+            <Dependent Role="PLAYER">
+              <PropertyRef Name="LevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK8">
+          <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+          <End Role="VIDEORECORD" Type="Self.VIDEORECORD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLAYER">
+              <PropertyRef Name="PlayerID" />
+            </Principal>
+            <Dependent Role="VIDEORECORD">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK7">
+          <End Role="RECORDSTATUS" Type="Self.RECORDSTATU" Multiplicity="0..1" />
+          <End Role="VIDEORECORD" Type="Self.VIDEORECORD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RECORDSTATUS">
+              <PropertyRef Name="StatusID" />
+            </Principal>
+            <Dependent Role="VIDEORECORD">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK11">
+          <End Role="SINGER" Type="Self.SINGER" Multiplicity="0..1" />
+          <End Role="VIDEOONLINE" Type="Self.VIDEOONLINE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SINGER">
+              <PropertyRef Name="SingerID" />
+            </Principal>
+            <Dependent Role="VIDEOONLINE">
+              <PropertyRef Name="SingerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DeepKaraEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AVATARs" EntityType="Self.AVATAR" />
+          <EntitySet Name="CATEGORies" EntityType="Self.CATEGORY" />
+          <EntitySet Name="CHUNG_VIDEOKARAOKE" EntityType="Self.CHUNG_VIDEOKARAOKE" />
+          <EntitySet Name="COMPOSERs" EntityType="Self.COMPOSER" />
+          <EntitySet Name="DETAILEACHSINGs" EntityType="Self.DETAILEACHSING" />
+          <EntitySet Name="FORMATVIDEOs" EntityType="Self.FORMATVIDEO" />
+          <EntitySet Name="LEVELs" EntityType="Self.LEVEL" />
+          <EntitySet Name="PARAMETERs" EntityType="Self.PARAMETER" />
+          <EntitySet Name="PLAYERs" EntityType="Self.PLAYER" />
+          <EntitySet Name="RECORDSTATUS" EntityType="Self.RECORDSTATU" />
+          <EntitySet Name="SINGERs" EntityType="Self.SINGER" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="VIDEOKARAOKEs" EntityType="Self.VIDEOKARAOKE" />
+          <EntitySet Name="VIDEOOFFLINEs" EntityType="Self.VIDEOOFFLINE" />
+          <EntitySet Name="VIDEOONLINEs" EntityType="Self.VIDEOONLINE" />
+          <EntitySet Name="VIDEORECORDs" EntityType="Self.VIDEORECORD" />
+          <AssociationSet Name="FK14" Association="Self.FK14">
+            <End Role="AVATAR" EntitySet="AVATARs" />
+            <End Role="PLAYER" EntitySet="PLAYERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK6" Association="Self.FK6">
+            <End Role="CATEGORY" EntitySet="CATEGORies" />
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+          </AssociationSet>
+          <AssociationSet Name="FK1" Association="Self.FK1">
+            <End Role="FORMATVIDEO" EntitySet="FORMATVIDEOs" />
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+          </AssociationSet>
+          <AssociationSet Name="FK2" Association="Self.FK2">
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+            <End Role="VIDEOOFFLINE" EntitySet="VIDEOOFFLINEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK3" Association="Self.FK3">
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+            <End Role="VIDEORECORD" EntitySet="VIDEORECORDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK4" Association="Self.FK4">
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+            <End Role="VIDEOKARAOKE" EntitySet="VIDEOKARAOKEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK5" Association="Self.FK5">
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+            <End Role="VIDEOONLINE" EntitySet="VIDEOONLINEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK9" Association="Self.FK9">
+            <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />
+            <End Role="DETAILEACHSING" EntitySet="DETAILEACHSINGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK12" Association="Self.FK12">
+            <End Role="COMPOSER" EntitySet="COMPOSERs" />
+            <End Role="VIDEOONLINE" EntitySet="VIDEOONLINEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK10" Association="Self.FK10">
+            <End Role="PLAYER" EntitySet="PLAYERs" />
+            <End Role="DETAILEACHSING" EntitySet="DETAILEACHSINGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK13" Association="Self.FK13">
+            <End Role="LEVEL" EntitySet="LEVELs" />
+            <End Role="PLAYER" EntitySet="PLAYERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK8" Association="Self.FK8">
+            <End Role="PLAYER" EntitySet="PLAYERs" />
+            <End Role="VIDEORECORD" EntitySet="VIDEORECORDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK7" Association="Self.FK7">
+            <End Role="RECORDSTATUS" EntitySet="RECORDSTATUS" />
+            <End Role="VIDEORECORD" EntitySet="VIDEORECORDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK11" Association="Self.FK11">
+            <End Role="SINGER" EntitySet="SINGERs" />
+            <End Role="VIDEOONLINE" EntitySet="VIDEOONLINEs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DeepKaraModelStoreContainer" CdmEntityContainer="DeepKaraEntities">
+          <EntitySetMapping Name="AVATARs">
+            <EntityTypeMapping TypeName="DeepKaraModel.AVATAR">
+              <MappingFragment StoreEntitySet="AVATAR">
+                <ScalarProperty Name="AvatarID" ColumnName="AvatarID" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CATEGORies">
+            <EntityTypeMapping TypeName="DeepKaraModel.CATEGORY">
+              <MappingFragment StoreEntitySet="CATEGORY">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHUNG_VIDEOKARAOKE">
+            <EntityTypeMapping TypeName="DeepKaraModel.CHUNG_VIDEOKARAOKE">
+              <MappingFragment StoreEntitySet="CHUNG_VIDEOKARAOKE">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Duaration" ColumnName="Duaration" />
+                <ScalarProperty Name="FormatVideoID" ColumnName="FormatVideoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COMPOSERs">
+            <EntityTypeMapping TypeName="DeepKaraModel.COMPOSER">
+              <MappingFragment StoreEntitySet="COMPOSER">
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="ComposerID" ColumnName="ComposerID" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETAILEACHSINGs">
+            <EntityTypeMapping TypeName="DeepKaraModel.DETAILEACHSING">
+              <MappingFragment StoreEntitySet="DETAILEACHSING">
+                <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+                <ScalarProperty Name="VideoID" ColumnName="VideoID" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="DateSing" ColumnName="DateSing" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FORMATVIDEOs">
+            <EntityTypeMapping TypeName="DeepKaraModel.FORMATVIDEO">
+              <MappingFragment StoreEntitySet="FORMATVIDEO">
+                <ScalarProperty Name="FormatVideoID" ColumnName="FormatVideoID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LEVELs">
+            <EntityTypeMapping TypeName="DeepKaraModel.LEVEL">
+              <MappingFragment StoreEntitySet="LEVEL">
+                <ScalarProperty Name="LevelID" ColumnName="LevelID" />
+                <ScalarProperty Name="MaxScore" ColumnName="MaxScore" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RemainScoreToUp" ColumnName="RemainScoreToUp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PARAMETERs">
+            <EntityTypeMapping TypeName="DeepKaraModel.PARAMETER">
+              <MappingFragment StoreEntitySet="PARAMETER">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ParamID" ColumnName="ParamID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PLAYERs">
+            <EntityTypeMapping TypeName="DeepKaraModel.PLAYER">
+              <MappingFragment StoreEntitySet="PLAYER">
+                <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+                <ScalarProperty Name="AvatarID" ColumnName="AvatarID" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="FacebookURL" ColumnName="FacebookURL" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Job" ColumnName="Job" />
+                <ScalarProperty Name="LevelID" ColumnName="LevelID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Scores" ColumnName="Scores" />
+                <ScalarProperty Name="SecurityQuestion" ColumnName="SecurityQuestion" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RECORDSTATUS">
+            <EntityTypeMapping TypeName="DeepKaraModel.RECORDSTATU">
+              <MappingFragment StoreEntitySet="RECORDSTATUS">
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINGERs">
+            <EntityTypeMapping TypeName="DeepKaraModel.SINGER">
+              <MappingFragment StoreEntitySet="SINGER">
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="SingerID" ColumnName="SingerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DeepKaraModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VIDEOKARAOKEs">
+            <EntityTypeMapping TypeName="DeepKaraModel.VIDEOKARAOKE">
+              <MappingFragment StoreEntitySet="VIDEOKARAOKE">
+                <ScalarProperty Name="VideoID" ColumnName="VideoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VIDEOOFFLINEs">
+            <EntityTypeMapping TypeName="DeepKaraModel.VIDEOOFFLINE">
+              <MappingFragment StoreEntitySet="VIDEOOFFLINE">
+                <ScalarProperty Name="LinkVideo" ColumnName="LinkVideo" />
+                <ScalarProperty Name="VideoID" ColumnName="VideoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VIDEOONLINEs">
+            <EntityTypeMapping TypeName="DeepKaraModel.VIDEOONLINE">
+              <MappingFragment StoreEntitySet="VIDEOONLINE">
+                <ScalarProperty Name="ComposerID" ColumnName="ComposerID" />
+                <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+                <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+                <ScalarProperty Name="SingerID" ColumnName="SingerID" />
+                <ScalarProperty Name="URLVideo" ColumnName="URLVideo" />
+                <ScalarProperty Name="VideoID" ColumnName="VideoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VIDEORECORDs">
+            <EntityTypeMapping TypeName="DeepKaraModel.VIDEORECORD">
+              <MappingFragment StoreEntitySet="VIDEORECORD">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="RecordDate" ColumnName="RecordDate" />
+                <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+                <ScalarProperty Name="RecordName" ColumnName="RecordName" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="VideoID" ColumnName="VideoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

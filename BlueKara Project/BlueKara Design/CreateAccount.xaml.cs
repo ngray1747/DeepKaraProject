@@ -17,11 +17,19 @@ namespace BlueKara_Design
     /// <summary>
     /// Interaction logic for CreateAccount.xaml
     /// </summary>
-    public partial class CreateAccount : Window
+    public partial class CreateAccount 
     {
         public CreateAccount()
         {
             InitializeComponent();
+        }
+
+        private void Goback(object sender, MouseButtonEventArgs e)
+        {
+            
+            MainWindow a = new MainWindow();
+            a.Show();
+            this.Close();
         }
     }
 }

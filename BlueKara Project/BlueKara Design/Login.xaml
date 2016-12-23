@@ -21,8 +21,8 @@
 
 
         </Image>
-        <TextBlock x:Name="textBlock" FontStyle="Oblique" Cursor="Hand" MouseEnter="LinkSpecial" MouseLeave="LinkSpecial2" FontSize="20" HorizontalAlignment="Left" Margin="467,486,0,0" TextWrapping="Wrap" Text="Quên mật khẩu?" VerticalAlignment="Top" Height="30" Width="167"/>
-        <TextBlock x:Name="textBlock_Copy" Cursor="Hand" FontStyle="Oblique" MouseEnter="LinkSpecial" MouseLeave="LinkSpecial2" FontSize="20" HorizontalAlignment="Left" Margin="467,535,0,0" TextWrapping="Wrap" Text="Chưa có tài khoản?" VerticalAlignment="Top" Height="27" Width="188"/>
+        <TextBlock x:Name="textBlock" FontStyle="Oblique" Cursor="Hand" MouseEnter="LinkSpecial" MouseLeave="LinkSpecial2" FontSize="20" HorizontalAlignment="Left" Margin="467,486,0,0" TextWrapping="Wrap" Text="Quên mật khẩu?" VerticalAlignment="Top" Height="30" Width="167" MouseLeftButtonDown="Gointoforgetpass"/>
+        <TextBlock x:Name="textBlock_Copy" Cursor="Hand" FontStyle="Oblique" MouseEnter="LinkSpecial" MouseLeave="LinkSpecial2" FontSize="20" HorizontalAlignment="Left" Margin="467,535,0,0" TextWrapping="Wrap" Text="Chưa có tài khoản?" VerticalAlignment="Top" Height="27" Width="188" MouseLeftButtonDown="Gointcreate"/>
         <Image x:Name="image1" Source="Image/Logo2.png" HorizontalAlignment="Left" Height="71" Margin="10,550,0,0" VerticalAlignment="Top" Width="123"/>
 
 

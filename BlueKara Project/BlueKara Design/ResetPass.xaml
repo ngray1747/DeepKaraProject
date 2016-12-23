@@ -26,6 +26,6 @@
             </TextBlock.Background>
                 
         </TextBlock>
-        <Image x:Name="image3" Cursor="Hand" Source="Image/back.png" HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="123" RenderTransformOrigin="0.711,0.529"/>
+        <Image x:Name="image3" Cursor="Hand" Source="Image/back.png" HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="123" RenderTransformOrigin="0.711,0.529" MouseLeftButtonDown="Gobacklogin"/>
     </Grid>
 </Controls:MetroWindow>

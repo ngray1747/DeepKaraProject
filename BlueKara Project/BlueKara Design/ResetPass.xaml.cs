@@ -23,5 +23,13 @@ namespace BlueKara_Design
         {
             InitializeComponent();
         }
+
+        private void Gobacklogin(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow a = new MainWindow();
+            a.Show();
+            this.Close();
+
+        }
     }
 }

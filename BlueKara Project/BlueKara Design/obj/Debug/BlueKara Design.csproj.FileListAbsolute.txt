@@ -36,3 +36,36 @@ C:\Users\NguyenThanhPhi\Desktop\BlueKara Project\BlueKara Design\obj\Debug\UseCo
 C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\BlueKara Design.exe.config
 C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design.exe
 C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design.pdb
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\BlueKara Design.exe
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\BlueKara Design.pdb
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\Facebook.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\MahApps.Metro.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\Facebook.xml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\MahApps.Metro.pdb
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\MahApps.Metro.xml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design.csprojResolveAssemblyReference.cache
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\CreateAccount.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\Login.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\MainHome.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\ResetPass.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\SplashScreen.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\UseControl\FacebbokPost.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\UseControl\Scored.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\UseControl\VideoPlayer.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\App.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design_MarkupCompile.cache
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design_MarkupCompile.lref
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\App.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\CreateAccount.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\Login.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\MainHome.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\ResetPass.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\SplashScreen.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\UseControl\FacebbokPost.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\UseControl\Scored.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\UseControl\VideoPlayer.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design.g.resources
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara_Design.Properties.Resources.resources
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design.csproj.GenerateResource.Cache
