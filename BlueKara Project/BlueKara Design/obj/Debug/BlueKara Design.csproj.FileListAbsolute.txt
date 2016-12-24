@@ -69,3 +69,8 @@ C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\
 C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design.g.resources
 C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara_Design.Properties.Resources.resources
 C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design.csproj.GenerateResource.Cache
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Debug\BlueKara Design_Content.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\EntityFramework.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\EntityFramework.xml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\EntityFramework.SqlServer.xml

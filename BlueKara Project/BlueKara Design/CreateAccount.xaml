@@ -19,11 +19,11 @@
                 <Label x:Name="label_Copy" Content="Email" FontSize="20" HorizontalAlignment="Left" Margin="71,10,0,0" VerticalAlignment="Top" Width="147" Height="38" RenderTransformOrigin="0.477,1.461"/>
                 <Label x:Name="label_Copy1" Content="Tên Đăng Nhập" FontSize="20" HorizontalAlignment="Left" Margin="71,62,0,0" VerticalAlignment="Top" Width="147" Height="38"/>
                 <Label x:Name="label_Copy2" Content="Password" FontSize="20" HorizontalAlignment="Left" Margin="71,115,0,0" VerticalAlignment="Top" Width="147" Height="38"/>
-                <TextBox Name="Email" FontSize="15" Foreground="Red" Margin="258,10,246,115"></TextBox>
-                <TextBox FontSize="15" Foreground="Red" Margin="258,62,347,63"></TextBox>
-                <PasswordBox FontSize="15" Foreground="Red" Margin="258,115,347,10"></PasswordBox>
-                <Image Stretch="Fill" Source="Image/My photo on Jobs HoilydayEdit.jpg" Margin="710,10,10,63"></Image>
-                <Button x:Name="button" Content="Tải Ảnh Đại Diện" HorizontalAlignment="Left" Margin="744,115,0,0" VerticalAlignment="Top" Width="100" Height="38" RenderTransformOrigin="0.406,0.592"/>
+                <TextBox Name="Email" FontSize="15" Foreground="Red" Margin="258,10,246,115"  ></TextBox>
+                <TextBox  Name="Username" FontSize="15" Foreground="Red" Margin="258,62,347,63"></TextBox>
+                <PasswordBox Name="Password" FontSize="15" Foreground="Red" Margin="258,115,347,10"></PasswordBox>
+                <Image Name="Image" Stretch="Fill" Source="Image/My photo on Jobs HoilydayEdit.jpg" Margin="710,10,10,63"></Image>
+                <Button x:Name="Upload" Content="Tải Ảnh Đại Diện" HorizontalAlignment="Left" Margin="744,115,0,0" VerticalAlignment="Top" Width="100" Height="38" RenderTransformOrigin="0.406,0.592" Click="button_Click"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Thông Tin Cá Nhân" Margin="0,316,0,53" Background="#CC991717">
@@ -31,27 +31,27 @@
                 <Label x:Name="label_Copy3" Content="Họ Tên" FontSize="20" HorizontalAlignment="Left" Margin="71,10,0,0" VerticalAlignment="Top" Width="147" Height="38" RenderTransformOrigin="0.477,1.461"/>
                 <Label x:Name="label_Copy4" Content="Số Điện Thoại" FontSize="20" HorizontalAlignment="Left" Margin="71,64,0,0" VerticalAlignment="Top" Width="147" Height="38" RenderTransformOrigin="0.477,1.461"/>
                 <Label x:Name="label_Copy5" Content="Link Facebook" FontSize="20" HorizontalAlignment="Left" Margin="71,118,0,0" VerticalAlignment="Top" Width="147" Height="38" RenderTransformOrigin="0.477,1.461"/>
-                <TextBox FontSize="15" Foreground="Red" Margin="258,10,348,165"></TextBox>
+                <TextBox Name="FullName" FontSize="15" Foreground="Red" Margin="258,10,348,165"></TextBox>
                 <Label x:Name="label_Copy6" Content="Ngày Sinh" FontSize="20" HorizontalAlignment="Left" Margin="562,10,0,0" VerticalAlignment="Top" Width="130" Height="38" RenderTransformOrigin="0.477,1.461"/>
-                <DatePicker Foreground="Red"  FontSize="20" HorizontalAlignment="Left" Margin="697,10,0,0" VerticalAlignment="Top" Width="163" Height="38"/>
-                <TextBox FontSize="15" Foreground="Red" Margin="258,64,348,111"></TextBox>
-                <TextBox FontSize="15" Foreground="Blue" FontStyle="Italic" TextDecorations="Underline" Margin="258,118,14,57"></TextBox>
-                <TextBox FontSize="15" Foreground="Red" Margin="697,64,14,111"></TextBox>
+                <DatePicker Name="DateBirth" Foreground="Red"  FontSize="20" HorizontalAlignment="Left" Margin="697,10,0,0" VerticalAlignment="Top" Width="163" Height="38"/>
+                <TextBox Name="Sdt" FontSize="15" Foreground="Red" Margin="258,64,348,111" ></TextBox>
+                <TextBox  Name="FacebookLink" FontSize="15" Foreground="Blue" FontStyle="Italic" TextDecorations="Underline" Margin="258,118,14,57"></TextBox>
+                <TextBox Name="Job" FontSize="15" Foreground="Red" Margin="697,64,14,111"></TextBox>
                 <Label x:Name="label_Copy16" Content="Nghề Nghiệp" FontSize="20" HorizontalAlignment="Left" Margin="562,64,0,0" VerticalAlignment="Top" Width="130" Height="38" RenderTransformOrigin="0.477,1.461"/>
                 <Label x:Name="label_Copy15" Content="Câu Hỏi Bảo Mật" FontSize="20" HorizontalAlignment="Left" Margin="71,175,0,0" VerticalAlignment="Top" Width="161" Height="38" RenderTransformOrigin="0.477,1.461"/>
-                <ComboBox FontSize="15" x:Name="comboBox" HorizontalAlignment="Left" Margin="258,172,0,0" VerticalAlignment="Top" Width="276" Height="38">
+                <ComboBox Name="Question" FontSize="15"  HorizontalAlignment="Left" Margin="258,172,0,0" VerticalAlignment="Top" Width="276" Height="38">
                     <ComboBoxItem FontSize="15"  Content="Tên Bố Của Bố Bạn?"></ComboBoxItem>
                     <ComboBoxItem FontSize="15"  Content="Tên Trường Học Tiểu Học Bạn Đã Học?"></ComboBoxItem>
                     <ComboBoxItem FontSize="15"  Content="Tên Chó Nuôi Đầu Tiên Của Bạn?"></ComboBoxItem>
                     <ComboBoxItem FontSize="15"  Content="Tên Bạn Thân Nhất Của Bạn?"></ComboBoxItem>
                 </ComboBox>
                 <Label x:Name="label_Copy20" Content="Trả Lời" FontSize="20" HorizontalAlignment="Left" Margin="539,175,0,0" VerticalAlignment="Top" Width="74" Height="38" RenderTransformOrigin="0.477,1.461"/>
-                <TextBox FontSize="15" Foreground="Red" Margin="613,175,14,0"></TextBox>
+                <TextBox Name="Answer" FontSize="15" Foreground="Red" Margin="613,175,14,0"></TextBox>
             </Grid>
         </GroupBox>
 
         <Image x:Name="image1" Source="Logo2.png" HorizontalAlignment="Left" Height="71" Margin="0,550,0,0" VerticalAlignment="Top" Width="123"/>
-        <Image x:Name="image2" Cursor="Hand" Source="Image/createaccount-button-png-hi.png" HorizontalAlignment="Left" Height="38" Margin="428,573,0,0" VerticalAlignment="Top" Width="144"/>
+        <Image MouseLeftButtonDown="SubmitProfile" x:Name="image2" Cursor="Hand" Source="Image/createaccount-button-png-hi.png" HorizontalAlignment="Left" Height="38" Margin="428,573,0,0" VerticalAlignment="Top" Width="144"/>
 
         <Image x:Name="image3" MouseLeftButtonDown="Goback" Cursor="Hand" Source="Image/back.png" HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="123" RenderTransformOrigin="0.711,0.529"/>
     </Grid>
