@@ -14,16 +14,10 @@ namespace BlueKara_Design.Database
     
     public partial class AVATAR
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public AVATAR()
-        {
-            this.PLAYERs = new HashSet<PLAYER>();
-        }
-    
         public string AvatarID { get; set; }
         public string URL { get; set; }
+        public string PlayerID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PLAYER> PLAYERs { get; set; }
+        public virtual PLAYER PLAYER { get; set; }
     }
 }

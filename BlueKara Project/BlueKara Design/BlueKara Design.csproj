@@ -119,6 +119,10 @@
     <Reference Include="WPF.MDI">
       <HintPath>..\..\WPF.MDI.dll</HintPath>
     </Reference>
+    <Reference Include="WpfAnimatedGif, Version=1.4.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.14\lib\net\WpfAnimatedGif.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -191,6 +195,7 @@
     <Compile Include="Database\VIDEORECORD.cs">
       <DependentUpon>DeepKaraDatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="ListKaraoke.cs" />
     <Compile Include="MainHome.xaml.cs">
       <DependentUpon>MainHome.xaml</DependentUpon>
     </Compile>
@@ -364,6 +369,10 @@
     <Resource Include="Image\Setting.png" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
     <Content Include="Database\DeepKaraDatabase.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DeepKaraDatabase.edmx</DependentUpon>
@@ -374,9 +383,8 @@
       <DependentUpon>DeepKaraDatabase.edmx</DependentUpon>
       <LastGenOutput>DeepKaraDatabase.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Resource Include="Image\loading.gif" />
+    <Resource Include="Image\loading-yellow.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

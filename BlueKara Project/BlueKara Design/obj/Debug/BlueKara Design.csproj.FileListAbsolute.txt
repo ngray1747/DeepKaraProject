@@ -74,3 +74,5 @@ C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\
 C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\EntityFramework.xml
 C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\WpfAnimatedGif.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Debug\WpfAnimatedGif.xml

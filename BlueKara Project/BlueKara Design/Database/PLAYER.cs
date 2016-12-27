@@ -17,18 +17,18 @@ namespace BlueKara_Design.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PLAYER()
         {
+            this.AVATARs = new HashSet<AVATAR>();
             this.DETAILEACHSINGs = new HashSet<DETAILEACHSING>();
+            this.LEVELs = new HashSet<LEVEL>();
             this.VIDEORECORDs = new HashSet<VIDEORECORD>();
         }
     
         public string PlayerID { get; set; }
-        public string AvatarID { get; set; }
         public Nullable<System.DateTime> BirthDate { get; set; }
         public string Email { get; set; }
         public string FacebookURL { get; set; }
         public string FullName { get; set; }
         public string Job { get; set; }
-        public string LevelID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
@@ -36,10 +36,12 @@ namespace BlueKara_Design.Database
         public string SecurityQuestion { get; set; }
         public string Answer { get; set; }
     
-        public virtual AVATAR AVATAR { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AVATAR> AVATARs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DETAILEACHSING> DETAILEACHSINGs { get; set; }
-        public virtual LEVEL LEVEL { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LEVEL> LEVELs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VIDEORECORD> VIDEORECORDs { get; set; }
     }

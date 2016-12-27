@@ -6,19 +6,19 @@
              xmlns:local="clr-namespace:BlueKara_Design.UseControl"
              
              xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" x:Class="BlueKara_Design.UseControl.VideoPlayer"
-             
+             x:Name="Usecontrolvideoplayer"
              mc:Ignorable="d" d:DesignWidth="1350" Height="693">
     <UserControl.Resources>
         <Style TargetType="{x:Type Slider}" x:Key="Customslider" BasedOn="{StaticResource MetroSlider}"></Style>
     </UserControl.Resources>
     <Grid>
-        <MediaElement   Stretch="Fill" x:Name="mediaElement" LoadedBehavior="Manual" UnloadedBehavior="Stop" Source="E:\Karaoke\Tru Tinh\can nha mau tim-Tan nhac.avi" HorizontalAlignment="Left" Height="630" VerticalAlignment="Top" Width="1350"/>
-        <TextBlock Background="Green" x:Name="label" TextAlignment="Center" Text="Căn Nhà Màu Tím" FontSize="30" HorizontalAlignment="Left" Margin="780,630,0,0" VerticalAlignment="Top" Height="63" Width="570"/>
+        <MediaElement  Stretch="Fill" x:Name="mediaElement" LoadedBehavior="Manual" UnloadedBehavior="Stop"  HorizontalAlignment="Left" Height="630" VerticalAlignment="Top" Width="1350"/>
+        <TextBlock Background="Green" x:Name="lbtenbaihat" TextAlignment="Center" Text="Căn Nhà Màu Tím" FontSize="30" HorizontalAlignment="Left" Margin="780,630,0,0" VerticalAlignment="Top" Height="63" Width="570"/>
         
-        <Image x:Name="image"  Source="../Image/pause.png" HorizontalAlignment="Left" Height="44" Margin="108,639,0,0" VerticalAlignment="Top" Width="47"/>
-        <Image x:Name="image_Copy" Visibility="Hidden" Source="../Image/play.png" HorizontalAlignment="Left" Height="44" Margin="108,639,0,0" VerticalAlignment="Top" Width="47"/>
-        <Image x:Name="image_Copy1"  Source="../Image/next.png" HorizontalAlignment="Left" Height="44" Margin="155,639,0,0" VerticalAlignment="Top" Width="50"/>
-        <Slider x:Name="slider" Style="{StaticResource Customslider}"   HorizontalAlignment="Left" Margin="210,650,0,0" VerticalAlignment="Top" Width="432" Height="22" Custom:SliderHelper.ChangeValueBy="LargeChange" Custom:SliderHelper.EnableMouseWheel="ControlFocused">
+        <Image x:Name="Pause"   Source="../Image/pause.png" HorizontalAlignment="Left" Height="44" Margin="108,639,0,0" VerticalAlignment="Top" Width="47" MouseLeftButtonUp="PauseVideo"/>
+        <Image x:Name="Play" Visibility="Hidden" Source="../Image/play.png" HorizontalAlignment="Left" Height="44" Margin="108,639,0,0" VerticalAlignment="Top" Width="47" MouseLeftButtonUp="PlayVideo"/>
+        <Image x:Name="Next"  Source="../Image/next.png" HorizontalAlignment="Left" Height="44" Margin="155,639,0,0" VerticalAlignment="Top" Width="50"/>
+        <Slider x:Name="slider" Style="{StaticResource Customslider}"   HorizontalAlignment="Left" Margin="210,650,0,0" VerticalAlignment="Top" Width="432" Height="22" Custom:SliderHelper.ChangeValueBy="LargeChange" Custom:SliderHelper.EnableMouseWheel="ControlFocused" ValueChanged="slider_ValueChanged">
 
             <Slider.Resources>
                 <SolidColorBrush x:Key="SliderSelectionBackground" Color="Green" />
@@ -26,8 +26,8 @@
             </Slider.Resources>
 
         </Slider>
-        <TextBlock FontSize="17" x:Name="textBlock" HorizontalAlignment="Left" Margin="660,644,0,0" TextWrapping="Wrap" Text="04:05" VerticalAlignment="Top" Height="33" Width="52"/>
-        <Image x:Name="Stop"  Source="/BlueKara Design;component/Image/stop.png" HorizontalAlignment="Left" Height="39" Margin="42,644,0,0" VerticalAlignment="Top" Width="37"/>
+        <TextBlock FontSize="17" x:Name="tblDuaration" HorizontalAlignment="Left" Margin="660,644,0,0" TextWrapping="Wrap" Text="04:05" VerticalAlignment="Top" Height="33" Width="52"/>
+        <Image x:Name="Stop"   Source="/BlueKara Design;component/Image/stop.png" HorizontalAlignment="Left" Height="39" Margin="42,644,0,0" VerticalAlignment="Top" Width="37" MouseLeftButtonUp="StopVideo"/>
 
     </Grid>
 </UserControl>

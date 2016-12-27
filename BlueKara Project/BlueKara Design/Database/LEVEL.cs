@@ -14,18 +14,12 @@ namespace BlueKara_Design.Database
     
     public partial class LEVEL
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LEVEL()
-        {
-            this.PLAYERs = new HashSet<PLAYER>();
-        }
-    
         public string LevelID { get; set; }
         public Nullable<int> MaxScore { get; set; }
         public string Name { get; set; }
         public Nullable<int> RemainScoreToUp { get; set; }
+        public string PlayerID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PLAYER> PLAYERs { get; set; }
+        public virtual PLAYER PLAYER { get; set; }
     }
 }

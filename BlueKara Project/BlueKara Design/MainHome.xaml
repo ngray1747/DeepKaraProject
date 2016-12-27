@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-         
+         xmlns:gif="http://wpfanimatedgif.codeplex.com"
     xmlns:mdi="clr-namespace:WPF.MDI;assembly=WPF.MDI"
         xmlns:phicontrol="clr-namespace:BlueKara_Design.UseControl"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -14,7 +14,7 @@
     <Window.Resources>
 
     </Window.Resources>
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.Background>
             <ImageBrush ImageSource="Image/triangular1.jpg"></ImageBrush>
         </Grid.Background>
@@ -35,18 +35,18 @@
                 </TransformGroup>
             </Border.RenderTransform>
         </Border>
-        <Controls:ToggleSwitch Foreground="Black" Header="Chuyển Chế Độ Karaoke" OnLabel="Hát ONLINE" OffLabel="Hát OFFLINE" Margin="10,10,1157,18"  OnSwitchBrush="#CCFF0000" />
+        <Controls:ToggleSwitch IsChecked="True" Foreground="Black" Header="Chuyển Chế Độ Karaoke" OnLabel="Hát ONLINE" OffLabel="Hát OFFLINE" Margin="10,10,1157,18"   OnSwitchBrush="#CCFF0000" />
         <Image x:Name="image" Source="Image/intro.png" HorizontalAlignment="Left" Height="108" Margin="412,-16,0,0" VerticalAlignment="Top" Width="605"/>
         <Image x:Name="image1" Cursor="Hand" ToolTip="Thay đổi ảnh đại diện" Source="Image/My photo on Jobs HoilydayEdit.jpg" HorizontalAlignment="Left" Height="62" Margin="1072,5,0,0" VerticalAlignment="Top" Width="83"/>
-        <Label x:Name="label" FontStyle="Italic" FontSize="15" Content="tuonglaivinhhang1" HorizontalAlignment="Left" Margin="1178,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.265,0.633" Width="152"/>
-        <Label x:Name="label_Copy1" Foreground="Black"  FontStyle="Italic" FontSize="15" Content="Level 2" HorizontalAlignment="Left" Margin="1178,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,1.5" Height="28" Width="78"/>
-        <Controls:MetroProgressBar Foreground="Yellow"  Name="progress" HorizontalAlignment="Left" Value="400" Maximum="1000" Margin="1178,57,0,0" VerticalAlignment="Top" Width="128" Height="17"  Background="White" BorderBrush="#FFF9F9F9" RenderTransformOrigin="0.234,0.588"/>
+        <Label x:Name="lbUsername" FontStyle="Italic" FontSize="15" Content="tuonglaivinhhang1" HorizontalAlignment="Left" Margin="1178,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.265,0.633" Width="152"/>
+        <Label x:Name="lbLevel" Foreground="Black"  FontStyle="Italic" FontSize="15" Content="Level 2" HorizontalAlignment="Left" Margin="1178,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,1.5" Height="28" Width="78"/>
+        <Controls:MetroProgressBar Foreground="Yellow"   Name="progressScore" HorizontalAlignment="Left"  Margin="1178,57,0,0" VerticalAlignment="Top" Width="128" Height="17"  Background="White" BorderBrush="#FFF9F9F9" RenderTransformOrigin="0.234,0.588"/>
         <Image x:Name="image2" Source="Image/online.ico" HorizontalAlignment="Left" Height="15" Margin="1160,20,0,0" VerticalAlignment="Top" Width="23"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="1218,57,94,18" TextWrapping="Wrap" Text="{Binding ElementName=progress,Path=Value,StringFormat={}{0:0} /}" VerticalAlignment="Center" Width="32" Height="17" RenderTransformOrigin="0.703,0.529"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Center" Margin="1250,57,62,18" TextWrapping="Wrap" Text="{Binding Maximum, ElementName=progress}" VerticalAlignment="Center" Width="32" Height="17"/>
+        <TextBlock x:Name="txbCurentscore" TextAlignment="Center" HorizontalAlignment="Center" Margin="1218,57,94,18" TextWrapping="Wrap"  VerticalAlignment="Center" Width="32" Height="17" RenderTransformOrigin="0.703,0.529"/>
+        <TextBlock x:Name="txbMaxscore" TextAlignment="Center" HorizontalAlignment="Center" Margin="1250,57,62,18" TextWrapping="Wrap"  VerticalAlignment="Center" Width="32" Height="17"/>
 
-        <Controls:Tile Cursor="Hand" FontSize="12" Margin="1072,69,229,6" Content="Profile" Height="Auto" Width="Auto" Click="OpenFlyout"/>
-        <Controls:Tile Cursor="Hand" FontSize="12" Margin="1115,69,189,6" Content="Logout" Height="Auto" Width="Auto"/>
+        <Controls:Tile Cursor="Hand"  FontSize="12" Margin="1072,69,229,6" Content="Profile" Height="Auto" Width="Auto" Click="OpenFlyout"/>
+        <Controls:Tile Cursor="Hand" Click="Logout" FontSize="12" Margin="1115,69,189,6" Content="Logout" Height="Auto" Width="Auto"/>
         <Image x:Name="image1_Copy" Source="Logo2.png" HorizontalAlignment="Left" Height="53" Margin="769,5,0,0" VerticalAlignment="Top" Width="76"/>
         <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="1353" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Margin="-2,404,-7,0">
             <Border.RenderTransform>
@@ -58,16 +58,15 @@
                 </TransformGroup>
             </Border.RenderTransform>
         </Border>
-        <DataGrid FontFamily="piron"  AutoGenerateColumns="False"  x:Name="dataGrid" Background="Transparent" HorizontalAlignment="Left" Margin="0,55,-6,0" Grid.Row="1" VerticalAlignment="Top" Width="1350" Height="345">
+        <DataGrid FontFamily="piron"    AutoGenerateColumns="False"  x:Name="gridlistMusic" IsReadOnly="True" HorizontalAlignment="Left" Margin="0,55,-6,0" Grid.Row="1" VerticalAlignment="Top" Width="1350" Height="345" MouseDoubleClick="OpenSong">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="      Mã Số" Width="100"></DataGridTextColumn>
-                <DataGridTextColumn Header="                                                       Tên Bài Hát" Width="450"></DataGridTextColumn>
-                <DataGridTextColumn Header="                      Ca Sĩ" Width="200" ></DataGridTextColumn>
-                <DataGridTextColumn Header="                  Nhạc Sĩ" Width="200"></DataGridTextColumn>
-                <DataGridTextColumn Header="              Ngày Cập Nhật" Width="210"></DataGridTextColumn>
-                <DataGridTextColumn Header="                 Thể Loại" Width="189"></DataGridTextColumn>
+                <DataGridTextColumn Header="      Mã Số" Width="100" FontSize="15" Binding="{Binding maso}"></DataGridTextColumn>
+                <DataGridTextColumn Header="                                                       Tên Bài Hát" FontSize="15" Width="450" Binding="{Binding tenbaihat}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="                      Ca Sĩ" Width="200" FontSize="15"  Binding="{Binding casi}"></DataGridTextColumn>
+                <DataGridTextColumn Header="                  Nhạc Sĩ" Width="200" FontSize="15" Binding="{Binding nhacsi}"></DataGridTextColumn>
+                <DataGridTextColumn Header="              Ngày Cập Nhật" Width="210" FontSize="15" Binding="{Binding ngaycapnhat}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="                 Thể Loại" Width="189" FontSize="15" Binding="{Binding theloai}"></DataGridTextColumn>
             </DataGrid.Columns>
-
         </DataGrid>
 
         <!--chạy chữ wpf-->
@@ -94,8 +93,8 @@
             </StackPanel.Triggers>
             <Canvas x:Name="canvas"  Width="1342">
 
-                <TextBlock FontFamily="piron" Text="Các bạn đang hát ca khúc" FontSize="25" Canvas.Left="1278" Canvas.Top="108"/>
-                <TextBlock FontFamily="piron" Text="Căn Nhà Màu Tím" Foreground="Red" FontStyle="Italic" FontSize="25" Canvas.Left="1634" Canvas.Top="108"/>
+                <TextBlock Name="tblWelcome" FontFamily="piron" Text="Chúc các bạn ca hát vui vẻ" FontSize="25" Canvas.Left="1278" Canvas.Top="108"/>
+                <TextBlock Name="tblTenbaihat" FontFamily="piron" Text="Welcome to DeepKara" Foreground="Red" FontStyle="Italic" FontSize="25" Canvas.Left="1634" Canvas.Top="108"/>
             </Canvas>
         </StackPanel>
         <TextBox x:Name="textBox" Foreground="Red" FontSize="17"  HorizontalAlignment="Left" Height="50" Margin="0,5,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="658" Controls:TextBoxHelper.UseFloatingWatermark="True" Controls:TextBoxHelper.Watermark="Gõ từ khóa tìm kiếm và nhấn Enter"/>
@@ -117,22 +116,22 @@
         <Border Visibility="Visible" BorderBrush="Green" BorderThickness="2.5" HorizontalAlignment="Left" Height="162" Margin="0,437,0,0" Grid.Row="1" VerticalAlignment="Top" Width="706"/>
 
         <!--<mdi:MdiContainer Visibility="Visible"  Name="AreaControl" Background="Silver" Theme="Aero" DockPanel.Dock="Top" Margin="930,405,109,0" Height="190" Width="300"  Grid.Row="1" />-->
-        <phicontrol:VideoPlayer IsEnabled="True" Visibility="Visible" x:Name="videoplayer"   Grid.RowSpan="2" Margin="0,0,0,-7" MouseDoubleClick="ChangeSizeWindow"/>
+        <phicontrol:VideoPlayer IsEnabled="True" Visibility="Hidden" x:Name="videoplayer"   Grid.RowSpan="2" Margin="63,5,-63,-7" MouseDoubleClick="ChangeSizeWindow"/>
         <!--<phicontrol:FacebbokPost  Visibility="Visible" Margin="231,10,214,141" Grid.Row="1" />
         <phicontrol:Scored Visibility="Visible" Grid.RowSpan="2" Margin="0,0,0,-7"></phicontrol:Scored>-->
 
-        <Controls:Flyout Name="FlyoutInfo" IsOpen="False"    Header="Thông Tin Cá Nhân" Foreground="White" Background="#6ECFF0" Position="Right"   Width="795" Grid.RowSpan="2" >
+        <Controls:Flyout Name="FlyoutInfo"  IsOpen="False" Visibility="Hidden"   Header="Thông Tin Cá Nhân" Foreground="White" Background="#6ECFF0" Position="Right"   Width="795" Grid.RowSpan="2" Loaded="UpdateInfo" >
             <Grid>
                 <GroupBox x:Name="groupBox" Background="#CC8D1313"  Header="Thông Tin Cố Định" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="795" Height="125">
                     <Grid>
                         <Label Foreground="Black" x:Name="label2" Content="Email" FontSize="15" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Width="54"/>
-                        <TextBlock x:Name="textBlock1" FontFamily="piron" Foreground="Black" Padding="3" FontSize="15" FontStyle="Italic" HorizontalAlignment="Left" Margin="202,10,0,0" TextWrapping="Wrap" Text="tuonglaivinhhang1@gmail.com" VerticalAlignment="Top" Height="30" Width="333"/>
+                        <TextBlock x:Name="txbEmail" FontFamily="piron" Foreground="Black" Padding="3" FontSize="15" FontStyle="Italic" HorizontalAlignment="Left" Margin="202,10,0,0" TextWrapping="Wrap" Text="tuonglaivinhhang1@gmail.com" VerticalAlignment="Top" Height="30" Width="333"/>
                         <Label Foreground="Black" x:Name="label3" Content="Username" FontSize="15" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="76"/>
-                        <TextBlock x:Name="textBlock2" FontFamily="piron" Foreground="Black" Padding="3" FontSize="15" FontStyle="Italic" HorizontalAlignment="Left" Margin="202,45,0,0" TextWrapping="Wrap" Text="tuonglaivinhhang1" VerticalAlignment="Top" Height="30" Width="333"/>
+                        <TextBlock x:Name="txbUsername" FontFamily="piron" Foreground="Black" Padding="3" FontSize="15" FontStyle="Italic" HorizontalAlignment="Left" Margin="202,45,0,0" TextWrapping="Wrap" Text="tuonglaivinhhang1" VerticalAlignment="Top" Height="30" Width="333"/>
                         <Label Foreground="Black" x:Name="scorelabel" Content="Điểm" FontSize="15" HorizontalAlignment="Left" Margin="568,11,0,0" VerticalAlignment="Top" Width="53"/>
                         <Label Foreground="Black" x:Name="levellabel" Content="Level" FontSize="15" HorizontalAlignment="Left" Margin="568,46,0,0" VerticalAlignment="Top" Width="53"/>
-                        <TextBlock Margin="626,11,58,46" Foreground="Black" FontFamily="piron" FontStyle="Italic" Padding="5" Text="400" FontSize="15"></TextBlock>
-                        <TextBlock Margin="626,46,58,11" Foreground="Black" FontFamily="piron" FontStyle="Italic" Padding="5" Text="2" FontSize="15"></TextBlock>
+                        <TextBlock Name="txbScore" Margin="626,11,58,46" Foreground="Black" FontFamily="piron" FontStyle="Italic" Padding="5" Text="400" FontSize="15"></TextBlock>
+                        <TextBlock Name="txbLevel" Margin="626,46,58,11" Foreground="Black" FontFamily="piron" FontStyle="Italic" Padding="5" Text="2" FontSize="15"></TextBlock>
 
                     </Grid>
 
@@ -141,34 +140,34 @@
                 <GroupBox Background="#CC8D1313" Header="Thông Tin Thay Đổi" Margin="0,140,0,71">
                     <Grid>
                         <Label Foreground="Black" x:Name="textBlock3" FontSize="15" HorizontalAlignment="Left" Margin="10,22,0,0"  Content="Họ Tên" VerticalAlignment="Top" Width="76"/>
-                        <TextBox FontStyle="Italic" CaretBrush="Black"  Foreground="Black" Background="White" x:Name="textBox1" FontSize="15" FontFamily="piron" HorizontalAlignment="Left" Height="30" Margin="204,22,0,0" TextWrapping="Wrap" Text="Nguyễn Thanh Phi" VerticalAlignment="Top" Width="246"/>
+                        <TextBox Name="txbName" FontStyle="Italic" CaretBrush="Black"  Foreground="Black" Background="White" FontSize="15" FontFamily="piron" HorizontalAlignment="Left" Height="30" Margin="204,22,0,0" TextWrapping="Wrap" Text="Nguyễn Thanh Phi" VerticalAlignment="Top" Width="246"/>
                         <Label Foreground="Black" x:Name="label4" FontSize="15" Content="Số Điện Thoại" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="115"/>
-                        <TextBox FontStyle="Italic" CaretBrush="Black" Foreground="Black" Background="White" x:Name="textBox2" FontSize="15" FontFamily="piron" HorizontalAlignment="Left" Height="30" Margin="204,67,0,0" TextWrapping="Wrap" Text="01265190526" VerticalAlignment="Top" Width="246"/>
+                        <TextBox FontStyle="Italic" CaretBrush="Black" Foreground="Black" Background="White" x:Name="txbPhone" FontSize="15" FontFamily="piron" HorizontalAlignment="Left" Height="30" Margin="204,67,0,0" TextWrapping="Wrap" Text="01265190526" VerticalAlignment="Top" Width="246"/>
                         <Label Foreground="Black" x:Name="label5" FontSize="15" Content="Nghề Nghiệp" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="101"/>
-                        <TextBox FontStyle="Italic" CaretBrush="Black" Foreground="Black" Background="White" x:Name="textBox3" FontSize="15" FontFamily="piron" HorizontalAlignment="Left" Height="30" Margin="204,114,0,0" TextWrapping="Wrap" Text="Sinh Viên" VerticalAlignment="Top" Width="246"/>
+                        <TextBox FontStyle="Italic" CaretBrush="Black" Foreground="Black" Background="White" x:Name="txbJob" FontSize="15" FontFamily="piron" HorizontalAlignment="Left" Height="30" Margin="204,114,0,0" TextWrapping="Wrap" Text="Sinh Viên" VerticalAlignment="Top" Width="246"/>
                         <Label Foreground="Black" x:Name="label6" FontSize="15" Content="Ngày Sinh" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="101"/>
                         <DatePicker Name="pickdate" Text="04/01/1996"   FontSize="15" FontStyle="Italic" FontFamily="piron" Background="White" Foreground="Black"  Margin="423,158,333,178"></DatePicker>
                         <Label Foreground="Black" x:Name="label7" FontSize="15" Content="Link Facebook" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Width="115"/>
-                        <TextBox Background="White"  CaretBrush="Black" FontSize="15" Foreground="Blue" FontStyle="Italic" TextDecorations="Underline" Margin="204,203,58,133" Text="https://www.facebook.com/InnerPeace.Windy"/>
+                        <TextBox Name="txbLink" Background="White"  CaretBrush="Black" FontSize="15" Foreground="Blue" FontStyle="Italic" TextDecorations="Underline" Margin="204,203,58,133" Text="https://www.facebook.com/InnerPeace.Windy"/>
 
                         <Label Foreground="Black"  x:Name="label8" FontSize="15" Content="Nhập Mật Khẩu Mới" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Width="156"/>
-                        <PasswordBox  Background="White" CaretBrush="Black" FontSize="15" Foreground="Black" Margin="204,247,333,89"></PasswordBox>
+                        <PasswordBox Name="pwPassWord"  Background="White" CaretBrush="Black" FontSize="15" Foreground="Black" Margin="204,247,333,89"></PasswordBox>
 
                         <Label Foreground="Black"  x:Name="label9" FontSize="15" Content="Nhập Lại Mật Khẩu Mới" HorizontalAlignment="Left" Margin="10,291,0,0" VerticalAlignment="Top" Width="168"/>
-                        <PasswordBox Background="White" CaretBrush="Black" FontSize="15" Foreground="Black" Margin="204,291,333,0" Height="30" VerticalAlignment="Top"></PasswordBox>
+                        <PasswordBox Name="psnewpass" Background="White" CaretBrush="Black" FontSize="15" Foreground="Black" Margin="204,291,333,0" Height="30" VerticalAlignment="Top"></PasswordBox>
                         <Label Foreground="Black" FontStyle="Italic"  x:Name="label10" FontSize="15" Content="Nhập Mật Khẩu Hiện Tại (*)" HorizontalAlignment="Left" Margin="10,336,0,0" VerticalAlignment="Top" Width="194"/>
-                        <PasswordBox Background="White" CaretBrush="Black" FontSize="15" Foreground="Black" Margin="204,336,333,0"></PasswordBox>
-                        <TextBox x:Name="textBox4" Background="White" Foreground="Black" IsReadOnly="True" CaretBrush="Black" FontSize="15" FontFamily="piron" Text="{Binding Text,ElementName=pickdate}" HorizontalAlignment="Left" Height="30" Margin="204,158,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="219"/>
+                        <PasswordBox Name="psCurrentPass" Background="White" CaretBrush="Black" FontSize="15" Foreground="Black" Margin="204,336,333,0"></PasswordBox>
+                        <TextBox x:Name="txbDate" PreviewTextInput="onlynumer" Background="White" Foreground="Black" IsReadOnly="True" CaretBrush="Black" FontSize="15" FontFamily="piron" Text="{Binding Text,ElementName=pickdate}" HorizontalAlignment="Left" Height="30" Margin="204,158,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="219"/>
 
 
                     </Grid>
                 </GroupBox>
-                <Button Content="Hủy Bỏ" FontSize="15" Controls:ControlsHelper.ContentCharacterCasing="Normal" Margin="507,563,212,15"></Button>
-                <Button Content="Đồng Ý" FontSize="15" Margin="288,563,433,15" Controls:ControlsHelper.ContentCharacterCasing="Normal"></Button>
+                <Button Content="Đồng Ý" FontSize="15" Margin="430,568,291,10" Controls:ControlsHelper.ContentCharacterCasing="Normal" Click="ChangeInfo"></Button>
             </Grid>
         </Controls:Flyout>
 
-        <Button x:Name="closefyout" Style="{DynamicResource MetroCircleButtonStyle}" Background="Transparent" HorizontalAlignment="Left" Margin="563,25,0,0" VerticalAlignment="Top" Width="42" Height="42" Click="CloseFlyout"/>
-
+        <Button x:Name="closefyout" Visibility="Hidden" Style="{DynamicResource MetroCircleButtonStyle}" Background="Transparent" HorizontalAlignment="Left" Margin="563,25,0,0" VerticalAlignment="Top" Width="42" Height="42" Click="CloseFlyout"/>
+        <Controls:ProgressRing Visibility="Hidden"  Name="Progressring" Foreground="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Margin="367,0,456,213" Height="239" Width="521" VerticalAlignment="Bottom" Grid.Row="1"/>
+        <Image Name="GifBackground" Visibility="Hidden" gif:ImageBehavior.AnimatedSource="Image/loading.gif" Margin="181,55,189,110" Grid.Row="1" />
     </Grid>
 </Controls:MetroWindow>

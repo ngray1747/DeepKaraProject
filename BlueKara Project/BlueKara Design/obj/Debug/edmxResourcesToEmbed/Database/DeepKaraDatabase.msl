@@ -6,6 +6,7 @@
         <MappingFragment StoreEntitySet="AVATAR">
           <ScalarProperty Name="AvatarID" ColumnName="AvatarID" />
           <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -65,6 +66,7 @@
           <ScalarProperty Name="MaxScore" ColumnName="MaxScore" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="RemainScoreToUp" ColumnName="RemainScoreToUp" />
+          <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -83,13 +85,11 @@
       <EntityTypeMapping TypeName="DeepKaraModel.PLAYER">
         <MappingFragment StoreEntitySet="PLAYER">
           <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
-          <ScalarProperty Name="AvatarID" ColumnName="AvatarID" />
           <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="FacebookURL" ColumnName="FacebookURL" />
           <ScalarProperty Name="FullName" ColumnName="FullName" />
           <ScalarProperty Name="Job" ColumnName="Job" />
-          <ScalarProperty Name="LevelID" ColumnName="LevelID" />
           <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />

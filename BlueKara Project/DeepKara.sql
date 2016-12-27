@@ -1,6 +1,6 @@
 ﻿CREATE TABLE VIDEOOFFLINE
 (
-	LinkVideo nvarchar(500),
+	LinkVideo nvarchar(MAX),
 	VideoID nvarchar(100) PRIMARY KEY
 )
 CREATE TABLE VIDEOONLINE
@@ -9,7 +9,7 @@ CREATE TABLE VIDEOONLINE
 	DateUpdate DATE,
 	Resolution nvarchar(10),
 	SingerID nvarchar(100),
-	URLVideo nvarchar(500),
+	URLVideo nvarchar(MAX),
 	VideoID nvarchar(100) PRIMARY KEY
 )
 CREATE TABLE VIDEOKARAOKE
@@ -59,7 +59,7 @@ CREATE TABLE VIDEORECORD
 	PlayerID nvarchar(100),
 	RecordName nvarchar(500),
 	StatusID nvarchar(100),
-	URL nvarchar(500),
+	URL nvarchar(MAX),
 	VideoID nvarchar(100)
 )
 CREATE TABLE RECORDSTATUS
@@ -78,17 +78,20 @@ CREATE TABLE DETAILEACHSING
 CREATE TABLE PLAYER
 (
 	PlayerID nvarchar(100) PRIMARY KEY,
-	AvatarID nvarchar(100),
+	
 	BirthDate date,
 	Email nvarchar(100),
-	FacebookURL nvarchar(500),
+	FacebookURL nvarchar(MAX),
 	FullName nvarchar(100),
 	Job nvarchar(200),
-	LevelID nvarchar(100),
+	
 	Username nvarchar(100),
 	Password nvarchar(100) ,
 	PhoneNumber nvarchar(15),
-	Scores int
+	Scores int,
+	SecurityQuestion nvarchar(500),
+	Answer nvarchar(500)
+
 
 )
 CREATE TABLE PARAMETER
@@ -103,14 +106,16 @@ CREATE TABLE PARAMETER
 CREATE TABLE AVATAR
 (
 	AvatarID nvarchar(100) PRIMARY KEY,
-	URL nvarchar(500)
+	URL nvarchar(MAX),
+	PlayerID nvarchar(100)
 )
 CREATE TABLE LEVEL
 (
 	LevelID nvarchar(100) PRIMARY KEY,
 	MaxScore int,
 	Name nvarchar(100),
-	RemainScoreToUp INT
+	RemainScoreToUp INT,
+	PlayerID nvarchar(100)
 )
 
 ALTER TABLE CHUNG_VIDEOKARAOKE
@@ -163,13 +168,13 @@ ALTER TABLE VIDEOONLINE
 ADD CONSTRAINT FK12
 FOREIGN KEY (ComposerID) REFERENCES COMPOSER (ComposerID)
 
-ALTER TABLE PLAYER
+ALTER TABLE LEVEL
 ADD CONSTRAINT FK13
-FOREIGN KEY (LevelID) REFERENCES LEVEL (LevelID)
+FOREIGN KEY (PlayerID) REFERENCES PLAYER (PlayerID)
 
-ALTER TABLE PLAYER
+ALTER TABLE AVATAR
 ADD CONSTRAINT FK14
-FOREIGN KEY (AvatarID) REFERENCES AVATAR (AvatarID)
+FOREIGN KEY (PlayerID) REFERENCES PLAYER (PlayerID)
 
 --chèn dữ liệu
 
@@ -392,7 +397,7 @@ VALUES ('31','CP01',N'Phạm Trưởng',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT02',233,'FM01','VD00036',N'Anh Yêu Em')
 INSERT INTO VIDEOONLINE
-VALUES ('CP01','12-22-2016','360p','SG08','C:\Users\Administrator\Desktop\Vpop\anh yeu em.avi','VD00036')
+VALUES ('CP01','12-22-2016','360p','SG08','Vpop\anh yeu em.avi','VD00036')
 
 
 
@@ -401,7 +406,7 @@ VALUES ('31','CP02',N'Lâm Chấn Khang',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT02',352,'FM01','VD00040',N'Cái Xác Không Hồn')
 INSERT INTO VIDEOONLINE
-VALUES ('CP02','12-22-2016','360p','SG15','C:\Users\Administrator\Desktop\Vpop\cai xac khong hon.avi','VD00040')
+VALUES ('CP02','12-22-2016','360p','SG15','Vpop\cai xac khong hon.avi','VD00040')
 
 INSERT INTO COMPOSER
 VALUES ('29','CP03',N'Khắc Việt',N'Nam')
@@ -411,11 +416,11 @@ VALUES ('69','CP04',N'Hàn Châu',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',354,'FM01','VD00005',N'Áo Đẹp Nàng Dâu')
 INSERT INTO VIDEOONLINE
-VALUES ('CP04','12-22-2016','360p','SG72','C:\Users\Administrator\Desktop\Bolero\ao dep nang dau.avi','VD00005')
+VALUES ('CP04','12-22-2016','360p','SG72','Bolero\ao dep nang dau.avi','VD00005')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',308,'FM01','VD00014',N'Bóng Dáng Mẹ Hiền')
 INSERT INTO VIDEOONLINE
-VALUES ('CP04','12-22-2016','360p','SG64','C:\Users\Administrator\Desktop\Bolero\bong dang me hien.avi','VD00014')
+VALUES ('CP04','12-22-2016','360p','SG64','Bolero\bong dang me hien.avi','VD00014')
 
 
 INSERT INTO COMPOSER
@@ -423,73 +428,73 @@ VALUES ('0','CP05',N'Nguyễn Duyên Phước',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',342,'FM01','VD00001',N'Mười Năm Đợi Chờ')
 INSERT INTO VIDEOONLINE
-VALUES ('CP05','12-22-2016','360p','SG68','C:\Users\Administrator\Desktop\Bolero\10 nam doi cho.avi','VD00001')
+VALUES ('CP05','12-22-2016','360p','SG68','Bolero\10 nam doi cho.avi','VD00001')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP06',N'Hoàng Trang',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',340,'FM01','VD00002',N'Ăn Năn')
 INSERT INTO VIDEOONLINE
-VALUES ('CP06','12-22-2016','360p','SG02','C:\Users\Administrator\Desktop\Bolero\an nan.avi','VD00002')
+VALUES ('CP06','12-22-2016','360p','SG02','Bolero\an nan.avi','VD00002')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP07',N'Nhạc Sống Organ',N'')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',235,'FM01','VD00003',N'Anh Ba Khía')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\anh ba khia.avi','VD00003')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\anh ba khia.avi','VD00003')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',294,'FM01','VD00004',N'Anh Về Miền Tây')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\anh ve mien tay.avi','VD00004')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\anh ve mien tay.avi','VD00004')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',282,'FM01','VD00006',N'Ba Đứa Bạn Nghèo')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\ba dua ban ngheo.avi','VD00006')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\ba dua ban ngheo.avi','VD00006')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',277,'FM01','VD00007',N'Ba Tháng Tạ Từ')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\ba thang ta tu.avi','VD00007')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\ba thang ta tu.avi','VD00007')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',256,'FM01','VD00008',N'Bạc Trắng Lửa Hồng')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\bac trang lua hong.avi','VD00008')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\bac trang lua hong.avi','VD00008')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',371,'FM01','VD00013',N'Bội Bạc')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\boi bac.avi','VD00013')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\boi bac.avi','VD00013')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',222,'FM01','VD00016',N'Cạm Bẫy Tình Yêu')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\cam bay tinh yeu.avi','VD00016')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\cam bay tinh yeu.avi','VD00016')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',370,'FM01','VD00018',N'Căn Nhà Màu Tím')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\can nha mau tim-Tan nhac.avi','VD00018')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\can nha mau tim-Tan nhac.avi','VD00018')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',301,'FM01','VD00019',N'Căn Nhà Mộng Ước')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\CAn nha mong uoc.avi','VD00019')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\CAn nha mong uoc.avi','VD00019')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',328,'FM01','VD00021',N'Câu Chuyện Đầu Năm')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\cau chuyen dau nam.avi','VD00021')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\cau chuyen dau nam.avi','VD00021')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',280,'FM01','VD00025',N'Cây Đàn Sinh Viên')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\cay dan sinh vien.avi','VD00025')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\cay dan sinh vien.avi','VD00025')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',294,'FM01','VD00027',N'Cây Cầu Dừa')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\cay cau dua.avi','VD00027')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\cay cau dua.avi','VD00027')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',303,'FM01','VD00028',N'Chỉ Có Bạn Bè Thôi')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\chi co ban be thoi.avi','VD00028')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\chi co ban be thoi.avi','VD00028')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT04',297,'FM01','VD00034',N'Chung Vầng Trăng Đợi')
 INSERT INTO VIDEOONLINE
-VALUES ('CP07','12-22-2016','360p','SG78','C:\Users\Administrator\Desktop\Bolero\Chung Vang trang doi.avi','VD00034')
+VALUES ('CP07','12-22-2016','360p','SG78','Bolero\Chung Vang trang doi.avi','VD00034')
 
 
 
@@ -499,14 +504,14 @@ VALUES ('0','CP08',N'Minh Khang',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',238,'FM01','VD00009',N'Bạc Trắng Tình Đời')
 INSERT INTO VIDEOONLINE
-VALUES ('CP08','12-22-2016','360p','SG70','C:\Users\Administrator\Desktop\Bolero\bac trang tinh doi.avi','VD00009')
+VALUES ('CP08','12-22-2016','360p','SG70','Bolero\bac trang tinh doi.avi','VD00009')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP09',N'Bằng Giang',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',231,'FM01','VD00010',N'Bài Ca Kỷ Niệm')
 INSERT INTO VIDEOONLINE
-VALUES ('CP09','12-22-2016','360p','SG64','C:\Users\Administrator\Desktop\Bolero\bai ca ky niem.avi','VD00010')
+VALUES ('CP09','12-22-2016','360p','SG64','Bolero\bai ca ky niem.avi','VD00010')
 
 
 INSERT INTO COMPOSER
@@ -514,49 +519,49 @@ VALUES ('0','CP10',N'Cao Nhật Minh',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',271,'FM01','VD00011',N'Bài Thơ Tình')
 INSERT INTO VIDEOONLINE
-VALUES ('CP10','12-22-2016','360p','SG76','C:\Users\Administrator\Desktop\Bolero\bai tho tinh.avi','VD00011')
+VALUES ('CP10','12-22-2016','360p','SG76','Bolero\bai tho tinh.avi','VD00011')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP11',N'Phạm Thế Mỹ',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',279,'FM01','VD00012',N'Bến Duyên Lành')
 INSERT INTO VIDEOONLINE
-VALUES ('CP11','12-22-2016','360p','SG55','C:\Users\Administrator\Desktop\Bolero\ben duyen lanh.avi','VD00012')
+VALUES ('CP11','12-22-2016','360p','SG55','Bolero\ben duyen lanh.avi','VD00012')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP12',N'Sơn Hạ',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',326,'FM01','VD00015',N'Bông Ô Môi')
 INSERT INTO VIDEOONLINE
-VALUES ('CP12','12-22-2016','360p','SG04','C:\Users\Administrator\Desktop\Bolero\Bong o moi.avi','VD00015')
+VALUES ('CP12','12-22-2016','360p','SG04','Bolero\Bong o moi.avi','VD00015')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP13',N'Đài Phương Trang',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',390,'FM01','VD00017',N'Căn Nhà Dĩ Vãng')
 INSERT INTO VIDEOONLINE
-VALUES ('CP13','12-22-2016','360p','SG65','C:\Users\Administrator\Desktop\Bolero\can nha di vang.avi','VD00017')
+VALUES ('CP13','12-22-2016','360p','SG65','Bolero\can nha di vang.avi','VD00017')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP14',N'PhanXiCô',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
-VALUES ('CT01',277,'FM01','VD00020',N'Căn Nhà Dĩ Vãng')
+VALUES ('CT01',277,'FM01','VD00020',N'Cầu Cho Cha Mẹ')
 INSERT INTO VIDEOONLINE
-VALUES ('CP14','12-22-2016','360p','SG65','C:\Users\Administrator\Desktop\Bolero\cau cho cha me.avi','VD00020')
+VALUES ('CP14','12-22-2016','360p','SG65','Bolero\cau cho cha me.avi','VD00020')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP15',N'Trần Quang Lộc',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',285,'FM01','VD00022',N'Câu Hát Tình Quê')
 INSERT INTO VIDEOONLINE
-VALUES ('CP15','12-22-2016','360p','SG03','C:\Users\Administrator\Desktop\Bolero\cau hat tinh que.avi','VD00022')
+VALUES ('CP15','12-22-2016','360p','SG03','Bolero\cau hat tinh que.avi','VD00022')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP16',N'Lê Minh',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',326,'FM01','VD00023',N'Câu Hò Điệu Lý Còn Đây')
 INSERT INTO VIDEOONLINE
-VALUES ('CP16','12-22-2016','360p','SG73','C:\Users\Administrator\Desktop\Bolero\cau ho dieu ly con day.avi','VD00023')
+VALUES ('CP16','12-22-2016','360p','SG73','Bolero\cau ho dieu ly con day.avi','VD00023')
 
 
 INSERT INTO COMPOSER
@@ -564,35 +569,35 @@ VALUES ('0','CP17',N'Minh Vy',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',350,'FM01','VD00024',N'Cây Bã Đậu')
 INSERT INTO VIDEOONLINE
-VALUES ('CP17','12-22-2016','360p','SG35','C:\Users\Administrator\Desktop\Bolero\Cay ba dau.avi','VD00024')
+VALUES ('CP17','12-22-2016','360p','SG35','Bolero\Cay ba dau.avi','VD00024')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP18',N'Trúc Phương',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',325,'FM01','VD00026',N'Chàng Trai Sinh Tình')
 INSERT INTO VIDEOONLINE
-VALUES ('CP18','12-22-2016','360p','SG64','C:\Users\Administrator\Desktop\Bolero\chang trai sinh tinh.avi','VD00026')
+VALUES ('CP18','12-22-2016','360p','SG64','Bolero\chang trai sinh tinh.avi','VD00026')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP19',N'Lam Phương',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',275,'FM01','VD00029',N'Chỉ Còn Là Kỷ Niệm')
 INSERT INTO VIDEOONLINE
-VALUES ('CP19','12-22-2016','360p','SG64','C:\Users\Administrator\Desktop\Bolero\chi con la ky niem.avi','VD00029')
+VALUES ('CP19','12-22-2016','360p','SG64','Bolero\chi con la ky niem.avi','VD00029')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP20',N'Sông Trà',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',315,'FM01','VD00030',N'Chiều Sân Ga')
 INSERT INTO VIDEOONLINE
-VALUES ('CP20','12-22-2016','360p','SG65','C:\Users\Administrator\Desktop\Bolero\chieu san ga.avi','VD00030')
+VALUES ('CP20','12-22-2016','360p','SG65','Bolero\chieu san ga.avi','VD00030')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP21',N'Hồng Xương Long',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',360,'FM01','VD00031',N'Chim Trắng Mồ Côi')
 INSERT INTO VIDEOONLINE
-VALUES ('CP21','12-22-2016','360p','SG34','C:\Users\Administrator\Desktop\Bolero\chim trang mo coi.avi','VD00031')
+VALUES ('CP21','12-22-2016','360p','SG34','Bolero\chim trang mo coi.avi','VD00031')
 
 
 INSERT INTO COMPOSER
@@ -600,14 +605,14 @@ VALUES ('0','CP22',N'Tiến Luân',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',328,'FM01','VD00032',N'Chờ Anh Hát Lý Duyên Tình')
 INSERT INTO VIDEOONLINE
-VALUES ('CP22','12-22-2016','360p','SG60','C:\Users\Administrator\Desktop\Bolero\cho anh hat ly duyen tinh.avi','VD00032')
+VALUES ('CP22','12-22-2016','360p','SG60','Bolero\cho anh hat ly duyen tinh.avi','VD00032')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP23',N'Mặc Thế Nhân',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',376,'FM01','VD00033',N'Cho Vừa Lòng Em')
 INSERT INTO VIDEOONLINE
-VALUES ('CP23','12-22-2016','360p','SG60','C:\Users\Administrator\Desktop\Bolero\cho vua long em.avi','VD00033')
+VALUES ('CP23','12-22-2016','360p','SG60','Bolero\cho vua long em.avi','VD00033')
 
 INSERT INTO VIDEOKARAOKE
 VALUES ('VD00001')
@@ -684,28 +689,28 @@ VALUES ('0','CP24',N'Nhạc Hoa',N'')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT02',211,'FM01','VD00035',N'Ánh Trăng Hiểu Lòng Em')
 INSERT INTO VIDEOONLINE
-VALUES ('CP24','12-22-2016','360p','SG05','C:\Users\Administrator\Desktop\Vpop\anh trang hieu long em.avi','VD00035')
+VALUES ('CP24','12-22-2016','360p','SG05','Vpop\anh trang hieu long em.avi','VD00035')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP25',N'Nguyễn Văn Chung',N'')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT02',230,'FM01','VD00037',N'Bay Giữa Ngân Hà')
 INSERT INTO VIDEOONLINE
-VALUES ('CP25','12-22-2016','360p','SG20','C:\Users\Administrator\Desktop\Vpop\Bay giua ngan ha.avi','VD00037')
+VALUES ('CP25','12-22-2016','360p','SG20','Vpop\Bay giua ngan ha.avi','VD00037')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP26',N'Lý Tuấn Kiệt',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT02',275,'FM01','VD00038',N'Bên Anh Em Không Có Tương Lai')
 INSERT INTO VIDEOONLINE
-VALUES ('CP26','12-22-2016','360p','SG25','C:\Users\Administrator\Desktop\Vpop\ben anh em khong co tuong lai.avi','VD00038')
+VALUES ('CP26','12-22-2016','360p','SG25','Vpop\ben anh em khong co tuong lai.avi','VD00038')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP27',N'Trịnh Đình Quang',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT02',268,'FM01','VD00039',N'Bố Trẻ Con')
 INSERT INTO VIDEOONLINE
-VALUES ('CP27','12-22-2016','360p','SG12','C:\Users\Administrator\Desktop\Vpop\bo tre con.avi','VD00039')
+VALUES ('CP27','12-22-2016','360p','SG12','Vpop\bo tre con.avi','VD00039')
 
 INSERT INTO VIDEOKARAOKE
 VALUES ('VD00035')
@@ -720,12 +725,5 @@ VALUES ('VD00039')
 INSERT INTO VIDEOKARAOKE
 VALUES ('VD00040')
 
----ADD COLUM TO PLAYER
-ALTER TABLE PLAYER
-ADD SecurityQuestion nvarchar(500)
-ALTER TABLE PLAYER
-ADD Answer nvarchar(500)
 
 
-
-SELECT * FROM VIDEOONLINE

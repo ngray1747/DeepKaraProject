@@ -5,8 +5,9 @@
       <PropertyRef Name="AvatarID" />
     </Key>
     <Property Name="AvatarID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="URL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="PLAYERs" Relationship="Self.FK14" FromRole="AVATAR" ToRole="PLAYER" />
+    <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PlayerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PLAYER" Relationship="Self.FK14" FromRole="AVATAR" ToRole="PLAYER" />
   </EntityType>
   <EntityType Name="CATEGORY">
     <Key>
@@ -73,7 +74,8 @@
     <Property Name="MaxScore" Type="Int32" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="RemainScoreToUp" Type="Int32" />
-    <NavigationProperty Name="PLAYERs" Relationship="Self.FK13" FromRole="LEVEL" ToRole="PLAYER" />
+    <Property Name="PlayerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PLAYER" Relationship="Self.FK13" FromRole="LEVEL" ToRole="PLAYER" />
   </EntityType>
   <EntityType Name="PARAMETER">
     <Key>
@@ -90,22 +92,20 @@
       <PropertyRef Name="PlayerID" />
     </Key>
     <Property Name="PlayerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="AvatarID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="BirthDate" Type="DateTime" Precision="0" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="FacebookURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FacebookURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Job" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="LevelID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="PhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="Scores" Type="Int32" />
     <Property Name="SecurityQuestion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="Answer" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="AVATAR" Relationship="Self.FK14" FromRole="PLAYER" ToRole="AVATAR" />
+    <NavigationProperty Name="AVATARs" Relationship="Self.FK14" FromRole="PLAYER" ToRole="AVATAR" />
     <NavigationProperty Name="DETAILEACHSINGs" Relationship="Self.FK10" FromRole="PLAYER" ToRole="DETAILEACHSING" />
-    <NavigationProperty Name="LEVEL" Relationship="Self.FK13" FromRole="PLAYER" ToRole="LEVEL" />
+    <NavigationProperty Name="LEVELs" Relationship="Self.FK13" FromRole="PLAYER" ToRole="LEVEL" />
     <NavigationProperty Name="VIDEORECORDs" Relationship="Self.FK8" FromRole="PLAYER" ToRole="VIDEORECORD" />
   </EntityType>
   <EntityType Name="RECORDSTATU">
@@ -147,7 +147,7 @@
     <Key>
       <PropertyRef Name="VideoID" />
     </Key>
-    <Property Name="LinkVideo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LinkVideo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="VideoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="CHUNG_VIDEOKARAOKE" Relationship="Self.FK2" FromRole="VIDEOOFFLINE" ToRole="CHUNG_VIDEOKARAOKE" />
   </EntityType>
@@ -159,7 +159,7 @@
     <Property Name="DateUpdate" Type="DateTime" Precision="0" />
     <Property Name="Resolution" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="SingerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="URLVideo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="URLVideo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="VideoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="CHUNG_VIDEOKARAOKE" Relationship="Self.FK5" FromRole="VIDEOONLINE" ToRole="CHUNG_VIDEOKARAOKE" />
     <NavigationProperty Name="COMPOSER" Relationship="Self.FK12" FromRole="VIDEOONLINE" ToRole="COMPOSER" />
@@ -174,21 +174,21 @@
     <Property Name="PlayerID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="RecordName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="StatusID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="URL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="VideoID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="CHUNG_VIDEOKARAOKE" Relationship="Self.FK3" FromRole="VIDEORECORD" ToRole="CHUNG_VIDEOKARAOKE" />
     <NavigationProperty Name="PLAYER" Relationship="Self.FK8" FromRole="VIDEORECORD" ToRole="PLAYER" />
     <NavigationProperty Name="RECORDSTATU" Relationship="Self.FK7" FromRole="VIDEORECORD" ToRole="RECORDSTATUS" />
   </EntityType>
   <Association Name="FK14">
-    <End Role="AVATAR" Type="Self.AVATAR" Multiplicity="0..1" />
-    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="*" />
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="AVATAR" Type="Self.AVATAR" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="AVATAR">
-        <PropertyRef Name="AvatarID" />
+      <Principal Role="PLAYER">
+        <PropertyRef Name="PlayerID" />
       </Principal>
-      <Dependent Role="PLAYER">
-        <PropertyRef Name="AvatarID" />
+      <Dependent Role="AVATAR">
+        <PropertyRef Name="PlayerID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -301,14 +301,14 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK13">
-    <End Role="LEVEL" Type="Self.LEVEL" Multiplicity="0..1" />
-    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="*" />
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="LEVEL" Type="Self.LEVEL" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="LEVEL">
-        <PropertyRef Name="LevelID" />
+      <Principal Role="PLAYER">
+        <PropertyRef Name="PlayerID" />
       </Principal>
-      <Dependent Role="PLAYER">
-        <PropertyRef Name="LevelID" />
+      <Dependent Role="LEVEL">
+        <PropertyRef Name="PlayerID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -366,8 +366,8 @@
     <EntitySet Name="VIDEOONLINEs" EntityType="Self.VIDEOONLINE" />
     <EntitySet Name="VIDEORECORDs" EntityType="Self.VIDEORECORD" />
     <AssociationSet Name="FK14" Association="Self.FK14">
-      <End Role="AVATAR" EntitySet="AVATARs" />
       <End Role="PLAYER" EntitySet="PLAYERs" />
+      <End Role="AVATAR" EntitySet="AVATARs" />
     </AssociationSet>
     <AssociationSet Name="FK6" Association="Self.FK6">
       <End Role="CATEGORY" EntitySet="CATEGORies" />
@@ -406,8 +406,8 @@
       <End Role="DETAILEACHSING" EntitySet="DETAILEACHSINGs" />
     </AssociationSet>
     <AssociationSet Name="FK13" Association="Self.FK13">
-      <End Role="LEVEL" EntitySet="LEVELs" />
       <End Role="PLAYER" EntitySet="PLAYERs" />
+      <End Role="LEVEL" EntitySet="LEVELs" />
     </AssociationSet>
     <AssociationSet Name="FK8" Association="Self.FK8">
       <End Role="PLAYER" EntitySet="PLAYERs" />

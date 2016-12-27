@@ -5,7 +5,8 @@
       <PropertyRef Name="AvatarID" />
     </Key>
     <Property Name="AvatarID" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="URL" Type="nvarchar" MaxLength="500" />
+    <Property Name="URL" Type="nvarchar(max)" />
+    <Property Name="PlayerID" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="CATEGORY">
     <Key>
@@ -60,6 +61,7 @@
     <Property Name="MaxScore" Type="int" />
     <Property Name="Name" Type="nvarchar" MaxLength="100" />
     <Property Name="RemainScoreToUp" Type="int" />
+    <Property Name="PlayerID" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="PARAMETER">
     <Key>
@@ -76,13 +78,11 @@
       <PropertyRef Name="PlayerID" />
     </Key>
     <Property Name="PlayerID" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="AvatarID" Type="nvarchar" MaxLength="100" />
     <Property Name="BirthDate" Type="date" />
     <Property Name="Email" Type="nvarchar" MaxLength="100" />
-    <Property Name="FacebookURL" Type="nvarchar" MaxLength="500" />
+    <Property Name="FacebookURL" Type="nvarchar(max)" />
     <Property Name="FullName" Type="nvarchar" MaxLength="100" />
     <Property Name="Job" Type="nvarchar" MaxLength="200" />
-    <Property Name="LevelID" Type="nvarchar" MaxLength="100" />
     <Property Name="Username" Type="nvarchar" MaxLength="100" />
     <Property Name="Password" Type="nvarchar" MaxLength="100" />
     <Property Name="PhoneNumber" Type="nvarchar" MaxLength="15" />
@@ -126,7 +126,7 @@
     <Key>
       <PropertyRef Name="VideoID" />
     </Key>
-    <Property Name="LinkVideo" Type="nvarchar" MaxLength="500" />
+    <Property Name="LinkVideo" Type="nvarchar(max)" />
     <Property Name="VideoID" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="VIDEOONLINE">
@@ -137,7 +137,7 @@
     <Property Name="DateUpdate" Type="date" />
     <Property Name="Resolution" Type="nvarchar" MaxLength="10" />
     <Property Name="SingerID" Type="nvarchar" MaxLength="100" />
-    <Property Name="URLVideo" Type="nvarchar" MaxLength="500" />
+    <Property Name="URLVideo" Type="nvarchar(max)" />
     <Property Name="VideoID" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="VIDEORECORD">
@@ -149,7 +149,7 @@
     <Property Name="PlayerID" Type="nvarchar" MaxLength="100" />
     <Property Name="RecordName" Type="nvarchar" MaxLength="500" />
     <Property Name="StatusID" Type="nvarchar" MaxLength="100" />
-    <Property Name="URL" Type="nvarchar" MaxLength="500" />
+    <Property Name="URL" Type="nvarchar(max)" />
     <Property Name="VideoID" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <Association Name="FK1">
@@ -201,26 +201,26 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK13">
-    <End Role="LEVEL" Type="Self.LEVEL" Multiplicity="0..1" />
-    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="*" />
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="LEVEL" Type="Self.LEVEL" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="LEVEL">
-        <PropertyRef Name="LevelID" />
+      <Principal Role="PLAYER">
+        <PropertyRef Name="PlayerID" />
       </Principal>
-      <Dependent Role="PLAYER">
-        <PropertyRef Name="LevelID" />
+      <Dependent Role="LEVEL">
+        <PropertyRef Name="PlayerID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK14">
-    <End Role="AVATAR" Type="Self.AVATAR" Multiplicity="0..1" />
-    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="*" />
+    <End Role="PLAYER" Type="Self.PLAYER" Multiplicity="0..1" />
+    <End Role="AVATAR" Type="Self.AVATAR" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="AVATAR">
-        <PropertyRef Name="AvatarID" />
+      <Principal Role="PLAYER">
+        <PropertyRef Name="PlayerID" />
       </Principal>
-      <Dependent Role="PLAYER">
-        <PropertyRef Name="AvatarID" />
+      <Dependent Role="AVATAR">
+        <PropertyRef Name="PlayerID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -354,12 +354,12 @@
       <End Role="VIDEOONLINE" EntitySet="VIDEOONLINE" />
     </AssociationSet>
     <AssociationSet Name="FK13" Association="Self.FK13">
-      <End Role="LEVEL" EntitySet="LEVEL" />
       <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="LEVEL" EntitySet="LEVEL" />
     </AssociationSet>
     <AssociationSet Name="FK14" Association="Self.FK14">
-      <End Role="AVATAR" EntitySet="AVATAR" />
       <End Role="PLAYER" EntitySet="PLAYER" />
+      <End Role="AVATAR" EntitySet="AVATAR" />
     </AssociationSet>
     <AssociationSet Name="FK2" Association="Self.FK2">
       <End Role="CHUNG_VIDEOKARAOKE" EntitySet="CHUNG_VIDEOKARAOKE" />

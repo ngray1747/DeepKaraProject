@@ -256,20 +256,7 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="81dd0bd8-ea56-4fb9-83bf-9ade28840174" name="Player" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="24c42416-94f9-45c3-8dbf-843f5429b69f" />
-        <suppliersInternal>
-          <dependency Id="7c8861cc-9ec7-48c3-8450-e0464e8d1887">
-            <classMoniker Id="8f23317e-ae12-4738-9f5f-e579990ff01f" LastKnownName="Avatar" />
-            <elementDefinition Id="7f4618eb-f112-4be0-9ddc-faffcc903e47" />
-          </dependency>
-          <dependency Id="2e3e1308-21af-470b-b485-944e53c424e3">
-            <classMoniker Id="a5635415-d2ad-440c-9ded-c3db34c1b8b2" LastKnownName="Level" />
-            <elementDefinition Id="15db95f6-e9d2-4360-8a5b-eb8a72ef5c51" />
-          </dependency>
-        </suppliersInternal>
         <ownedAttributesInternal>
-          <property Id="e9b9dc57-c1f0-4f15-83de-29570087b66c" name="AvatarID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="d7888b38-fb1e-40c1-8dcf-c898ce8fac70" />
-          </property>
           <property Id="9c394e58-2607-41dc-9a49-242024070f35" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="9a2f81df-bc92-4c76-b3f9-e50843b41271" />
             <type_NamedElement>
@@ -306,9 +293,6 @@
               <referencedTypeMoniker Id="ca85dfe5-2cfd-45d6-97e4-6a7df2f0ccc5" LastKnownName="Int" />
             </type_NamedElement>
           </property>
-          <property Id="97b64340-1fcb-4ae8-926c-32dfc8621e33" name="LevelID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="800dccd1-33a8-4fe3-b852-3d1a25ce9c1f" />
-          </property>
           <property Id="ed584955-49a2-46db-9e29-f722a470cbf0" name="Username" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="9ec687a4-1679-46b6-8e51-b943c2dfca80" />
           </property>
@@ -324,6 +308,12 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="8f23317e-ae12-4738-9f5f-e579990ff01f" name="Avatar" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="ca095ce3-e67b-4c5b-bb48-dc7cb9728b37" />
+        <suppliersInternal>
+          <dependency Id="54fbe2e0-fbee-4ead-ab6d-b8b576458897">
+            <classMoniker Id="81dd0bd8-ea56-4fb9-83bf-9ade28840174" LastKnownName="Player" />
+            <elementDefinition Id="32d63760-84ea-41d8-b89e-940291a0034b" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="00a2688a-1ae9-41e0-8f9a-ef6adfcec982" name="URL" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="520b0a50-e220-4cb9-9869-ec15dcae82be" />
@@ -331,12 +321,21 @@
           <property Id="b8fff1a5-f7e7-4d0f-8de4-8a8e37851e2b" name="PhotoID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="450d14fd-435a-478a-9147-a16b9adceb83" />
           </property>
+          <property Id="dd7b68c8-a615-4271-a186-7fa819671e78" name="PlayerID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="84ef1a56-5802-489a-b62e-7a61af3fdb27" />
+          </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="a5635415-d2ad-440c-9ded-c3db34c1b8b2" name="Level" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="59c8cd2e-08c5-4075-bbf6-3c327bba67ae" />
+        <suppliersInternal>
+          <dependency Id="3f14f823-8ad6-4651-a4c0-fe8a4241a487">
+            <classMoniker Id="81dd0bd8-ea56-4fb9-83bf-9ade28840174" LastKnownName="Player" />
+            <elementDefinition Id="4cdca30d-c2eb-4edd-9ff2-97099758ae8d" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="3fabce06-6178-4c53-ac38-8d913abd3f06" name="LevelID" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="c9de9232-1da3-4336-a4c9-c59ff69e43ee" />
@@ -352,6 +351,9 @@
             <type_NamedElement>
               <referencedTypeMoniker Id="ca85dfe5-2cfd-45d6-97e4-6a7df2f0ccc5" LastKnownName="Int" />
             </type_NamedElement>
+          </property>
+          <property Id="74f17a0e-31c2-4998-8916-4ea37422bea1" name="PlayerID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7f16c527-d425-4162-a1a4-6a9a86b9919d" />
           </property>
         </ownedAttributesInternal>
       </class>
