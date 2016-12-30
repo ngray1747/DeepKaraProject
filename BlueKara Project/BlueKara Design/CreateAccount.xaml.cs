@@ -190,8 +190,8 @@ namespace BlueKara_Design
 
                 level.PlayerID = id;
                 level.Name = "Level 1";
-                level.MaxScore = 100;
-                level.RemainScoreToUp = 100;
+                level.MaxScore = 1000;
+                level.RemainScoreToUp = 1000;
 
                 var k2 = de.LEVELs.Select(a1 => a1.LevelID);
                 level.LevelID = string.Format("LV{0}", k2.Count() + 1);

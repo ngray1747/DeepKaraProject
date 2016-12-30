@@ -19,6 +19,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
 using System.Threading;
+using System.Windows.Controls.Primitives;
+using System.Windows.Threading;
 
 namespace BlueKara_Design.UseControl
 {
@@ -29,16 +31,15 @@ namespace BlueKara_Design.UseControl
     {
         DeepKaraEntities de = new DeepKaraEntities();
         WebClient web = new WebClient();
-
+       public  DispatcherTimer D;
         public VideoPlayer()
         {
             InitializeComponent();
 
-            //DownloadFileFTP();
-
-            //mediaElement.Source = new Uri("C:\\ShareFolderMusic\\Biet anh sai.avi");
-            //mediaElement.Play();
-
+            D = new DispatcherTimer();
+            D.Interval = TimeSpan.FromSeconds(1);
+            D.Tick += MoreTime;
+           
 
 
         }
@@ -72,27 +73,7 @@ namespace BlueKara_Design.UseControl
             lbtenbaihat.Margin = new Thickness(780, 630, 0, 0);
 
         }
-        private void DownloadFileFTP()
-        {
-            string inputfilepath = @"C:\ShareFolderMusic\Biet anh sai.avi";
-            string ftphost = "123.31.34.57";
-            string ftpfilepath = "/Biet anh sai.avi";
 
-            string ftpfullpath = "ftp://" + ftphost + ftpfilepath;
-
-            using (WebClient request = new WebClient())
-            {
-                request.Credentials = new NetworkCredential("Administrator", "Tietkhaiky2");
-                byte[] fileData = request.DownloadData(ftpfullpath);
-
-                using (FileStream file = File.Create(inputfilepath))
-                {
-                    file.Write(fileData, 0, fileData.Length);
-                    file.Close();
-                }
-
-            }
-        }
 
         private void StopVideo(object sender, MouseButtonEventArgs e)
         {
@@ -100,16 +81,21 @@ namespace BlueKara_Design.UseControl
             string source = mediaElement.Source.AbsolutePath;
 
             source = source.Replace("%20", " ");
-           
+
             //xóa file trên ổ cứng
-            
+
 
             mediaElement.Stop();
-            
+
             mediaElement.Close();
             Thread.Sleep(2000);
-            File.Delete(source);
-            
+
+            //video online tải về mới xóa
+            if (source.StartsWith("C"))
+            {
+                File.Delete(source);
+            }
+
             Usecontrolvideoplayer.Visibility = Visibility.Hidden;
 
 
@@ -126,15 +112,52 @@ namespace BlueKara_Design.UseControl
 
         private void PlayVideo(object sender, MouseButtonEventArgs e)
         {
+
             mediaElement.Play();
             Pause.Visibility = Visibility.Visible;
             Play.Visibility = Visibility.Hidden;
         }
 
-        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+
+        bool isDragging = false;
+        public void seekBar_DragStarted(object sender, DragStartedEventArgs e)
         {
+            isDragging = true;
 
         }
+
+        public void seekBar_DragCompleted(object sender, DragCompletedEventArgs e)
+        {
+            isDragging = false;
+            mediaElement.Position = TimeSpan.FromSeconds(slider.Value);
+        }
+        public void MoreTime(object sender, EventArgs e)
+        {
+            if (!isDragging)
+            {
+                slider.Value = mediaElement.Position.TotalSeconds;
+
+
+
+            }
+        }
+
+        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            TimeSpan a = new TimeSpan(0, 0, Convert.ToInt32(mediaElement.Position.TotalSeconds));
+            tblTimePass.Text = a.ToString();
+        }
+
+        private void OpenSong(object sender, RoutedEventArgs e)
+        {
+            D.Start();
+            mediaElement.Play();
+            slider.Maximum = mediaElement.NaturalDuration.TimeSpan.TotalSeconds;
+            TimeSpan b = new TimeSpan(0, 0, Convert.ToInt32(mediaElement.NaturalDuration.TimeSpan.TotalSeconds));
+            tblTimeTotal.Text = b.ToString();
+        }
+
+        
     }
 
 }

@@ -10,6 +10,7 @@
         xmlns:local="clr-namespace:BlueKara_Design"
         mc:Ignorable="d"
        Icon="Image/micro.png"
+                      Name="MainHomewd"
         Title="MainHome" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Height="720" Width="1350">
     <Window.Resources>
 
@@ -35,15 +36,15 @@
                 </TransformGroup>
             </Border.RenderTransform>
         </Border>
-        <Controls:ToggleSwitch IsChecked="True" Foreground="Black" Header="Chuyển Chế Độ Karaoke" OnLabel="Hát ONLINE" OffLabel="Hát OFFLINE" Margin="10,10,1157,18"   OnSwitchBrush="#CCFF0000" />
+        <Controls:ToggleSwitch IsChecked="True" Name="SwitchType" Foreground="Black" Header="Chuyển Chế Độ Karaoke" OnLabel="Hát ONLINE" OffLabel="Hát OFFLINE" Margin="10,10,1157,18"   OnSwitchBrush="#CCFF0000" Checked="Switch2" Unchecked="Switch1" />
         <Image x:Name="image" Source="Image/intro.png" HorizontalAlignment="Left" Height="108" Margin="412,-16,0,0" VerticalAlignment="Top" Width="605"/>
         <Image x:Name="image1" Cursor="Hand" ToolTip="Thay đổi ảnh đại diện" Source="Image/My photo on Jobs HoilydayEdit.jpg" HorizontalAlignment="Left" Height="62" Margin="1072,5,0,0" VerticalAlignment="Top" Width="83"/>
         <Label x:Name="lbUsername" FontStyle="Italic" FontSize="15" Content="tuonglaivinhhang1" HorizontalAlignment="Left" Margin="1178,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.265,0.633" Width="152"/>
         <Label x:Name="lbLevel" Foreground="Black"  FontStyle="Italic" FontSize="15" Content="Level 2" HorizontalAlignment="Left" Margin="1178,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,1.5" Height="28" Width="78"/>
         <Controls:MetroProgressBar Foreground="Yellow"   Name="progressScore" HorizontalAlignment="Left"  Margin="1178,57,0,0" VerticalAlignment="Top" Width="128" Height="17"  Background="White" BorderBrush="#FFF9F9F9" RenderTransformOrigin="0.234,0.588"/>
         <Image x:Name="image2" Source="Image/online.ico" HorizontalAlignment="Left" Height="15" Margin="1160,20,0,0" VerticalAlignment="Top" Width="23"/>
-        <TextBlock x:Name="txbCurentscore" TextAlignment="Center" HorizontalAlignment="Center" Margin="1218,57,94,18" TextWrapping="Wrap"  VerticalAlignment="Center" Width="32" Height="17" RenderTransformOrigin="0.703,0.529"/>
-        <TextBlock x:Name="txbMaxscore" TextAlignment="Center" HorizontalAlignment="Center" Margin="1250,57,62,18" TextWrapping="Wrap"  VerticalAlignment="Center" Width="32" Height="17"/>
+        <TextBlock x:Name="txbCurentscore" TextAlignment="Center" HorizontalAlignment="Center" Margin="1192,57,94,18" TextWrapping="Wrap"  VerticalAlignment="Center" Width="58" Height="17" RenderTransformOrigin="0.703,0.529"/>
+        <TextBlock x:Name="txbMaxscore" TextAlignment="Center" HorizontalAlignment="Center" Margin="1250,57,38,18" TextWrapping="Wrap"  VerticalAlignment="Center" Width="56" Height="17"/>
 
         <Controls:Tile Cursor="Hand"  FontSize="12" Margin="1072,69,229,6" Content="Profile" Height="Auto" Width="Auto" Click="OpenFlyout"/>
         <Controls:Tile Cursor="Hand" Click="Logout" FontSize="12" Margin="1115,69,189,6" Content="Logout" Height="Auto" Width="Auto"/>
@@ -59,6 +60,24 @@
             </Border.RenderTransform>
         </Border>
         <DataGrid FontFamily="piron"    AutoGenerateColumns="False"  x:Name="gridlistMusic" IsReadOnly="True" HorizontalAlignment="Left" Margin="0,55,-6,0" Grid.Row="1" VerticalAlignment="Top" Width="1350" Height="345" MouseDoubleClick="OpenSong">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background"  Value="Red" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Chọn Bài Hát" Click="AddKaraoketoQueue">
+                        <MenuItem.Icon>
+                            <Image Source="Image/add.ico" Width="20" Height="20"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="      Mã Số" Width="100" FontSize="15" Binding="{Binding maso}"></DataGridTextColumn>
                 <DataGridTextColumn Header="                                                       Tên Bài Hát" FontSize="15" Width="450" Binding="{Binding tenbaihat}" ></DataGridTextColumn>
@@ -97,19 +116,37 @@
                 <TextBlock Name="tblTenbaihat" FontFamily="piron" Text="Welcome to DeepKara" Foreground="Red" FontStyle="Italic" FontSize="25" Canvas.Left="1634" Canvas.Top="108"/>
             </Canvas>
         </StackPanel>
-        <TextBox x:Name="textBox" Foreground="Red" FontSize="17"  HorizontalAlignment="Left" Height="50" Margin="0,5,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="658" Controls:TextBoxHelper.UseFloatingWatermark="True" Controls:TextBoxHelper.Watermark="Gõ từ khóa tìm kiếm và nhấn Enter"/>
+        <TextBox x:Name="tbKeySearch" KeyUp="EnterSearch" Foreground="Red" FontSize="17"  HorizontalAlignment="Left" Height="50" Margin="0,5,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="658" Controls:TextBoxHelper.UseFloatingWatermark="True" Controls:TextBoxHelper.Watermark="Gõ từ khóa tìm kiếm và nhấn Enter"/>
         <Image x:Name="image3" Source="Image/search.png" HorizontalAlignment="Left" Height="50" Margin="610,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="48"/>
         <Label x:Name="label1" Visibility="Visible" FontSize="20"  FontStyle="Italic" FontFamily="piron" Content="Danh sách bài hát đang đợi phát" HorizontalAlignment="Left" Margin="208,405,0,0" Grid.Row="1" VerticalAlignment="Top" Width="341" Height="32"/>
-        <DataGrid x:Name="dataGrid1" Visibility="Visible" Background="Transparent"  FontFamily="piron"  HorizontalAlignment="Left" Margin="0,437,0,0" Grid.Row="1" VerticalAlignment="Top" Height="162" Width="706">
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" FontSize="15" x:Name="gridQueue" Visibility="Visible" Background="Transparent"  FontFamily="piron"  HorizontalAlignment="Left" Margin="0,437,0,0" Grid.Row="1" VerticalAlignment="Top" Height="162" Width="706">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background"  Value="Red" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Xóa bài hát" Click="RemoveKaraokeFromQueue">
+                        <MenuItem.Icon>
+                            <Image Source="Image/remove.png" Width="20" Height="20"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="      Mã Số" Width="100"></DataGridTextColumn>
-                <DataGridTextColumn Header="                                                       Tên Bài Hát" Width="450"></DataGridTextColumn>
-                <DataGridTextColumn Header="                 Thể Loại" Width="189"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="15" Header="    Mã Số" Binding="{Binding _maso}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="15" Header="                                Tên Bài Hát" Binding="{Binding _tenbaihat}" Width="425"></DataGridTextColumn>
+                <DataGridTextColumn FontSize="15" Header="           Thể Loại" Width="189" Binding="{Binding _theloai}"></DataGridTextColumn>
             </DataGrid.Columns>
 
 
         </DataGrid>
-        <ComboBox FontSize="18" x:Name="comboBox" HorizontalAlignment="Left" SelectedIndex="0" Margin="490,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Height="50">
+        <ComboBox FontSize="18" x:Name="cbboxType" HorizontalAlignment="Left" SelectedIndex="0" Margin="490,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Height="50">
             <ComboBoxItem FontSize="18" Content="Tiêu Đề"></ComboBoxItem>
             <ComboBoxItem FontSize="18" Content="Thể Loại"></ComboBoxItem>
         </ComboBox>
@@ -117,8 +154,8 @@
 
         <!--<mdi:MdiContainer Visibility="Visible"  Name="AreaControl" Background="Silver" Theme="Aero" DockPanel.Dock="Top" Margin="930,405,109,0" Height="190" Width="300"  Grid.Row="1" />-->
         <phicontrol:VideoPlayer IsEnabled="True" Visibility="Hidden" x:Name="videoplayer"   Grid.RowSpan="2" Margin="63,5,-63,-7" MouseDoubleClick="ChangeSizeWindow"/>
-        <!--<phicontrol:FacebbokPost  Visibility="Visible" Margin="231,10,214,141" Grid.Row="1" />
-        <phicontrol:Scored Visibility="Visible" Grid.RowSpan="2" Margin="0,0,0,-7"></phicontrol:Scored>-->
+        <!--<phicontrol:FacebbokPost  Visibility="Visible" Margin="231,10,214,141" Grid.Row="1" />-->
+
 
         <Controls:Flyout Name="FlyoutInfo"  IsOpen="False" Visibility="Hidden"   Header="Thông Tin Cá Nhân" Foreground="White" Background="#6ECFF0" Position="Right"   Width="795" Grid.RowSpan="2" Loaded="UpdateInfo" >
             <Grid>

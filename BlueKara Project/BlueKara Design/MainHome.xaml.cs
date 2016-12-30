@@ -21,6 +21,13 @@ using System.Text.RegularExpressions;
 using MahApps.Metro.Controls.Dialogs;
 using System.Net;
 using System.IO;
+using System.Threading;
+using System.Collections;
+using System.Collections.ObjectModel;
+using Microsoft.Win32;
+using EntityFramework.BulkInsert.Extensions;
+using EntityFramework.MappingAPI;
+
 
 namespace BlueKara_Design
 {
@@ -29,10 +36,13 @@ namespace BlueKara_Design
     /// </summary>
     public partial class MainHome
     {
+        Scored sc;
         string filename;
         DeepKaraEntities de = new DeepKaraEntities();
+        ObservableCollection<ListKaraokeQueue> listQueue = new ObservableCollection<ListKaraokeQueue>();
+        ObservableCollection<ListKaraoke> listCurrent = new ObservableCollection<ListKaraoke>();
+        public string _playerID;
 
-        string _playerID;
         public MainHome(string playerID)
         {
             InitializeComponent();
@@ -46,48 +56,238 @@ namespace BlueKara_Design
 
             //    Content = new VideoPlayer()
             //});
+
+
+
+            videoplayer.Next.MouseLeftButtonUp += new MouseButtonEventHandler(NextInQueue);
+
+
             _playerID = playerID;
 
             AppearInfo();
             GetListKaraoke();
+        }
+
+        private async void NextInQueue(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                videoplayer.mediaElement.MediaEnded -= EndedVideo;
+            }
+            catch { }
+
+            if (SwitchType.IsChecked == true)
+            {
+                try
+                {
+                    var theFirstVideo = listQueue.FirstOrDefault();
+
+                    videoplayer.mediaElement.Stop();
+                    Thread.Sleep(1000);
+
+                    DeleteFile();
+
+                    videoplayer.Visibility = Visibility.Hidden;
+
+                    string Name = "";
+
+                    GetInfoVideoOnline(theFirstVideo._maso, ref Name, ref filename);
+                    //cần url video,Name
+
+                    Task<int> task = new Task<int>(DowloadFromFTP);
+                    task.Start();
+                    ChangeProgressRing();
+                    await task;
+                    ChangeProgressRingagain();
+
+                    string inputvideo = string.Format("C:\\ShareFolderMusic\\{0}", filename);
+                    tblTenbaihat.Text = Name;
+                    tblWelcome.Text = "Bạn đang hát ca khúc ";
+
+                    PlayVideo(inputvideo, Name);
+
+                    //remove danh sách queue
+                    RemoveKaraokeFromQueue_(theFirstVideo._maso);
+                }
+                catch { }
+            }
+            else
+            {
+                try
+                {
+                    var theFirstVideo = listQueue.FirstOrDefault();
+
+                    videoplayer.mediaElement.Stop();
 
 
+                    var k = (from a in listQueue
+                             where a._maso == theFirstVideo._maso
+                             join b in listCurrent on a._maso equals b.maso
+                             select new { a._tenbaihat, a._maso, b.url }).FirstOrDefault();
+                    string Name = k._tenbaihat;
+                    string inputvideo = k.url;
+                    PlayVideo(inputvideo, Name);
 
+                    RemoveKaraokeFromQueue_(theFirstVideo._maso);
+
+                }
+                catch { }
+            }
         }
 
         private async void GetListKaraoke()
         {
-            ChangeProgressRing();
-            var c = (dynamic)null;
-            await Task.Run(() =>
-             {
+            listCurrent.Clear();
+            if (SwitchType.IsChecked == true)//online type
+            {
 
-                 c = (from a in de.CHUNG_VIDEOKARAOKE
-                      join b in de.VIDEOONLINEs on a.ID equals b.VideoID
-                      select new ListKaraoke
-                      {
-                          maso = b.VideoID,
-                          tenbaihat = a.Name,
-                          casi = b.SINGER.FullName,
-                          ngaycapnhat = b.DateUpdate.Value,
-                          nhacsi = b.COMPOSER.FullName,
-                          theloai = a.CATEGORY.Name
+                ChangeProgressRing();
+                var c = (dynamic)null;
+                await Task.Run(() =>
+                 {
 
-                      }).ToList();
+                     c = (from a in de.CHUNG_VIDEOKARAOKE
+                          join b in de.VIDEOONLINEs on a.ID equals b.VideoID
+                          select new ListKaraoke
+                          {
+                              maso = b.VideoID,
+                              tenbaihat = a.Name,
+                              casi = b.SINGER.FullName,
+                              ngaycapnhat = b.DateUpdate.Value,
+                              nhacsi = b.COMPOSER.FullName,
+                              theloai = a.CATEGORY.Name
 
-             });
-            gridlistMusic.ItemsSource = c;
-            ChangeProgressRingagain();
+                          }).ToList();
 
+                 });
+                foreach (var a in c)
+                {
+                    listCurrent.Add(a);
+                }
+
+                gridlistMusic.ItemsSource = listCurrent;
+                ChangeProgressRingagain();
+
+            }
+            else //offline type
+            {
+
+                OpenFileDialog file = new OpenFileDialog();
+                file.DefaultExt = ".";
+                file.Multiselect = true;
+                file.Filter = "Image File (*.avi,*.mp4,*.mkv,*.wmv,*.vob,*.flv,*.3pg,*.mov,*.mpg) | *.avi;*.mp4;*.mkv;*.wmv;*.vob;*.flv;*.3gp;*.mov;*.mpg";
+
+                var soluongbaihat = from a in de.CHUNG_VIDEOKARAOKE
+                                    select a;
+                int i = soluongbaihat.Count() + 1;
+                string ID = "";
+
+                if (file.ShowDialog() == true)
+                {
+                    foreach (var s in file.FileNames)
+                    {
+
+                        FileInfo fileinfo = new FileInfo(s);
+                        //add vô list
+                        //tạo ID
+                        if (i.ToString().Length == 1)
+                        {
+                            ID = "VD0000" + i.ToString();
+                        }
+                        else if (i.ToString().Length == 2)
+                        {
+                            ID = "VD000" + i.ToString();
+                        }
+                        else if (i.ToString().Length == 3)
+                        {
+                            ID = "VD00" + i.ToString();
+                        }
+                        else if (i.ToString().Length == 4)
+                        {
+                            ID = "VD0" + i.ToString();
+                        }
+                        else if (i.ToString().Length == 5)
+                        {
+                            ID = "VD" + i.ToString();
+                        }
+
+
+                        listCurrent.Add(new ListKaraoke() { maso = ID, tenbaihat = fileinfo.Name.Split('.')[0], url = fileinfo.FullName, ngaycapnhat = fileinfo.LastWriteTime, format = fileinfo.Extension, theloai = "Unknow", casi = "Unknow", nhacsi = "Unknow" });
+                        i++;
+
+                    }
+                }
+
+
+                gridlistMusic.ItemsSource = listCurrent;
+                gridlistMusic.Items.Refresh();
+                ChangeProgressRing();
+
+                await Task.Run(() =>
+                {
+                    //cập nhật vô csdl 3 bảng: chung_videokaraoke và videooffline và videokaraoke
+                    foreach (ListKaraoke a in listCurrent)
+                    {
+                        CHUNG_VIDEOKARAOKE chung = new CHUNG_VIDEOKARAOKE();
+                        chung.ID = a.maso;
+                        chung.Name = a.tenbaihat;
+                        chung.Duaration = 0;
+                        chung.CategoryID = "CT07";//unknow
+                        switch (a.format.ToLower())
+                        {
+                            case "avi":
+                                chung.FormatVideoID = "FM01";
+                                break;
+                            case "mp4":
+                                chung.FormatVideoID = "FM02";
+                                break;
+                            case "mkv":
+                                chung.FormatVideoID = "FM03";
+                                break;
+                            case "mpg":
+                                chung.FormatVideoID = "FM04";
+                                break;
+                            case "wmv":
+                                chung.FormatVideoID = "FM05";
+                                break;
+                            case "vob":
+                                chung.FormatVideoID = "FM06";
+                                break;
+                            case "flv":
+                                chung.FormatVideoID = "FM07";
+                                break;
+                            case "mov":
+                                chung.FormatVideoID = "FM08";
+                                break;
+                            case "3gp":
+                                chung.FormatVideoID = "FM09";
+                                break;
+                        }
+                        de.CHUNG_VIDEOKARAOKE.Add(chung);
+                        VIDEOKARAOKE videokaraoke = new VIDEOKARAOKE();
+                        videokaraoke.VideoID = a.maso;
+                        de.VIDEOKARAOKEs.Add(videokaraoke);
+                        VIDEOOFFLINE videoOffline = new VIDEOOFFLINE();
+                        videoOffline.VideoID = a.maso;
+                        videoOffline.LinkVideo = a.url;
+                        de.VIDEOOFFLINEs.Add(videoOffline);
+
+                    }
+
+                    de.Configuration.AutoDetectChangesEnabled = false;
+                    de.Configuration.ValidateOnSaveEnabled = false;
+                    de.SaveChanges();
+                });
+                ChangeProgressRingagain();
+
+            }
         }
 
-        private async void AppearInfo()
+
+        private void AppearInfo()
         {
-            ChangeProgressRing();
-            var pl = (dynamic)null;
-            await Task.Run(() =>
-            {
-                pl = (from a in de.PLAYERs
+
+            var pl = (from a in de.PLAYERs
                       where a.PlayerID == _playerID
                       join b in de.LEVELs on a.PlayerID equals b.PlayerID
                       select new
@@ -99,56 +299,39 @@ namespace BlueKara_Design
                       }).FirstOrDefault();
 
 
-            });
-
             lbUsername.Content = pl.Username;
             lbLevel.Content = pl.Name;
             txbCurentscore.Text = (pl.MaxScore - pl.RemainScoreToUp).ToString() + "    / ";
             txbMaxscore.Text = pl.MaxScore.ToString();
-            progressScore.Value = pl.MaxScore - pl.RemainScoreToUp;
-            progressScore.Maximum = pl.MaxScore;
-            ChangeProgressRingagain();
+            progressScore.Value = Convert.ToDouble(pl.MaxScore - pl.RemainScoreToUp);
+            progressScore.Maximum = Convert.ToDouble(pl.MaxScore);
 
-        }
-
-        public MainHome()
-        {
-            InitializeComponent();
-            //ShowYouTubeVideo(web, "");
-            //web2.Navigate("https://www.youtube.com/watch?v=4T1cggtX8XY");
-            //AreaControl.Children.Add(new MdiChild()
+            //try
             //{
-            //    Title = "VideoPlayer",
-            //    Height = 300,
-            //    Width = 300,
-
-            //    Content = new VideoPlayer()
-            //});
-
-            videoplayer.Visibility = Visibility.Visible;
-            videoplayer.mediaElement.Play();
-
+            //    mainGrid.Children.Remove(sc);
+            //}
+            //catch { }
         }
+
+
         static int cout = 0;
+
+
 
         private void ChangeSizeWindow(object sender, MouseButtonEventArgs e)
         {
-            if (cout % 2 == 0)
+            if (e.ChangedButton == MouseButton.Right)
             {
-                videoplayer.Margin = new Thickness(908, 410, 142, 0);
-                Grid.SetRow(videoplayer, 1);
-                videoplayer.Changesize();
+                if (cout % 2 == 0)
+                {
+                    ChangeSizeMinimum();
+                }
+                else
+                {
+                    ChangeSizeMaximum();
+                }
+                cout++;
             }
-            else
-            {
-                videoplayer.Margin = new Thickness(0, -96, 0, 0);
-                Grid.SetRow(videoplayer, 2);
-                videoplayer.Changesize2();
-            }
-            cout++;
-
-
-
         }
 
         private static string GetYouTubeVideoPlayerHTML(string videoCode)
@@ -190,7 +373,7 @@ namespace BlueKara_Design
             closefyout.Visibility = Visibility.Hidden;
         }
 
-        private async void OpenFlyout(object sender, RoutedEventArgs e)
+        private void OpenFlyout(object sender, RoutedEventArgs e)
         {
             FlyoutInfo.IsOpen = true;
             closefyout.Visibility = Visibility.Visible;
@@ -308,9 +491,48 @@ namespace BlueKara_Design
 
         private async void OpenSong(object sender, MouseButtonEventArgs e)
         {
-            object item = gridlistMusic.SelectedItem;
-            string ID = (gridlistMusic.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+            if (e.ChangedButton == MouseButton.Left)
+            {
 
+                object item = gridlistMusic.SelectedItem;
+                string ID = (gridlistMusic.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+                string Name = "";
+                string inputvideo = "";//url video input
+                if (SwitchType.IsChecked == true)
+                {
+                    GetInfoVideoOnline(ID, ref Name, ref filename);
+                    //cần url video,Name
+
+                    Task<int> task = new Task<int>(DowloadFromFTP);
+                    task.Start();
+                    ChangeProgressRing();
+                    await task;
+                    ChangeProgressRingagain();
+
+                    inputvideo = string.Format("C:\\ShareFolderMusic\\{0}", filename);
+
+                }
+                else
+                {
+                    var k = (from a in listCurrent
+                             where a.maso == ID
+                             select a).FirstOrDefault();
+                    Name = k.tenbaihat;
+                    inputvideo = k.url;
+
+
+
+                }
+                tblTenbaihat.Text = Name;
+
+                tblWelcome.Text = "Bạn đang hát ca khúc ";
+                PlayVideo(inputvideo, Name);
+
+            }
+        }
+
+        private void GetInfoVideoOnline(string ID, ref string name, ref string URL)
+        {
             var k = (from a in de.CHUNG_VIDEOKARAOKE
                      where a.ID == ID
                      select new
@@ -318,30 +540,120 @@ namespace BlueKara_Design
                          a.VIDEOONLINE.URLVideo,
                          a.Name
                      }).FirstOrDefault();
-            filename = k.URLVideo;
-            Task<int> task = new Task<int>(DowloadFromFTP);
-            task.Start();
-            ChangeProgressRing();
-            await task;
+            name = k.Name;
+            URL = k.URLVideo;
+        }
 
-            ChangeProgressRingagain();
+        private void PlayVideo(string inputvideo, string tenbaihat)
+        {
 
-            string inputvideo = string.Format("C:\\ShareFolderMusic\\{0}", filename);
-            tblTenbaihat.Text = k.Name;
-            tblWelcome.Text = "Bạn đang hát ca khúc ";
 
-            PlayVideo(inputvideo,k.Name);
+
+            videoplayer.Visibility = Visibility.Visible;
+            videoplayer.mediaElement.Source = new Uri(inputvideo);
+            ChangeSizeMaximum();
+
+
+            videoplayer.mediaElement.Play();
+
+            videoplayer.lbtenbaihat.Text = tenbaihat;
+            videoplayer.mediaElement.MediaEnded += new RoutedEventHandler(EndedVideo);
 
 
 
         }
 
-        private void PlayVideo(string inputvideo,string tenbaihat)
+        private void ChangeSizeMinimum()
         {
-            videoplayer.Visibility = Visibility.Visible;
-            videoplayer.mediaElement.Source = new Uri(inputvideo);
-            videoplayer.mediaElement.Play();
-            videoplayer.lbtenbaihat.Text = tenbaihat;
+            videoplayer.Margin = new Thickness(908, 410, 142, 0);
+            Grid.SetRow(videoplayer, 1);
+            videoplayer.Changesize();
+
+        }
+        private void ChangeSizeMaximum()
+        {
+            videoplayer.Margin = new Thickness(0, -96, 0, 0);
+            Grid.SetRow(videoplayer, 2);
+            videoplayer.Changesize2();
+
+        }
+
+        private void EndedVideo(object sender, RoutedEventArgs e)
+        {
+            videoplayer.D.Stop();
+            videoplayer.D.IsEnabled = false;
+
+
+            DeleteFile();
+
+            videoplayer.Visibility = Visibility.Hidden;
+
+            AddControlScore();
+
+            NextInQueue(null, null);
+            try
+            {
+                videoplayer.mediaElement.MediaEnded -= EndedVideo;
+            }
+            catch { }
+
+        }
+
+        private void AddControlScore()
+        {
+
+            sc = new Scored();
+            Grid.SetRow(sc, 2);
+            sc.Margin = new Thickness(0, 0, 0, -7);
+
+
+            mainGrid.Children.Add(sc);
+            sc.ChamDiem(_playerID);
+
+
+            sc.mediaVotay.MediaEnded += new RoutedEventHandler(EndVotay);
+
+
+            // mainGrid.Children.Remove(sc);
+
+
+
+        }
+
+        private void EndVotay(object sender, RoutedEventArgs e)
+        {
+            mainGrid.Children.Remove(sc);
+            sc = null;
+
+            ////cập nhật lại điểm và level
+
+
+            AppearInfo();
+            UpdateInfo(null, null);
+            try
+            {
+                sc.mediaVotay.MediaEnded -= EndVotay;
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        private void DeleteFile()
+        {
+            string source = videoplayer.mediaElement.Source.AbsolutePath;
+
+            source = source.Replace("%20", " ");
+
+            //xóa file trên ổ cứng nếu là video online
+            videoplayer.mediaElement.Close();
+            if (source.StartsWith("C"))
+            {
+                Thread.Sleep(2000);
+                File.Delete(source);
+            }
         }
 
         private int DowloadFromFTP()
@@ -368,6 +680,150 @@ namespace BlueKara_Design
             }
 
             return 0;
+        }
+
+
+
+        private void AddKaraoketoQueue(object sender, RoutedEventArgs e)
+        {
+
+            object item = gridlistMusic.SelectedItem;
+            string ID = (gridlistMusic.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+            try
+            {
+                var k = (from a in de.CHUNG_VIDEOKARAOKE
+                         where a.ID == ID
+                         select new ListKaraokeQueue
+                         {
+                             _maso = a.ID,
+                             _theloai = a.CATEGORY.Name,
+                             _tenbaihat = a.Name
+                         }).FirstOrDefault();
+
+                listQueue.Add(k as ListKaraokeQueue);
+            }
+            catch { }
+            gridQueue.ItemsSource = listQueue;
+
+
+        }
+
+        private void RemoveKaraokeFromQueue(object sender, RoutedEventArgs e)
+        {
+
+            object item = gridQueue.SelectedItem;
+            string ID = (gridQueue.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
+            RemoveKaraokeFromQueue_(ID);
+
+        }
+
+        private void RemoveKaraokeFromQueue_(string iD)
+        {
+            try
+            {
+                var k = (from a in listQueue
+                         where a._maso == iD
+                         select a).FirstOrDefault();
+
+                listQueue.Remove(k as ListKaraokeQueue);
+            }
+            catch { }
+            gridQueue.ItemsSource = listQueue;
+        }
+
+        private async void EnterSearch(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back || e.Key == Key.Delete)
+            {
+                if (tbKeySearch.Text == "")
+                {
+                    gridlistMusic.ItemsSource = listCurrent;
+                }
+
+            }
+            else
+            {
+                ObservableCollection<ListKaraoke> listResult = new ObservableCollection<ListKaraoke>();
+
+                if (e.Key == Key.Enter)
+                {
+                    string keyWord1 = tbKeySearch.Text;
+                    string typeOfSearch = ((ComboBoxItem)(cbboxType.SelectedItem)).Content.ToString();
+                    string keyWordUnsign = convertToUnSign(keyWord1);
+
+                    var k = (from a in listCurrent
+                             select new ListKaraoke
+                             {
+                                 maso = a.maso,
+                                 tenbaihat = a.tenbaihat,
+                                 casi = a.casi,
+                                 ngaycapnhat = a.ngaycapnhat,
+                                 nhacsi = a.nhacsi,
+                                 theloai = a.theloai
+                             }).ToList();
+
+                    if (typeOfSearch == "Tiêu Đề")
+                    {
+
+                        foreach (var c in k)
+                        {
+                            string nameUnsign = convertToUnSign(c.tenbaihat).ToLower();
+                            if (nameUnsign.Contains(keyWordUnsign.ToLower()) || c.tenbaihat.ToLower().Contains(keyWord1.ToLower()))
+                            {
+                                listResult.Add(c);
+                            }
+                        }
+
+
+                    }
+                    else
+                    {
+
+                        foreach (var c in k)
+                        {
+                            string nameUnsign = convertToUnSign(c.theloai).ToLower();
+                            if (nameUnsign.Contains(keyWordUnsign.ToLower()) || c.theloai.ToLower().Contains(keyWord1.ToLower()))
+                            {
+                                listResult.Add(c);
+                            }
+                        }
+
+                    }
+
+                    if (listResult.Count == 0)
+                    {
+                        await this.ShowMessageAsync("Thông Báo", "Không tìm thấy dữ liệu", MessageDialogStyle.Affirmative);
+
+                    }
+                }
+
+
+                gridlistMusic.ItemsSource = listResult;
+
+            }
+        }
+
+        //hàm bỏ dấu trong c#
+        public static string convertToUnSign(string s)
+        {
+            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+            string temp = s.Normalize(NormalizationForm.FormD);
+            return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
+
+        private void Switch1(object sender, RoutedEventArgs e)//hát offline
+        {
+
+            GetListKaraoke();
+
+
+
+        }
+        private void Switch2(object sender, RoutedEventArgs e)//hát online
+        {
+            GetListKaraoke();
+
+
         }
     }
 

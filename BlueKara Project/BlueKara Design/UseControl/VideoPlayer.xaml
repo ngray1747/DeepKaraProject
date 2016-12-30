@@ -12,22 +12,41 @@
         <Style TargetType="{x:Type Slider}" x:Key="Customslider" BasedOn="{StaticResource MetroSlider}"></Style>
     </UserControl.Resources>
     <Grid>
-        <MediaElement  Stretch="Fill" x:Name="mediaElement" LoadedBehavior="Manual" UnloadedBehavior="Stop"  HorizontalAlignment="Left" Height="630" VerticalAlignment="Top" Width="1350"/>
+        <MediaElement  Stretch="Fill" MediaOpened="OpenSong" x:Name="mediaElement" LoadedBehavior="Manual" UnloadedBehavior="Stop"  HorizontalAlignment="Left" Height="630" VerticalAlignment="Top" Width="1350" />
         <TextBlock Background="Green" x:Name="lbtenbaihat" TextAlignment="Center" Text="Căn Nhà Màu Tím" FontSize="30" HorizontalAlignment="Left" Margin="780,630,0,0" VerticalAlignment="Top" Height="63" Width="570"/>
-        
-        <Image x:Name="Pause"   Source="../Image/pause.png" HorizontalAlignment="Left" Height="44" Margin="108,639,0,0" VerticalAlignment="Top" Width="47" MouseLeftButtonUp="PauseVideo"/>
-        <Image x:Name="Play" Visibility="Hidden" Source="../Image/play.png" HorizontalAlignment="Left" Height="44" Margin="108,639,0,0" VerticalAlignment="Top" Width="47" MouseLeftButtonUp="PlayVideo"/>
-        <Image x:Name="Next"  Source="../Image/next.png" HorizontalAlignment="Left" Height="44" Margin="155,639,0,0" VerticalAlignment="Top" Width="50"/>
-        <Slider x:Name="slider" Style="{StaticResource Customslider}"   HorizontalAlignment="Left" Margin="210,650,0,0" VerticalAlignment="Top" Width="432" Height="22" Custom:SliderHelper.ChangeValueBy="LargeChange" Custom:SliderHelper.EnableMouseWheel="ControlFocused" ValueChanged="slider_ValueChanged">
+
+        <Image x:Name="Pause" Cursor="Hand"   Source="../Image/pause.png" HorizontalAlignment="Left" Height="44" Margin="108,639,0,0" VerticalAlignment="Top" Width="47" MouseLeftButtonUp="PauseVideo"/>
+        <Image x:Name="Play" Cursor="Hand" Visibility="Hidden" Source="../Image/play.png" HorizontalAlignment="Left" Height="44" Margin="108,639,0,0" VerticalAlignment="Top" Width="47" MouseLeftButtonUp="PlayVideo"/>
+        <Image x:Name="Next" Cursor="Hand"  Source="../Image/next.png" HorizontalAlignment="Left" Height="44" Margin="155,639,0,0" VerticalAlignment="Top"  Width="50"/>
+        <Slider x:Name="slider" Cursor="Hand" Value="0" Thumb.DragStarted="seekBar_DragStarted" Thumb.DragCompleted="seekBar_DragCompleted" Style="{StaticResource Customslider}"   HorizontalAlignment="Left" Margin="297,655,0,0" VerticalAlignment="Top" Width="389" Height="22" Custom:SliderHelper.ChangeValueBy="LargeChange" Custom:SliderHelper.EnableMouseWheel="ControlFocused" ValueChanged="slider_ValueChanged">
 
             <Slider.Resources>
                 <SolidColorBrush x:Key="SliderSelectionBackground" Color="Green" />
-                
+
             </Slider.Resources>
 
         </Slider>
-        <TextBlock FontSize="17" x:Name="tblDuaration" HorizontalAlignment="Left" Margin="660,644,0,0" TextWrapping="Wrap" Text="04:05" VerticalAlignment="Top" Height="33" Width="52"/>
-        <Image x:Name="Stop"   Source="/BlueKara Design;component/Image/stop.png" HorizontalAlignment="Left" Height="39" Margin="42,644,0,0" VerticalAlignment="Top" Width="37" MouseLeftButtonUp="StopVideo"/>
+        <TextBlock FontSize="17" x:Name="tblTimePass"  HorizontalAlignment="Left" Margin="198,650,0,0" TextWrapping="Wrap" Text="----" TextAlignment="Center" VerticalAlignment="Top" Height="27" Width="97" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.194"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Image x:Name="Stop" Cursor="Hand"  Source="/BlueKara Design;component/Image/stop.png" HorizontalAlignment="Left" Height="39" Margin="42,644,0,0" VerticalAlignment="Top" Width="37" MouseLeftButtonUp="StopVideo"/>
+        <TextBlock FontSize="17" x:Name="tblTimeTotal"  HorizontalAlignment="Left" Margin="691,650,0,0" TextWrapping="Wrap" Text="----" TextAlignment="Center" VerticalAlignment="Top" Height="27" Width="98" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.418"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
 
     </Grid>
 </UserControl>

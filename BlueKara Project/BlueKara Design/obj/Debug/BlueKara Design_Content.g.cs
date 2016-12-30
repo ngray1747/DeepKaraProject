@@ -10,5 +10,6 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/deepkaradatabase.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/deepkaradatabase.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/voaty.mp3")]
 
 

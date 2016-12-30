@@ -1,4 +1,6 @@
-﻿CREATE TABLE VIDEOOFFLINE
+﻿
+--create database DeepKara
+CREATE TABLE VIDEOOFFLINE
 (
 	LinkVideo nvarchar(MAX),
 	VideoID nvarchar(100) PRIMARY KEY
@@ -190,6 +192,8 @@ INSERT INTO CATEGORY
 VALUES ('CT05',N'Tập hợp các ca khúc hát đôi, trong đó đã có một giọng (nam hoặc nữ) hát trước rồi.',N'Nhạc Song Ca')
 INSERT INTO CATEGORY
 VALUES ('CT06',N'Tập hợp các ca khúc nhạc dành cho trẻ em.',N'Nhạc Thiếu Nhi')
+INSERT INTO CATEGORY
+VALUES ('CT07',N'Các ca khúc không rõ tác giả là ai. Dùng cho video offline',N'Unknow')
 
 
 INSERT INTO FORMATVIDEO
@@ -576,7 +580,7 @@ VALUES ('0','CP18',N'Trúc Phương',N'Nam')
 INSERT INTO CHUNG_VIDEOKARAOKE
 VALUES ('CT01',325,'FM01','VD00026',N'Chàng Trai Sinh Tình')
 INSERT INTO VIDEOONLINE
-VALUES ('CP18','12-22-2016','360p','SG64','Bolero\chang trai sinh tinh.avi','VD00026')
+VALUES ('CP18','12-22-2016','360p','SG64','Bolero\chang trai si tinh.avi','VD00026')
 
 INSERT INTO COMPOSER
 VALUES ('0','CP19',N'Lam Phương',N'Nam')

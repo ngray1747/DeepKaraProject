@@ -5,10 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BlueKara_Design.UseControl"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="1350" Height="693" Background="#F2F2F2">
-    <Grid>
+             d:DesignHeight="300" Background="#F2F2F2" d:DesignWidth="1350" Height="693">
+    <Grid Name="Maingrid">
+        
         <Label x:Name="scorelabel"  FontSize="450" Background="Transparent" Foreground="Yellow" FontFamily="Piron" HorizontalAlignment="Center" Margin="436,56,334,201" VerticalAlignment="Center" Height="436" Width="580"/>
-        <Label x:Name="review" FontSize="70" Foreground="Red"  HorizontalAlignment="Left" Margin="470,518,0,0" VerticalAlignment="Top" Width="500" Height="96"/>
+        <Label x:Name="review" FontSize="70" Foreground="Red"  HorizontalAlignment="Left" Margin="472,492,0,0" VerticalAlignment="Top" Width="500" Height="96"/>
+        <MediaElement Visibility="Hidden" x:Name="mediaVotay" HorizontalAlignment="Left" Height="100" Margin="486,94,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </UserControl>

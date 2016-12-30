@@ -11,6 +11,16 @@ namespace BlueKara_Design
         public DateTime  ngaycapnhat { get; set; }
         public string nhacsi { get; set; }
 
+        public string url { get; set; }
+        public string format { get; set; }
+    }
+    internal class ListKaraokeQueue
+    {
+        public string _maso { get; set; }
+        public string _tenbaihat { get; set; }
+        public string _theloai { get; set; }
+        
+
 
     }
 }
