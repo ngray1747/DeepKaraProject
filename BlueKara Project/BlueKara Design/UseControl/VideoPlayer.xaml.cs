@@ -31,7 +31,7 @@ namespace BlueKara_Design.UseControl
     {
         DeepKaraEntities de = new DeepKaraEntities();
         WebClient web = new WebClient();
-       public  DispatcherTimer D;
+        public DispatcherTimer D;
         public VideoPlayer()
         {
             InitializeComponent();
@@ -39,7 +39,8 @@ namespace BlueKara_Design.UseControl
             D = new DispatcherTimer();
             D.Interval = TimeSpan.FromSeconds(1);
             D.Tick += MoreTime;
-           
+
+
 
 
         }
@@ -88,6 +89,7 @@ namespace BlueKara_Design.UseControl
             mediaElement.Stop();
 
             mediaElement.Close();
+
             Thread.Sleep(2000);
 
             //video online tải về mới xóa
@@ -151,13 +153,52 @@ namespace BlueKara_Design.UseControl
         private void OpenSong(object sender, RoutedEventArgs e)
         {
             D.Start();
+
+            
             mediaElement.Play();
+
+
+
             slider.Maximum = mediaElement.NaturalDuration.TimeSpan.TotalSeconds;
             TimeSpan b = new TimeSpan(0, 0, Convert.ToInt32(mediaElement.NaturalDuration.TimeSpan.TotalSeconds));
             tblTimeTotal.Text = b.ToString();
+
         }
 
-        
+        private void PlayRecord(object sender, MouseButtonEventArgs e)
+        {
+            playrecord.Visibility = Visibility.Hidden;
+            stoprecord.Visibility = Visibility.Visible;
+
+
+            RecordAudioSystem.RecordSystem(@"C:\ShareFolderMusic\Record\system.mp3");
+            RecordYourVoice.RecordVoice(@"C:\ShareFolderMusic\Record\voice.wav");
+
+
+
+        }
+
+        private void StopRecord(object sender, MouseButtonEventArgs e)
+        {
+            string numberrecord = "";
+            var k = from a in de.VIDEORECORDs
+                    select a;
+
+            numberrecord = string.Format("Record{0}", k.Count() + 1);
+            string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            playrecord.Visibility = Visibility.Visible;
+            stoprecord.Visibility = Visibility.Hidden;
+            RecordAudioSystem.StopRecord();
+            RecordYourVoice.StopRecord();
+
+            ConvertFile.NAudioMp3ToWav("C:\\ShareFolderMusic\\Record\\system.mp3", "C:\\ShareFolderMusic\\Record\\tempt.wav");
+            ConvertFile.MixWavFiles(new string[] { "C:\\ShareFolderMusic\\Record\\tempt.wav", "C:\\ShareFolderMusic\\Record\\voice.wav" }, string.Format("C:\\ShareFolderMusic\\Record\\{0}_{1}.wav", lbtenbaihat.Text, numberrecord));
+            string output = desktop + "\\" + lbtenbaihat.Text + "_" + numberrecord + ".wav";
+            string input = "C:\\ShareFolderMusic\\Record\\" + lbtenbaihat.Text + "_" + numberrecord + ".wav";
+            File.Copy(input, output);
+
+        }
     }
 
 }

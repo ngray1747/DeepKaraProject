@@ -3,15 +3,16 @@
         xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
          xmlns:gif="http://wpfanimatedgif.codeplex.com"
-    xmlns:mdi="clr-namespace:WPF.MDI;assembly=WPF.MDI"
+    
         xmlns:phicontrol="clr-namespace:BlueKara_Design.UseControl"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BlueKara_Design"
         mc:Ignorable="d"
        Icon="Image/micro.png"
-                      Name="MainHomewd"
-        Title="MainHome" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Height="720" Width="1350">
+        Name="MainHomewd"
+                    
+        Title="MainHome" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Height="720" Width="1350" >
     <Window.Resources>
 
     </Window.Resources>
@@ -152,7 +153,7 @@
         </ComboBox>
         <Border Visibility="Visible" BorderBrush="Green" BorderThickness="2.5" HorizontalAlignment="Left" Height="162" Margin="0,437,0,0" Grid.Row="1" VerticalAlignment="Top" Width="706"/>
 
-        <!--<mdi:MdiContainer Visibility="Visible"  Name="AreaControl" Background="Silver" Theme="Aero" DockPanel.Dock="Top" Margin="930,405,109,0" Height="190" Width="300"  Grid.Row="1" />-->
+       
         <phicontrol:VideoPlayer IsEnabled="True" Visibility="Hidden" x:Name="videoplayer"   Grid.RowSpan="2" Margin="63,5,-63,-7" MouseDoubleClick="ChangeSizeWindow"/>
         <!--<phicontrol:FacebbokPost  Visibility="Visible" Margin="231,10,214,141" Grid.Row="1" />-->
 

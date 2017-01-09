@@ -130,5 +130,7 @@ namespace BlueKara_Design
             maingrLogin.IsEnabled = false;
 
         }
+
+        
     }
 }

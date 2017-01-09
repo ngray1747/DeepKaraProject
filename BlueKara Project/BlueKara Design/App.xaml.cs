@@ -15,27 +15,37 @@ namespace BlueKara_Design
     /// </summary>
     public partial class App : Application
     {
-        //private const int a = 6000;
-        //protected override void OnStartup(StartupEventArgs e)
-        //{
-        //    SplashScreen splash = new SplashScreen();
-        //    splash.Show();
-        //    Stopwatch timer = new Stopwatch();
-        //    timer.Start();
+        private const int a = 6000;
 
-        //    base.OnStartup(e);
-        //    MainWindow main = new MainWindow();
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            SplashScreen splash = new SplashScreen();
+            splash.Show();
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
 
-        //    timer.Stop();
-        //    int remaintime = a - (int)timer.ElapsedMilliseconds;
-        //    if(remaintime>0)
-        //    {
-        //        Thread.Sleep(remaintime);
-        //    }
+            base.OnStartup(e);
+            MainWindow main = new MainWindow();
 
-        //    splash.Close();
+            timer.Stop();
+            int remaintime = a - (int)timer.ElapsedMilliseconds;
+            if(remaintime>0)
+            {
+                Thread.Sleep(remaintime);
+            }
+
+            splash.Close();
 
 
-        //}
+        }
+        protected override void OnExit(ExitEventArgs e)
+        {
+
+            base.OnExit(e);
+
+
+       
+
+        }
     }
 }

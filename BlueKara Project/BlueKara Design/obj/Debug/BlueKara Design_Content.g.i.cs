@@ -11,5 +11,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/deepkaradatabase.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/deepkaradatabase.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/voaty.mp3")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libmp3lame.32.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libmp3lame.64.dll")]
 
 

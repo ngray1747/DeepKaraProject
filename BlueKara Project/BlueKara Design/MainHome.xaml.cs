@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Interop;
-using WPF.MDI;
 using BlueKara_Design.UseControl;
 using Facebook;
 using BlueKara_Design.Database;
@@ -27,7 +26,7 @@ using System.Collections.ObjectModel;
 using Microsoft.Win32;
 using EntityFramework.BulkInsert.Extensions;
 using EntityFramework.MappingAPI;
-
+using NAudio.Wave;
 
 namespace BlueKara_Design
 {
@@ -82,7 +81,6 @@ namespace BlueKara_Design
                 {
                     var theFirstVideo = listQueue.FirstOrDefault();
 
-                    videoplayer.mediaElement.Stop();
                     Thread.Sleep(1000);
 
                     DeleteFile();
@@ -108,30 +106,30 @@ namespace BlueKara_Design
 
                     //remove danh sách queue
                     RemoveKaraokeFromQueue_(theFirstVideo._maso);
+
                 }
                 catch { }
             }
             else
             {
-                try
-                {
-                    var theFirstVideo = listQueue.FirstOrDefault();
+                var theFirstVideo = listQueue.FirstOrDefault();
 
-                    videoplayer.mediaElement.Stop();
+                Thread.Sleep(1000);
+
+                videoplayer.Visibility = Visibility.Hidden;
+
+                var k = (from a in listQueue
+                         where a._maso == theFirstVideo._maso
+                         join b in listCurrent on a._maso equals b.maso
+                         select new { a._tenbaihat, a._maso, b.url }).FirstOrDefault();
+                if (k==null) return;
+                string Name = k._tenbaihat;
+                string inputvideo = k.url;
+                PlayVideo(inputvideo, Name);
+
+                RemoveKaraokeFromQueue_(theFirstVideo._maso);
 
 
-                    var k = (from a in listQueue
-                             where a._maso == theFirstVideo._maso
-                             join b in listCurrent on a._maso equals b.maso
-                             select new { a._tenbaihat, a._maso, b.url }).FirstOrDefault();
-                    string Name = k._tenbaihat;
-                    string inputvideo = k.url;
-                    PlayVideo(inputvideo, Name);
-
-                    RemoveKaraokeFromQueue_(theFirstVideo._maso);
-
-                }
-                catch { }
             }
         }
 
@@ -491,8 +489,10 @@ namespace BlueKara_Design
 
         private async void OpenSong(object sender, MouseButtonEventArgs e)
         {
+
             if (e.ChangedButton == MouseButton.Left)
             {
+
 
                 object item = gridlistMusic.SelectedItem;
                 string ID = (gridlistMusic.SelectedCells[0].Column.GetCellContent(item) as TextBlock).Text;
@@ -520,8 +520,6 @@ namespace BlueKara_Design
                     Name = k.tenbaihat;
                     inputvideo = k.url;
 
-
-
                 }
                 tblTenbaihat.Text = Name;
 
@@ -529,7 +527,10 @@ namespace BlueKara_Design
                 PlayVideo(inputvideo, Name);
 
             }
+
         }
+
+
 
         private void GetInfoVideoOnline(string ID, ref string name, ref string URL)
         {
@@ -547,18 +548,14 @@ namespace BlueKara_Design
         private void PlayVideo(string inputvideo, string tenbaihat)
         {
 
-
-
             videoplayer.Visibility = Visibility.Visible;
             videoplayer.mediaElement.Source = new Uri(inputvideo);
             ChangeSizeMaximum();
-
 
             videoplayer.mediaElement.Play();
 
             videoplayer.lbtenbaihat.Text = tenbaihat;
             videoplayer.mediaElement.MediaEnded += new RoutedEventHandler(EndedVideo);
-
 
 
         }
@@ -580,22 +577,28 @@ namespace BlueKara_Design
 
         private void EndedVideo(object sender, RoutedEventArgs e)
         {
-            videoplayer.D.Stop();
-            videoplayer.D.IsEnabled = false;
 
-
+            videoplayer.mediaElement.Close();
+            Thread.Sleep(500);
             DeleteFile();
 
             videoplayer.Visibility = Visibility.Hidden;
 
             AddControlScore();
 
-            NextInQueue(null, null);
+
+
+
             try
             {
+
                 videoplayer.mediaElement.MediaEnded -= EndedVideo;
+
             }
-            catch { }
+            catch
+            {
+
+            }
 
         }
 
@@ -639,6 +642,9 @@ namespace BlueKara_Design
 
             }
 
+            videoplayer.mediaElement.Close();
+
+            NextInQueue(null, null);
         }
 
         private void DeleteFile()
@@ -825,6 +831,8 @@ namespace BlueKara_Design
 
 
         }
+
+
     }
 
 

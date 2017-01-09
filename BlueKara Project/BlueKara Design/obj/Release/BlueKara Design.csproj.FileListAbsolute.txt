@@ -1,0 +1,51 @@
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\CreateAccount.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\Login.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\MainHome.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\ResetPass.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\SplashScreen.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\UseControl\FacebbokPost.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\UseControl\Scored.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\UseControl\VideoPlayer.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\App.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\BlueKara Design_Content.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\BlueKara Design_MarkupCompile.cache
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\BlueKara Design_MarkupCompile.lref
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\libmp3lame.32.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\libmp3lame.64.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\BlueKara Design.exe.config
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\BlueKara Design.exe
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\BlueKara Design.pdb
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\EntityFramework.BulkInsert.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\EntityFramework.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\EntityFramework.MappingAPI.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\Facebook.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\MahApps.Metro.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\NAudio.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\NAudio.Lame.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\System.Windows.Interactivity.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\WpfAnimatedGif.dll
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\EntityFramework.xml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\EntityFramework.BulkInsert.pdb
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\EntityFramework.MappingAPI.pdb
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\Facebook.xml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\MahApps.Metro.pdb
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\MahApps.Metro.xml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\NAudio.xml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\bin\Release\WpfAnimatedGif.xml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\App.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\CreateAccount.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\Login.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\MainHome.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\ResetPass.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\SplashScreen.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\UseControl\FacebbokPost.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\UseControl\Scored.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\UseControl\VideoPlayer.baml
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\BlueKara Design.g.resources
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\BlueKara_Design.Properties.Resources.resources
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\BlueKara Design.csproj.GenerateResource.Cache
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\BlueKara Design.exe
+C:\Users\NguyenThanhPhi\Desktop\DeepkaraGitHub\DeepKaraProject\BlueKara Project\BlueKara Design\obj\Release\BlueKara Design.pdb
